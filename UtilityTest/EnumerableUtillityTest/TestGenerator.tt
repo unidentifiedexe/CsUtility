@@ -1,0 +1,119 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ output extension=".cs" #>
+
+<#
+
+
+var typeNames = new List<(string TypeName,string PropName, bool HasValue)>()
+{
+   ("sbyte" , "SByteValue" , true),
+   ("sbyte?" , "SbyteNullableValue" , false),
+   ("byte" , "ByteValue" , true),
+   ("byte?" , "ByteNullableValue" , false),
+   ("char" , "CharValue" , true),
+   ("char?" , "CharNullableValue" , false),
+   ("short" , "ShortValue" , true),
+   ("short?" , "ShortNullableValue" , false),
+   ("ushort" , "UshortValue" , true),
+   ("ushort?" , "UshortNullableValue" , false),
+   ("int" , "IntValue" , true),
+   ("int?" , "IntNullableValue" , false),
+   ("uint" , "UintValue" , true),
+   ("uint?" , "UintNullableValue" , false),
+   ("long" , "LongValue" , true),
+   ("long?" , "LongNullableValue" , false),
+   ("ulong" , "UlongValue" , true),
+   ("ulong?" , "UlongNullableValue" , false),
+   ("float" , "FloatValue" , true),
+   ("float?" , "FloatNullableValue" , false),
+   ("double" , "DoubleValue" , true),
+   ("double?" , "DoubleNullableValue" , false),
+   ("decimal" , "DecimalValue" , true),
+   ("decimal?" , "DecimalNullableValue" , false),
+
+};
+
+var dataTypes = new string[]{ "Enumerable"/*,"List","Array"*/};
+#>
+
+using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Linq;
+using CsUtility.EnumerableUtillity;
+
+
+namespace UtilityTest.EnumerableUtillityTest
+{
+
+    public partial class EnumerableUtillityTest
+    {
+<# foreach (var (typeName, propName, hasValue) in typeNames) { #>
+<# foreach (var dataType in dataTypes) { #>
+<# var testCases = new[]{"Nomal", "AllNull"}; #>
+<# foreach (var testCase in testCases.Take(hasValue ? 1:2)) {#>
+
+        [TestMethod]
+        public void MinMaxTestOf<#= propName #>As<#= dataType #>On<#= testCase #>()
+        {
+            var testData = TestCase.<#= testCase #>TestCase;
+            var min = testData.Min(p => p.<#= propName #>);
+            var max = testData.Max(p => p.<#= propName #>);
+            var minItem = testData.First(p => p.<#= propName #> == min);
+            var maxItem = testData.First(p => p.<#= propName #> == max);
+
+            var (utillMin, utillMax) = testData.As<#= dataType #>().MinMax(p => p.<#= propName #>);
+            var (utillMinItem, utillMaxItem) = testData.As<#= dataType #>().MinMaxItem(p => p.<#= propName #>);
+
+            Assert.AreEqual(utillMin, min);
+            Assert.AreEqual(utillMax, max);
+            Assert.AreEqual(utillMinItem, minItem);
+            Assert.AreEqual(utillMaxItem, maxItem);
+            Assert.AreEqual(testData.As<#= dataType #>().MinItem(p => p.<#= propName #>), minItem);
+            Assert.AreEqual(testData.As<#= dataType #>().MaxItem(p => p.<#= propName #>), maxItem);
+            
+        }
+
+<# } #>
+<# } #>
+<# } #>
+
+
+<# foreach (var (typeName, typeNameAsPascal) in new []{("float","Float"),("double","Double")}) { #>
+        [TestMethod]
+        public void MinMaxTextOf<#= typeNameAsPascal #>NaNValue()
+        {
+            var testArray = new[] 
+            { 
+                <#= typeName #>.MinValue, 
+                <#= typeName #>.MaxValue, 
+                <#= typeName #>.NegativeInfinity,
+                <#= typeName #>.NaN 
+            };
+            var nomalTestData = testArray.Select(p => new { Value = p }).ToArray();
+
+
+            var min = nomalTestData.Min(p => p.Value);
+            var max = nomalTestData.Max(p => p.Value);
+            var minItem = nomalTestData.First(p => <#= typeName #>.IsNaN(min) && <#= typeName #>.IsNaN(p.Value) || p.Value == min);
+            var maxItem = nomalTestData.First(p => <#= typeName #>.IsNaN(max) && <#= typeName #>.IsNaN(p.Value) || p.Value == max);
+
+            var (utillMin, utillMax) = nomalTestData.MinMax(p => p.Value);
+            var (utillMinItem, utillMaxItem) = nomalTestData.MinMaxItem(p => p.Value);
+
+            Assert.AreEqual(min, utillMin);
+            Assert.AreEqual(max, utillMax);
+            Assert.AreEqual(minItem, utillMinItem);
+            Assert.AreEqual(maxItem, utillMaxItem);
+            Assert.AreEqual(minItem, nomalTestData.MinItem(p => p.Value));
+            Assert.AreEqual(maxItem, nomalTestData.MaxItem(p => p.Value));
+
+        }
+
+<# } #>
+    }
+}
+
