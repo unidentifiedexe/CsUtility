@@ -23,7 +23,8 @@ namespace CsUtility.Enumerable
                 if (hasValue)
                 {
                     sbyte x = keySelector(item);
-                    					                    if (x < value )
+                    
+                    if (x < value )
                     {
                         value = x;
                         obj = item;
@@ -51,7 +52,8 @@ namespace CsUtility.Enumerable
                 if (hasValue)
                 {
                     sbyte? x = keySelector(item);
-                     if( x == null) continue; 					                    if (value == null || x < value )
+                    if( x == null) continue; 
+                    if (value == null || x < value )
                     {
                         value = x;
                         obj = item;
@@ -79,7 +81,8 @@ namespace CsUtility.Enumerable
                 if (hasValue)
                 {
                     byte x = keySelector(item);
-                    					                    if (x < value )
+                    
+                    if (x < value )
                     {
                         value = x;
                         obj = item;
@@ -107,7 +110,8 @@ namespace CsUtility.Enumerable
                 if (hasValue)
                 {
                     byte? x = keySelector(item);
-                     if( x == null) continue; 					                    if (value == null || x < value )
+                    if( x == null) continue; 
+                    if (value == null || x < value )
                     {
                         value = x;
                         obj = item;
@@ -135,7 +139,8 @@ namespace CsUtility.Enumerable
                 if (hasValue)
                 {
                     char x = keySelector(item);
-                    					                    if (x < value )
+                    
+                    if (x < value )
                     {
                         value = x;
                         obj = item;
@@ -163,7 +168,8 @@ namespace CsUtility.Enumerable
                 if (hasValue)
                 {
                     char? x = keySelector(item);
-                     if( x == null) continue; 					                    if (value == null || x < value )
+                    if( x == null) continue; 
+                    if (value == null || x < value )
                     {
                         value = x;
                         obj = item;
@@ -191,7 +197,8 @@ namespace CsUtility.Enumerable
                 if (hasValue)
                 {
                     short x = keySelector(item);
-                    					                    if (x < value )
+                    
+                    if (x < value )
                     {
                         value = x;
                         obj = item;
@@ -219,7 +226,8 @@ namespace CsUtility.Enumerable
                 if (hasValue)
                 {
                     short? x = keySelector(item);
-                     if( x == null) continue; 					                    if (value == null || x < value )
+                    if( x == null) continue; 
+                    if (value == null || x < value )
                     {
                         value = x;
                         obj = item;
@@ -247,7 +255,8 @@ namespace CsUtility.Enumerable
                 if (hasValue)
                 {
                     ushort x = keySelector(item);
-                    					                    if (x < value )
+                    
+                    if (x < value )
                     {
                         value = x;
                         obj = item;
@@ -275,7 +284,8 @@ namespace CsUtility.Enumerable
                 if (hasValue)
                 {
                     ushort? x = keySelector(item);
-                     if( x == null) continue; 					                    if (value == null || x < value )
+                    if( x == null) continue; 
+                    if (value == null || x < value )
                     {
                         value = x;
                         obj = item;
@@ -303,7 +313,8 @@ namespace CsUtility.Enumerable
                 if (hasValue)
                 {
                     int x = keySelector(item);
-                    					                    if (x < value )
+                    
+                    if (x < value )
                     {
                         value = x;
                         obj = item;
@@ -331,7 +342,8 @@ namespace CsUtility.Enumerable
                 if (hasValue)
                 {
                     int? x = keySelector(item);
-                     if( x == null) continue; 					                    if (value == null || x < value )
+                    if( x == null) continue; 
+                    if (value == null || x < value )
                     {
                         value = x;
                         obj = item;
@@ -359,7 +371,8 @@ namespace CsUtility.Enumerable
                 if (hasValue)
                 {
                     uint x = keySelector(item);
-                    					                    if (x < value )
+                    
+                    if (x < value )
                     {
                         value = x;
                         obj = item;
@@ -387,7 +400,8 @@ namespace CsUtility.Enumerable
                 if (hasValue)
                 {
                     uint? x = keySelector(item);
-                     if( x == null) continue; 					                    if (value == null || x < value )
+                    if( x == null) continue; 
+                    if (value == null || x < value )
                     {
                         value = x;
                         obj = item;
@@ -415,7 +429,8 @@ namespace CsUtility.Enumerable
                 if (hasValue)
                 {
                     long x = keySelector(item);
-                    					                    if (x < value )
+                    
+                    if (x < value )
                     {
                         value = x;
                         obj = item;
@@ -443,7 +458,8 @@ namespace CsUtility.Enumerable
                 if (hasValue)
                 {
                     long? x = keySelector(item);
-                     if( x == null) continue; 					                    if (value == null || x < value )
+                    if( x == null) continue; 
+                    if (value == null || x < value )
                     {
                         value = x;
                         obj = item;
@@ -471,7 +487,8 @@ namespace CsUtility.Enumerable
                 if (hasValue)
                 {
                     ulong x = keySelector(item);
-                    					                    if (x < value )
+                    
+                    if (x < value )
                     {
                         value = x;
                         obj = item;
@@ -499,7 +516,8 @@ namespace CsUtility.Enumerable
                 if (hasValue)
                 {
                     ulong? x = keySelector(item);
-                     if( x == null) continue; 					                    if (value == null || x < value )
+                    if( x == null) continue; 
+                    if (value == null || x < value )
                     {
                         value = x;
                         obj = item;
@@ -527,7 +545,8 @@ namespace CsUtility.Enumerable
                 if (hasValue)
                 {
                     float x = keySelector(item);
-                    					                    if (x < value  || float.IsNaN(x))
+                    
+                    if (x < value  || float.IsNaN(x))
                     {
                         value = x;
                         obj = item;
@@ -555,7 +574,8 @@ namespace CsUtility.Enumerable
                 if (hasValue)
                 {
                     float? x = keySelector(item);
-                     if( x == null) continue; 					                    if (value == null || x < value  || float.IsNaN(x.Value))
+                    if( x == null) continue; 
+                    if (value == null || x < value  || float.IsNaN(x.Value))
                     {
                         value = x;
                         obj = item;
@@ -583,7 +603,8 @@ namespace CsUtility.Enumerable
                 if (hasValue)
                 {
                     double x = keySelector(item);
-                    					                    if (x < value  || double.IsNaN(x))
+                    
+                    if (x < value  || double.IsNaN(x))
                     {
                         value = x;
                         obj = item;
@@ -611,7 +632,8 @@ namespace CsUtility.Enumerable
                 if (hasValue)
                 {
                     double? x = keySelector(item);
-                     if( x == null) continue; 					                    if (value == null || x < value  || double.IsNaN(x.Value))
+                    if( x == null) continue; 
+                    if (value == null || x < value  || double.IsNaN(x.Value))
                     {
                         value = x;
                         obj = item;
@@ -639,7 +661,8 @@ namespace CsUtility.Enumerable
                 if (hasValue)
                 {
                     decimal x = keySelector(item);
-                    					                    if (x < value )
+                    
+                    if (x < value )
                     {
                         value = x;
                         obj = item;
@@ -667,7 +690,8 @@ namespace CsUtility.Enumerable
                 if (hasValue)
                 {
                     decimal? x = keySelector(item);
-                     if( x == null) continue; 					                    if (value == null || x < value )
+                    if( x == null) continue; 
+                    if (value == null || x < value )
                     {
                         value = x;
                         obj = item;
@@ -698,7 +722,8 @@ namespace CsUtility.Enumerable
                 if (hasValue)
                 {
                     sbyte x = keySelector(item);
-                    					                    if (x > value )
+                    
+                    if (x > value )
                     {
                         value = x;
                         obj = item;
@@ -726,7 +751,8 @@ namespace CsUtility.Enumerable
                 if (hasValue)
                 {
                     sbyte? x = keySelector(item);
-                     if( x == null) continue; 					                    if (value == null || x > value )
+                    if( x == null) continue; 
+                    if (value == null || x > value )
                     {
                         value = x;
                         obj = item;
@@ -754,7 +780,8 @@ namespace CsUtility.Enumerable
                 if (hasValue)
                 {
                     byte x = keySelector(item);
-                    					                    if (x > value )
+                    
+                    if (x > value )
                     {
                         value = x;
                         obj = item;
@@ -782,7 +809,8 @@ namespace CsUtility.Enumerable
                 if (hasValue)
                 {
                     byte? x = keySelector(item);
-                     if( x == null) continue; 					                    if (value == null || x > value )
+                    if( x == null) continue; 
+                    if (value == null || x > value )
                     {
                         value = x;
                         obj = item;
@@ -810,7 +838,8 @@ namespace CsUtility.Enumerable
                 if (hasValue)
                 {
                     char x = keySelector(item);
-                    					                    if (x > value )
+                    
+                    if (x > value )
                     {
                         value = x;
                         obj = item;
@@ -838,7 +867,8 @@ namespace CsUtility.Enumerable
                 if (hasValue)
                 {
                     char? x = keySelector(item);
-                     if( x == null) continue; 					                    if (value == null || x > value )
+                    if( x == null) continue; 
+                    if (value == null || x > value )
                     {
                         value = x;
                         obj = item;
@@ -866,7 +896,8 @@ namespace CsUtility.Enumerable
                 if (hasValue)
                 {
                     short x = keySelector(item);
-                    					                    if (x > value )
+                    
+                    if (x > value )
                     {
                         value = x;
                         obj = item;
@@ -894,7 +925,8 @@ namespace CsUtility.Enumerable
                 if (hasValue)
                 {
                     short? x = keySelector(item);
-                     if( x == null) continue; 					                    if (value == null || x > value )
+                    if( x == null) continue; 
+                    if (value == null || x > value )
                     {
                         value = x;
                         obj = item;
@@ -922,7 +954,8 @@ namespace CsUtility.Enumerable
                 if (hasValue)
                 {
                     ushort x = keySelector(item);
-                    					                    if (x > value )
+                    
+                    if (x > value )
                     {
                         value = x;
                         obj = item;
@@ -950,7 +983,8 @@ namespace CsUtility.Enumerable
                 if (hasValue)
                 {
                     ushort? x = keySelector(item);
-                     if( x == null) continue; 					                    if (value == null || x > value )
+                    if( x == null) continue; 
+                    if (value == null || x > value )
                     {
                         value = x;
                         obj = item;
@@ -978,7 +1012,8 @@ namespace CsUtility.Enumerable
                 if (hasValue)
                 {
                     int x = keySelector(item);
-                    					                    if (x > value )
+                    
+                    if (x > value )
                     {
                         value = x;
                         obj = item;
@@ -1006,7 +1041,8 @@ namespace CsUtility.Enumerable
                 if (hasValue)
                 {
                     int? x = keySelector(item);
-                     if( x == null) continue; 					                    if (value == null || x > value )
+                    if( x == null) continue; 
+                    if (value == null || x > value )
                     {
                         value = x;
                         obj = item;
@@ -1034,7 +1070,8 @@ namespace CsUtility.Enumerable
                 if (hasValue)
                 {
                     uint x = keySelector(item);
-                    					                    if (x > value )
+                    
+                    if (x > value )
                     {
                         value = x;
                         obj = item;
@@ -1062,7 +1099,8 @@ namespace CsUtility.Enumerable
                 if (hasValue)
                 {
                     uint? x = keySelector(item);
-                     if( x == null) continue; 					                    if (value == null || x > value )
+                    if( x == null) continue; 
+                    if (value == null || x > value )
                     {
                         value = x;
                         obj = item;
@@ -1090,7 +1128,8 @@ namespace CsUtility.Enumerable
                 if (hasValue)
                 {
                     long x = keySelector(item);
-                    					                    if (x > value )
+                    
+                    if (x > value )
                     {
                         value = x;
                         obj = item;
@@ -1118,7 +1157,8 @@ namespace CsUtility.Enumerable
                 if (hasValue)
                 {
                     long? x = keySelector(item);
-                     if( x == null) continue; 					                    if (value == null || x > value )
+                    if( x == null) continue; 
+                    if (value == null || x > value )
                     {
                         value = x;
                         obj = item;
@@ -1146,7 +1186,8 @@ namespace CsUtility.Enumerable
                 if (hasValue)
                 {
                     ulong x = keySelector(item);
-                    					                    if (x > value )
+                    
+                    if (x > value )
                     {
                         value = x;
                         obj = item;
@@ -1174,7 +1215,8 @@ namespace CsUtility.Enumerable
                 if (hasValue)
                 {
                     ulong? x = keySelector(item);
-                     if( x == null) continue; 					                    if (value == null || x > value )
+                    if( x == null) continue; 
+                    if (value == null || x > value )
                     {
                         value = x;
                         obj = item;
@@ -1202,7 +1244,8 @@ namespace CsUtility.Enumerable
                 if (hasValue)
                 {
                     float x = keySelector(item);
-                    					                    if (x > value  || float.IsNaN(value))
+                    
+                    if (x > value  || float.IsNaN(value))
                     {
                         value = x;
                         obj = item;
@@ -1230,7 +1273,8 @@ namespace CsUtility.Enumerable
                 if (hasValue)
                 {
                     float? x = keySelector(item);
-                     if( x == null) continue; 					                    if (value == null || x > value  || float.IsNaN(value.Value))
+                    if( x == null) continue; 
+                    if (value == null || x > value  || float.IsNaN(value.Value))
                     {
                         value = x;
                         obj = item;
@@ -1258,7 +1302,8 @@ namespace CsUtility.Enumerable
                 if (hasValue)
                 {
                     double x = keySelector(item);
-                    					                    if (x > value  || double.IsNaN(value))
+                    
+                    if (x > value  || double.IsNaN(value))
                     {
                         value = x;
                         obj = item;
@@ -1286,7 +1331,8 @@ namespace CsUtility.Enumerable
                 if (hasValue)
                 {
                     double? x = keySelector(item);
-                     if( x == null) continue; 					                    if (value == null || x > value  || double.IsNaN(value.Value))
+                    if( x == null) continue; 
+                    if (value == null || x > value  || double.IsNaN(value.Value))
                     {
                         value = x;
                         obj = item;
@@ -1314,7 +1360,8 @@ namespace CsUtility.Enumerable
                 if (hasValue)
                 {
                     decimal x = keySelector(item);
-                    					                    if (x > value )
+                    
+                    if (x > value )
                     {
                         value = x;
                         obj = item;
@@ -1342,7 +1389,8 @@ namespace CsUtility.Enumerable
                 if (hasValue)
                 {
                     decimal? x = keySelector(item);
-                     if( x == null) continue; 					                    if (value == null || x > value )
+                    if( x == null) continue; 
+                    if (value == null || x > value )
                     {
                         value = x;
                         obj = item;
@@ -1362,129 +1410,129 @@ namespace CsUtility.Enumerable
         #endregion
 
         #region MinMax
-        public static MinMaxTuple<sbyte> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, sbyte> selector) 
+        public static MinMaxPair<sbyte> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, sbyte> selector) 
         {
             return MinMax(System.Linq.Enumerable.Select(source, selector));
         }
 
-        public static MinMaxTuple<sbyte?> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, sbyte?> selector) 
+        public static MinMaxPair<sbyte?> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, sbyte?> selector) 
         {
             return MinMax(System.Linq.Enumerable.Select(source, selector));
         }
 
-        public static MinMaxTuple<byte> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, byte> selector) 
+        public static MinMaxPair<byte> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, byte> selector) 
         {
             return MinMax(System.Linq.Enumerable.Select(source, selector));
         }
 
-        public static MinMaxTuple<byte?> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, byte?> selector) 
+        public static MinMaxPair<byte?> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, byte?> selector) 
         {
             return MinMax(System.Linq.Enumerable.Select(source, selector));
         }
 
-        public static MinMaxTuple<char> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, char> selector) 
+        public static MinMaxPair<char> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, char> selector) 
         {
             return MinMax(System.Linq.Enumerable.Select(source, selector));
         }
 
-        public static MinMaxTuple<char?> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, char?> selector) 
+        public static MinMaxPair<char?> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, char?> selector) 
         {
             return MinMax(System.Linq.Enumerable.Select(source, selector));
         }
 
-        public static MinMaxTuple<short> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, short> selector) 
+        public static MinMaxPair<short> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, short> selector) 
         {
             return MinMax(System.Linq.Enumerable.Select(source, selector));
         }
 
-        public static MinMaxTuple<short?> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, short?> selector) 
+        public static MinMaxPair<short?> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, short?> selector) 
         {
             return MinMax(System.Linq.Enumerable.Select(source, selector));
         }
 
-        public static MinMaxTuple<ushort> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, ushort> selector) 
+        public static MinMaxPair<ushort> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, ushort> selector) 
         {
             return MinMax(System.Linq.Enumerable.Select(source, selector));
         }
 
-        public static MinMaxTuple<ushort?> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, ushort?> selector) 
+        public static MinMaxPair<ushort?> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, ushort?> selector) 
         {
             return MinMax(System.Linq.Enumerable.Select(source, selector));
         }
 
-        public static MinMaxTuple<int> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, int> selector) 
+        public static MinMaxPair<int> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, int> selector) 
         {
             return MinMax(System.Linq.Enumerable.Select(source, selector));
         }
 
-        public static MinMaxTuple<int?> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, int?> selector) 
+        public static MinMaxPair<int?> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, int?> selector) 
         {
             return MinMax(System.Linq.Enumerable.Select(source, selector));
         }
 
-        public static MinMaxTuple<uint> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, uint> selector) 
+        public static MinMaxPair<uint> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, uint> selector) 
         {
             return MinMax(System.Linq.Enumerable.Select(source, selector));
         }
 
-        public static MinMaxTuple<uint?> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, uint?> selector) 
+        public static MinMaxPair<uint?> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, uint?> selector) 
         {
             return MinMax(System.Linq.Enumerable.Select(source, selector));
         }
 
-        public static MinMaxTuple<long> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, long> selector) 
+        public static MinMaxPair<long> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, long> selector) 
         {
             return MinMax(System.Linq.Enumerable.Select(source, selector));
         }
 
-        public static MinMaxTuple<long?> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, long?> selector) 
+        public static MinMaxPair<long?> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, long?> selector) 
         {
             return MinMax(System.Linq.Enumerable.Select(source, selector));
         }
 
-        public static MinMaxTuple<ulong> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, ulong> selector) 
+        public static MinMaxPair<ulong> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, ulong> selector) 
         {
             return MinMax(System.Linq.Enumerable.Select(source, selector));
         }
 
-        public static MinMaxTuple<ulong?> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, ulong?> selector) 
+        public static MinMaxPair<ulong?> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, ulong?> selector) 
         {
             return MinMax(System.Linq.Enumerable.Select(source, selector));
         }
 
-        public static MinMaxTuple<float> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, float> selector) 
+        public static MinMaxPair<float> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, float> selector) 
         {
             return MinMax(System.Linq.Enumerable.Select(source, selector));
         }
 
-        public static MinMaxTuple<float?> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, float?> selector) 
+        public static MinMaxPair<float?> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, float?> selector) 
         {
             return MinMax(System.Linq.Enumerable.Select(source, selector));
         }
 
-        public static MinMaxTuple<double> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, double> selector) 
+        public static MinMaxPair<double> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, double> selector) 
         {
             return MinMax(System.Linq.Enumerable.Select(source, selector));
         }
 
-        public static MinMaxTuple<double?> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, double?> selector) 
+        public static MinMaxPair<double?> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, double?> selector) 
         {
             return MinMax(System.Linq.Enumerable.Select(source, selector));
         }
 
-        public static MinMaxTuple<decimal> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, decimal> selector) 
+        public static MinMaxPair<decimal> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, decimal> selector) 
         {
             return MinMax(System.Linq.Enumerable.Select(source, selector));
         }
 
-        public static MinMaxTuple<decimal?> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, decimal?> selector) 
+        public static MinMaxPair<decimal?> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, decimal?> selector) 
         {
             return MinMax(System.Linq.Enumerable.Select(source, selector));
         }
 
 
 
-        public static MinMaxTuple<sbyte> MinMax(this IEnumerable<sbyte> source) 
+        public static MinMaxPair<sbyte> MinMax(this IEnumerable<sbyte> source) 
         {
             if (source == null) throw new ArgumentNullException("source");
             sbyte min = default(sbyte);
@@ -1494,7 +1542,7 @@ namespace CsUtility.Enumerable
             {
                 if (hasValue) 
                 {
-										 
+                     
                     if (x < min ) min = x;
                     if (x > max ) max = x;
                 }
@@ -1505,10 +1553,10 @@ namespace CsUtility.Enumerable
                     hasValue = true;
                 }
             }
-            if (hasValue) return new MinMaxTuple<sbyte>(min, max);
+            if (hasValue) return new MinMaxPair<sbyte>(min, max);
             throw new ArgumentException("No element");
         }
-        public static MinMaxTuple<sbyte?> MinMax(this IEnumerable<sbyte?> source) 
+        public static MinMaxPair<sbyte?> MinMax(this IEnumerable<sbyte?> source) 
         {
             if (source == null) throw new ArgumentNullException("source");
             sbyte? min = default(sbyte?);
@@ -1518,7 +1566,7 @@ namespace CsUtility.Enumerable
             {
                 if (hasValue) 
                 {
-					 if( x == null) continue; 					 
+                    if( x == null) continue;  
                     if ( min == null || x < min ) min = x;
                     if ( max == null || x > max ) max = x;
                 }
@@ -1529,10 +1577,10 @@ namespace CsUtility.Enumerable
                     hasValue = true;
                 }
             }
-            if (hasValue) return new MinMaxTuple<sbyte?>(min, max);
+            if (hasValue) return new MinMaxPair<sbyte?>(min, max);
             throw new ArgumentException("No element");
         }
-        public static MinMaxTuple<byte> MinMax(this IEnumerable<byte> source) 
+        public static MinMaxPair<byte> MinMax(this IEnumerable<byte> source) 
         {
             if (source == null) throw new ArgumentNullException("source");
             byte min = default(byte);
@@ -1542,7 +1590,7 @@ namespace CsUtility.Enumerable
             {
                 if (hasValue) 
                 {
-										 
+                     
                     if (x < min ) min = x;
                     if (x > max ) max = x;
                 }
@@ -1553,10 +1601,10 @@ namespace CsUtility.Enumerable
                     hasValue = true;
                 }
             }
-            if (hasValue) return new MinMaxTuple<byte>(min, max);
+            if (hasValue) return new MinMaxPair<byte>(min, max);
             throw new ArgumentException("No element");
         }
-        public static MinMaxTuple<byte?> MinMax(this IEnumerable<byte?> source) 
+        public static MinMaxPair<byte?> MinMax(this IEnumerable<byte?> source) 
         {
             if (source == null) throw new ArgumentNullException("source");
             byte? min = default(byte?);
@@ -1566,7 +1614,7 @@ namespace CsUtility.Enumerable
             {
                 if (hasValue) 
                 {
-					 if( x == null) continue; 					 
+                    if( x == null) continue;  
                     if ( min == null || x < min ) min = x;
                     if ( max == null || x > max ) max = x;
                 }
@@ -1577,10 +1625,10 @@ namespace CsUtility.Enumerable
                     hasValue = true;
                 }
             }
-            if (hasValue) return new MinMaxTuple<byte?>(min, max);
+            if (hasValue) return new MinMaxPair<byte?>(min, max);
             throw new ArgumentException("No element");
         }
-        public static MinMaxTuple<char> MinMax(this IEnumerable<char> source) 
+        public static MinMaxPair<char> MinMax(this IEnumerable<char> source) 
         {
             if (source == null) throw new ArgumentNullException("source");
             char min = default(char);
@@ -1590,7 +1638,7 @@ namespace CsUtility.Enumerable
             {
                 if (hasValue) 
                 {
-										 
+                     
                     if (x < min ) min = x;
                     if (x > max ) max = x;
                 }
@@ -1601,10 +1649,10 @@ namespace CsUtility.Enumerable
                     hasValue = true;
                 }
             }
-            if (hasValue) return new MinMaxTuple<char>(min, max);
+            if (hasValue) return new MinMaxPair<char>(min, max);
             throw new ArgumentException("No element");
         }
-        public static MinMaxTuple<char?> MinMax(this IEnumerable<char?> source) 
+        public static MinMaxPair<char?> MinMax(this IEnumerable<char?> source) 
         {
             if (source == null) throw new ArgumentNullException("source");
             char? min = default(char?);
@@ -1614,7 +1662,7 @@ namespace CsUtility.Enumerable
             {
                 if (hasValue) 
                 {
-					 if( x == null) continue; 					 
+                    if( x == null) continue;  
                     if ( min == null || x < min ) min = x;
                     if ( max == null || x > max ) max = x;
                 }
@@ -1625,10 +1673,10 @@ namespace CsUtility.Enumerable
                     hasValue = true;
                 }
             }
-            if (hasValue) return new MinMaxTuple<char?>(min, max);
+            if (hasValue) return new MinMaxPair<char?>(min, max);
             throw new ArgumentException("No element");
         }
-        public static MinMaxTuple<short> MinMax(this IEnumerable<short> source) 
+        public static MinMaxPair<short> MinMax(this IEnumerable<short> source) 
         {
             if (source == null) throw new ArgumentNullException("source");
             short min = default(short);
@@ -1638,7 +1686,7 @@ namespace CsUtility.Enumerable
             {
                 if (hasValue) 
                 {
-										 
+                     
                     if (x < min ) min = x;
                     if (x > max ) max = x;
                 }
@@ -1649,10 +1697,10 @@ namespace CsUtility.Enumerable
                     hasValue = true;
                 }
             }
-            if (hasValue) return new MinMaxTuple<short>(min, max);
+            if (hasValue) return new MinMaxPair<short>(min, max);
             throw new ArgumentException("No element");
         }
-        public static MinMaxTuple<short?> MinMax(this IEnumerable<short?> source) 
+        public static MinMaxPair<short?> MinMax(this IEnumerable<short?> source) 
         {
             if (source == null) throw new ArgumentNullException("source");
             short? min = default(short?);
@@ -1662,7 +1710,7 @@ namespace CsUtility.Enumerable
             {
                 if (hasValue) 
                 {
-					 if( x == null) continue; 					 
+                    if( x == null) continue;  
                     if ( min == null || x < min ) min = x;
                     if ( max == null || x > max ) max = x;
                 }
@@ -1673,10 +1721,10 @@ namespace CsUtility.Enumerable
                     hasValue = true;
                 }
             }
-            if (hasValue) return new MinMaxTuple<short?>(min, max);
+            if (hasValue) return new MinMaxPair<short?>(min, max);
             throw new ArgumentException("No element");
         }
-        public static MinMaxTuple<ushort> MinMax(this IEnumerable<ushort> source) 
+        public static MinMaxPair<ushort> MinMax(this IEnumerable<ushort> source) 
         {
             if (source == null) throw new ArgumentNullException("source");
             ushort min = default(ushort);
@@ -1686,7 +1734,7 @@ namespace CsUtility.Enumerable
             {
                 if (hasValue) 
                 {
-										 
+                     
                     if (x < min ) min = x;
                     if (x > max ) max = x;
                 }
@@ -1697,10 +1745,10 @@ namespace CsUtility.Enumerable
                     hasValue = true;
                 }
             }
-            if (hasValue) return new MinMaxTuple<ushort>(min, max);
+            if (hasValue) return new MinMaxPair<ushort>(min, max);
             throw new ArgumentException("No element");
         }
-        public static MinMaxTuple<ushort?> MinMax(this IEnumerable<ushort?> source) 
+        public static MinMaxPair<ushort?> MinMax(this IEnumerable<ushort?> source) 
         {
             if (source == null) throw new ArgumentNullException("source");
             ushort? min = default(ushort?);
@@ -1710,7 +1758,7 @@ namespace CsUtility.Enumerable
             {
                 if (hasValue) 
                 {
-					 if( x == null) continue; 					 
+                    if( x == null) continue;  
                     if ( min == null || x < min ) min = x;
                     if ( max == null || x > max ) max = x;
                 }
@@ -1721,10 +1769,10 @@ namespace CsUtility.Enumerable
                     hasValue = true;
                 }
             }
-            if (hasValue) return new MinMaxTuple<ushort?>(min, max);
+            if (hasValue) return new MinMaxPair<ushort?>(min, max);
             throw new ArgumentException("No element");
         }
-        public static MinMaxTuple<int> MinMax(this IEnumerable<int> source) 
+        public static MinMaxPair<int> MinMax(this IEnumerable<int> source) 
         {
             if (source == null) throw new ArgumentNullException("source");
             int min = default(int);
@@ -1734,7 +1782,7 @@ namespace CsUtility.Enumerable
             {
                 if (hasValue) 
                 {
-										 
+                     
                     if (x < min ) min = x;
                     if (x > max ) max = x;
                 }
@@ -1745,10 +1793,10 @@ namespace CsUtility.Enumerable
                     hasValue = true;
                 }
             }
-            if (hasValue) return new MinMaxTuple<int>(min, max);
+            if (hasValue) return new MinMaxPair<int>(min, max);
             throw new ArgumentException("No element");
         }
-        public static MinMaxTuple<int?> MinMax(this IEnumerable<int?> source) 
+        public static MinMaxPair<int?> MinMax(this IEnumerable<int?> source) 
         {
             if (source == null) throw new ArgumentNullException("source");
             int? min = default(int?);
@@ -1758,7 +1806,7 @@ namespace CsUtility.Enumerable
             {
                 if (hasValue) 
                 {
-					 if( x == null) continue; 					 
+                    if( x == null) continue;  
                     if ( min == null || x < min ) min = x;
                     if ( max == null || x > max ) max = x;
                 }
@@ -1769,10 +1817,10 @@ namespace CsUtility.Enumerable
                     hasValue = true;
                 }
             }
-            if (hasValue) return new MinMaxTuple<int?>(min, max);
+            if (hasValue) return new MinMaxPair<int?>(min, max);
             throw new ArgumentException("No element");
         }
-        public static MinMaxTuple<uint> MinMax(this IEnumerable<uint> source) 
+        public static MinMaxPair<uint> MinMax(this IEnumerable<uint> source) 
         {
             if (source == null) throw new ArgumentNullException("source");
             uint min = default(uint);
@@ -1782,7 +1830,7 @@ namespace CsUtility.Enumerable
             {
                 if (hasValue) 
                 {
-										 
+                     
                     if (x < min ) min = x;
                     if (x > max ) max = x;
                 }
@@ -1793,10 +1841,10 @@ namespace CsUtility.Enumerable
                     hasValue = true;
                 }
             }
-            if (hasValue) return new MinMaxTuple<uint>(min, max);
+            if (hasValue) return new MinMaxPair<uint>(min, max);
             throw new ArgumentException("No element");
         }
-        public static MinMaxTuple<uint?> MinMax(this IEnumerable<uint?> source) 
+        public static MinMaxPair<uint?> MinMax(this IEnumerable<uint?> source) 
         {
             if (source == null) throw new ArgumentNullException("source");
             uint? min = default(uint?);
@@ -1806,7 +1854,7 @@ namespace CsUtility.Enumerable
             {
                 if (hasValue) 
                 {
-					 if( x == null) continue; 					 
+                    if( x == null) continue;  
                     if ( min == null || x < min ) min = x;
                     if ( max == null || x > max ) max = x;
                 }
@@ -1817,10 +1865,10 @@ namespace CsUtility.Enumerable
                     hasValue = true;
                 }
             }
-            if (hasValue) return new MinMaxTuple<uint?>(min, max);
+            if (hasValue) return new MinMaxPair<uint?>(min, max);
             throw new ArgumentException("No element");
         }
-        public static MinMaxTuple<long> MinMax(this IEnumerable<long> source) 
+        public static MinMaxPair<long> MinMax(this IEnumerable<long> source) 
         {
             if (source == null) throw new ArgumentNullException("source");
             long min = default(long);
@@ -1830,7 +1878,7 @@ namespace CsUtility.Enumerable
             {
                 if (hasValue) 
                 {
-										 
+                     
                     if (x < min ) min = x;
                     if (x > max ) max = x;
                 }
@@ -1841,10 +1889,10 @@ namespace CsUtility.Enumerable
                     hasValue = true;
                 }
             }
-            if (hasValue) return new MinMaxTuple<long>(min, max);
+            if (hasValue) return new MinMaxPair<long>(min, max);
             throw new ArgumentException("No element");
         }
-        public static MinMaxTuple<long?> MinMax(this IEnumerable<long?> source) 
+        public static MinMaxPair<long?> MinMax(this IEnumerable<long?> source) 
         {
             if (source == null) throw new ArgumentNullException("source");
             long? min = default(long?);
@@ -1854,7 +1902,7 @@ namespace CsUtility.Enumerable
             {
                 if (hasValue) 
                 {
-					 if( x == null) continue; 					 
+                    if( x == null) continue;  
                     if ( min == null || x < min ) min = x;
                     if ( max == null || x > max ) max = x;
                 }
@@ -1865,10 +1913,10 @@ namespace CsUtility.Enumerable
                     hasValue = true;
                 }
             }
-            if (hasValue) return new MinMaxTuple<long?>(min, max);
+            if (hasValue) return new MinMaxPair<long?>(min, max);
             throw new ArgumentException("No element");
         }
-        public static MinMaxTuple<ulong> MinMax(this IEnumerable<ulong> source) 
+        public static MinMaxPair<ulong> MinMax(this IEnumerable<ulong> source) 
         {
             if (source == null) throw new ArgumentNullException("source");
             ulong min = default(ulong);
@@ -1878,7 +1926,7 @@ namespace CsUtility.Enumerable
             {
                 if (hasValue) 
                 {
-										 
+                     
                     if (x < min ) min = x;
                     if (x > max ) max = x;
                 }
@@ -1889,10 +1937,10 @@ namespace CsUtility.Enumerable
                     hasValue = true;
                 }
             }
-            if (hasValue) return new MinMaxTuple<ulong>(min, max);
+            if (hasValue) return new MinMaxPair<ulong>(min, max);
             throw new ArgumentException("No element");
         }
-        public static MinMaxTuple<ulong?> MinMax(this IEnumerable<ulong?> source) 
+        public static MinMaxPair<ulong?> MinMax(this IEnumerable<ulong?> source) 
         {
             if (source == null) throw new ArgumentNullException("source");
             ulong? min = default(ulong?);
@@ -1902,7 +1950,7 @@ namespace CsUtility.Enumerable
             {
                 if (hasValue) 
                 {
-					 if( x == null) continue; 					 
+                    if( x == null) continue;  
                     if ( min == null || x < min ) min = x;
                     if ( max == null || x > max ) max = x;
                 }
@@ -1913,10 +1961,10 @@ namespace CsUtility.Enumerable
                     hasValue = true;
                 }
             }
-            if (hasValue) return new MinMaxTuple<ulong?>(min, max);
+            if (hasValue) return new MinMaxPair<ulong?>(min, max);
             throw new ArgumentException("No element");
         }
-        public static MinMaxTuple<float> MinMax(this IEnumerable<float> source) 
+        public static MinMaxPair<float> MinMax(this IEnumerable<float> source) 
         {
             if (source == null) throw new ArgumentNullException("source");
             float min = default(float);
@@ -1926,7 +1974,7 @@ namespace CsUtility.Enumerable
             {
                 if (hasValue) 
                 {
-										 
+                     
                     if (x < min  || float.IsNaN(x)) min = x;
                     if (x > max  || float.IsNaN(max)) max = x;
                 }
@@ -1937,10 +1985,10 @@ namespace CsUtility.Enumerable
                     hasValue = true;
                 }
             }
-            if (hasValue) return new MinMaxTuple<float>(min, max);
+            if (hasValue) return new MinMaxPair<float>(min, max);
             throw new ArgumentException("No element");
         }
-        public static MinMaxTuple<float?> MinMax(this IEnumerable<float?> source) 
+        public static MinMaxPair<float?> MinMax(this IEnumerable<float?> source) 
         {
             if (source == null) throw new ArgumentNullException("source");
             float? min = default(float?);
@@ -1950,7 +1998,7 @@ namespace CsUtility.Enumerable
             {
                 if (hasValue) 
                 {
-					 if( x == null) continue; 					 
+                    if( x == null) continue;  
                     if ( min == null || x < min  || float.IsNaN(x.Value)) min = x;
                     if ( max == null || x > max  || float.IsNaN(max.Value)) max = x;
                 }
@@ -1961,10 +2009,10 @@ namespace CsUtility.Enumerable
                     hasValue = true;
                 }
             }
-            if (hasValue) return new MinMaxTuple<float?>(min, max);
+            if (hasValue) return new MinMaxPair<float?>(min, max);
             throw new ArgumentException("No element");
         }
-        public static MinMaxTuple<double> MinMax(this IEnumerable<double> source) 
+        public static MinMaxPair<double> MinMax(this IEnumerable<double> source) 
         {
             if (source == null) throw new ArgumentNullException("source");
             double min = default(double);
@@ -1974,7 +2022,7 @@ namespace CsUtility.Enumerable
             {
                 if (hasValue) 
                 {
-										 
+                     
                     if (x < min  || double.IsNaN(x)) min = x;
                     if (x > max  || double.IsNaN(max)) max = x;
                 }
@@ -1985,10 +2033,10 @@ namespace CsUtility.Enumerable
                     hasValue = true;
                 }
             }
-            if (hasValue) return new MinMaxTuple<double>(min, max);
+            if (hasValue) return new MinMaxPair<double>(min, max);
             throw new ArgumentException("No element");
         }
-        public static MinMaxTuple<double?> MinMax(this IEnumerable<double?> source) 
+        public static MinMaxPair<double?> MinMax(this IEnumerable<double?> source) 
         {
             if (source == null) throw new ArgumentNullException("source");
             double? min = default(double?);
@@ -1998,7 +2046,7 @@ namespace CsUtility.Enumerable
             {
                 if (hasValue) 
                 {
-					 if( x == null) continue; 					 
+                    if( x == null) continue;  
                     if ( min == null || x < min  || double.IsNaN(x.Value)) min = x;
                     if ( max == null || x > max  || double.IsNaN(max.Value)) max = x;
                 }
@@ -2009,10 +2057,10 @@ namespace CsUtility.Enumerable
                     hasValue = true;
                 }
             }
-            if (hasValue) return new MinMaxTuple<double?>(min, max);
+            if (hasValue) return new MinMaxPair<double?>(min, max);
             throw new ArgumentException("No element");
         }
-        public static MinMaxTuple<decimal> MinMax(this IEnumerable<decimal> source) 
+        public static MinMaxPair<decimal> MinMax(this IEnumerable<decimal> source) 
         {
             if (source == null) throw new ArgumentNullException("source");
             decimal min = default(decimal);
@@ -2022,7 +2070,7 @@ namespace CsUtility.Enumerable
             {
                 if (hasValue) 
                 {
-										 
+                     
                     if (x < min ) min = x;
                     if (x > max ) max = x;
                 }
@@ -2033,10 +2081,10 @@ namespace CsUtility.Enumerable
                     hasValue = true;
                 }
             }
-            if (hasValue) return new MinMaxTuple<decimal>(min, max);
+            if (hasValue) return new MinMaxPair<decimal>(min, max);
             throw new ArgumentException("No element");
         }
-        public static MinMaxTuple<decimal?> MinMax(this IEnumerable<decimal?> source) 
+        public static MinMaxPair<decimal?> MinMax(this IEnumerable<decimal?> source) 
         {
             if (source == null) throw new ArgumentNullException("source");
             decimal? min = default(decimal?);
@@ -2046,7 +2094,7 @@ namespace CsUtility.Enumerable
             {
                 if (hasValue) 
                 {
-					 if( x == null) continue; 					 
+                    if( x == null) continue;  
                     if ( min == null || x < min ) min = x;
                     if ( max == null || x > max ) max = x;
                 }
@@ -2057,29 +2105,15 @@ namespace CsUtility.Enumerable
                     hasValue = true;
                 }
             }
-            if (hasValue) return new MinMaxTuple<decimal?>(min, max);
+            if (hasValue) return new MinMaxPair<decimal?>(min, max);
             throw new ArgumentException("No element");
-        }
-        public struct MinMaxTuple<T>
-        {
-            public T Min { get; }
-            public T Max { get; }
-
-            internal MinMaxTuple(T min, T max )
-            {
-                Min = min;
-                Max = max;
-            }
-
-            public void Deconstruct(out T min, out T max) => (min, max) = (Min, Max);
-
         }
         
         #endregion
 
         #region MinMaxItem
 
-        public static MinMaxTuple<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, sbyte> selector) 
+        public static MinMaxPair<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, sbyte> selector) 
         {
             if (source == null) throw new ArgumentNullException("source");
             sbyte min = default(sbyte);
@@ -2093,8 +2127,7 @@ namespace CsUtility.Enumerable
                 x = selector(item);
                 if (hasValue) 
                 {
-				
-										 
+                     
                     if (x < min ) {min = x; minItem = item;}
                     if (x > max ) {max = x; maxItem = item;}
                 }
@@ -2107,11 +2140,11 @@ namespace CsUtility.Enumerable
                     maxItem = item;
                 }
             }
-            if (hasValue) return new MinMaxTuple<TSource>(minItem, maxItem);
+            if (hasValue) return new MinMaxPair<TSource>(minItem, maxItem);
             throw new ArgumentException("No element");
         }
 
-        public static MinMaxTuple<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, sbyte?> selector) 
+        public static MinMaxPair<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, sbyte?> selector) 
         {
             if (source == null) throw new ArgumentNullException("source");
             sbyte? min = default(sbyte?);
@@ -2125,8 +2158,7 @@ namespace CsUtility.Enumerable
                 x = selector(item);
                 if (hasValue) 
                 {
-				
-					 if( x == null)continue; 					 
+                    if( x == null)continue;  
                     if ( min == null || x < min ) {min = x; minItem = item;}
                     if ( max == null || x > max ) {max = x; maxItem = item;}
                 }
@@ -2139,11 +2171,11 @@ namespace CsUtility.Enumerable
                     maxItem = item;
                 }
             }
-            if (hasValue) return new MinMaxTuple<TSource>(minItem, maxItem);
+            if (hasValue) return new MinMaxPair<TSource>(minItem, maxItem);
             throw new ArgumentException("No element");
         }
 
-        public static MinMaxTuple<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, byte> selector) 
+        public static MinMaxPair<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, byte> selector) 
         {
             if (source == null) throw new ArgumentNullException("source");
             byte min = default(byte);
@@ -2157,8 +2189,7 @@ namespace CsUtility.Enumerable
                 x = selector(item);
                 if (hasValue) 
                 {
-				
-										 
+                     
                     if (x < min ) {min = x; minItem = item;}
                     if (x > max ) {max = x; maxItem = item;}
                 }
@@ -2171,11 +2202,11 @@ namespace CsUtility.Enumerable
                     maxItem = item;
                 }
             }
-            if (hasValue) return new MinMaxTuple<TSource>(minItem, maxItem);
+            if (hasValue) return new MinMaxPair<TSource>(minItem, maxItem);
             throw new ArgumentException("No element");
         }
 
-        public static MinMaxTuple<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, byte?> selector) 
+        public static MinMaxPair<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, byte?> selector) 
         {
             if (source == null) throw new ArgumentNullException("source");
             byte? min = default(byte?);
@@ -2189,8 +2220,7 @@ namespace CsUtility.Enumerable
                 x = selector(item);
                 if (hasValue) 
                 {
-				
-					 if( x == null)continue; 					 
+                    if( x == null)continue;  
                     if ( min == null || x < min ) {min = x; minItem = item;}
                     if ( max == null || x > max ) {max = x; maxItem = item;}
                 }
@@ -2203,11 +2233,11 @@ namespace CsUtility.Enumerable
                     maxItem = item;
                 }
             }
-            if (hasValue) return new MinMaxTuple<TSource>(minItem, maxItem);
+            if (hasValue) return new MinMaxPair<TSource>(minItem, maxItem);
             throw new ArgumentException("No element");
         }
 
-        public static MinMaxTuple<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, char> selector) 
+        public static MinMaxPair<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, char> selector) 
         {
             if (source == null) throw new ArgumentNullException("source");
             char min = default(char);
@@ -2221,8 +2251,7 @@ namespace CsUtility.Enumerable
                 x = selector(item);
                 if (hasValue) 
                 {
-				
-										 
+                     
                     if (x < min ) {min = x; minItem = item;}
                     if (x > max ) {max = x; maxItem = item;}
                 }
@@ -2235,11 +2264,11 @@ namespace CsUtility.Enumerable
                     maxItem = item;
                 }
             }
-            if (hasValue) return new MinMaxTuple<TSource>(minItem, maxItem);
+            if (hasValue) return new MinMaxPair<TSource>(minItem, maxItem);
             throw new ArgumentException("No element");
         }
 
-        public static MinMaxTuple<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, char?> selector) 
+        public static MinMaxPair<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, char?> selector) 
         {
             if (source == null) throw new ArgumentNullException("source");
             char? min = default(char?);
@@ -2253,8 +2282,7 @@ namespace CsUtility.Enumerable
                 x = selector(item);
                 if (hasValue) 
                 {
-				
-					 if( x == null)continue; 					 
+                    if( x == null)continue;  
                     if ( min == null || x < min ) {min = x; minItem = item;}
                     if ( max == null || x > max ) {max = x; maxItem = item;}
                 }
@@ -2267,11 +2295,11 @@ namespace CsUtility.Enumerable
                     maxItem = item;
                 }
             }
-            if (hasValue) return new MinMaxTuple<TSource>(minItem, maxItem);
+            if (hasValue) return new MinMaxPair<TSource>(minItem, maxItem);
             throw new ArgumentException("No element");
         }
 
-        public static MinMaxTuple<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, short> selector) 
+        public static MinMaxPair<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, short> selector) 
         {
             if (source == null) throw new ArgumentNullException("source");
             short min = default(short);
@@ -2285,8 +2313,7 @@ namespace CsUtility.Enumerable
                 x = selector(item);
                 if (hasValue) 
                 {
-				
-										 
+                     
                     if (x < min ) {min = x; minItem = item;}
                     if (x > max ) {max = x; maxItem = item;}
                 }
@@ -2299,11 +2326,11 @@ namespace CsUtility.Enumerable
                     maxItem = item;
                 }
             }
-            if (hasValue) return new MinMaxTuple<TSource>(minItem, maxItem);
+            if (hasValue) return new MinMaxPair<TSource>(minItem, maxItem);
             throw new ArgumentException("No element");
         }
 
-        public static MinMaxTuple<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, short?> selector) 
+        public static MinMaxPair<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, short?> selector) 
         {
             if (source == null) throw new ArgumentNullException("source");
             short? min = default(short?);
@@ -2317,8 +2344,7 @@ namespace CsUtility.Enumerable
                 x = selector(item);
                 if (hasValue) 
                 {
-				
-					 if( x == null)continue; 					 
+                    if( x == null)continue;  
                     if ( min == null || x < min ) {min = x; minItem = item;}
                     if ( max == null || x > max ) {max = x; maxItem = item;}
                 }
@@ -2331,11 +2357,11 @@ namespace CsUtility.Enumerable
                     maxItem = item;
                 }
             }
-            if (hasValue) return new MinMaxTuple<TSource>(minItem, maxItem);
+            if (hasValue) return new MinMaxPair<TSource>(minItem, maxItem);
             throw new ArgumentException("No element");
         }
 
-        public static MinMaxTuple<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, ushort> selector) 
+        public static MinMaxPair<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, ushort> selector) 
         {
             if (source == null) throw new ArgumentNullException("source");
             ushort min = default(ushort);
@@ -2349,8 +2375,7 @@ namespace CsUtility.Enumerable
                 x = selector(item);
                 if (hasValue) 
                 {
-				
-										 
+                     
                     if (x < min ) {min = x; minItem = item;}
                     if (x > max ) {max = x; maxItem = item;}
                 }
@@ -2363,11 +2388,11 @@ namespace CsUtility.Enumerable
                     maxItem = item;
                 }
             }
-            if (hasValue) return new MinMaxTuple<TSource>(minItem, maxItem);
+            if (hasValue) return new MinMaxPair<TSource>(minItem, maxItem);
             throw new ArgumentException("No element");
         }
 
-        public static MinMaxTuple<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, ushort?> selector) 
+        public static MinMaxPair<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, ushort?> selector) 
         {
             if (source == null) throw new ArgumentNullException("source");
             ushort? min = default(ushort?);
@@ -2381,8 +2406,7 @@ namespace CsUtility.Enumerable
                 x = selector(item);
                 if (hasValue) 
                 {
-				
-					 if( x == null)continue; 					 
+                    if( x == null)continue;  
                     if ( min == null || x < min ) {min = x; minItem = item;}
                     if ( max == null || x > max ) {max = x; maxItem = item;}
                 }
@@ -2395,11 +2419,11 @@ namespace CsUtility.Enumerable
                     maxItem = item;
                 }
             }
-            if (hasValue) return new MinMaxTuple<TSource>(minItem, maxItem);
+            if (hasValue) return new MinMaxPair<TSource>(minItem, maxItem);
             throw new ArgumentException("No element");
         }
 
-        public static MinMaxTuple<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, int> selector) 
+        public static MinMaxPair<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, int> selector) 
         {
             if (source == null) throw new ArgumentNullException("source");
             int min = default(int);
@@ -2413,8 +2437,7 @@ namespace CsUtility.Enumerable
                 x = selector(item);
                 if (hasValue) 
                 {
-				
-										 
+                     
                     if (x < min ) {min = x; minItem = item;}
                     if (x > max ) {max = x; maxItem = item;}
                 }
@@ -2427,11 +2450,11 @@ namespace CsUtility.Enumerable
                     maxItem = item;
                 }
             }
-            if (hasValue) return new MinMaxTuple<TSource>(minItem, maxItem);
+            if (hasValue) return new MinMaxPair<TSource>(minItem, maxItem);
             throw new ArgumentException("No element");
         }
 
-        public static MinMaxTuple<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, int?> selector) 
+        public static MinMaxPair<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, int?> selector) 
         {
             if (source == null) throw new ArgumentNullException("source");
             int? min = default(int?);
@@ -2445,8 +2468,7 @@ namespace CsUtility.Enumerable
                 x = selector(item);
                 if (hasValue) 
                 {
-				
-					 if( x == null)continue; 					 
+                    if( x == null)continue;  
                     if ( min == null || x < min ) {min = x; minItem = item;}
                     if ( max == null || x > max ) {max = x; maxItem = item;}
                 }
@@ -2459,11 +2481,11 @@ namespace CsUtility.Enumerable
                     maxItem = item;
                 }
             }
-            if (hasValue) return new MinMaxTuple<TSource>(minItem, maxItem);
+            if (hasValue) return new MinMaxPair<TSource>(minItem, maxItem);
             throw new ArgumentException("No element");
         }
 
-        public static MinMaxTuple<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, uint> selector) 
+        public static MinMaxPair<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, uint> selector) 
         {
             if (source == null) throw new ArgumentNullException("source");
             uint min = default(uint);
@@ -2477,8 +2499,7 @@ namespace CsUtility.Enumerable
                 x = selector(item);
                 if (hasValue) 
                 {
-				
-										 
+                     
                     if (x < min ) {min = x; minItem = item;}
                     if (x > max ) {max = x; maxItem = item;}
                 }
@@ -2491,11 +2512,11 @@ namespace CsUtility.Enumerable
                     maxItem = item;
                 }
             }
-            if (hasValue) return new MinMaxTuple<TSource>(minItem, maxItem);
+            if (hasValue) return new MinMaxPair<TSource>(minItem, maxItem);
             throw new ArgumentException("No element");
         }
 
-        public static MinMaxTuple<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, uint?> selector) 
+        public static MinMaxPair<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, uint?> selector) 
         {
             if (source == null) throw new ArgumentNullException("source");
             uint? min = default(uint?);
@@ -2509,8 +2530,7 @@ namespace CsUtility.Enumerable
                 x = selector(item);
                 if (hasValue) 
                 {
-				
-					 if( x == null)continue; 					 
+                    if( x == null)continue;  
                     if ( min == null || x < min ) {min = x; minItem = item;}
                     if ( max == null || x > max ) {max = x; maxItem = item;}
                 }
@@ -2523,11 +2543,11 @@ namespace CsUtility.Enumerable
                     maxItem = item;
                 }
             }
-            if (hasValue) return new MinMaxTuple<TSource>(minItem, maxItem);
+            if (hasValue) return new MinMaxPair<TSource>(minItem, maxItem);
             throw new ArgumentException("No element");
         }
 
-        public static MinMaxTuple<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, long> selector) 
+        public static MinMaxPair<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, long> selector) 
         {
             if (source == null) throw new ArgumentNullException("source");
             long min = default(long);
@@ -2541,8 +2561,7 @@ namespace CsUtility.Enumerable
                 x = selector(item);
                 if (hasValue) 
                 {
-				
-										 
+                     
                     if (x < min ) {min = x; minItem = item;}
                     if (x > max ) {max = x; maxItem = item;}
                 }
@@ -2555,11 +2574,11 @@ namespace CsUtility.Enumerable
                     maxItem = item;
                 }
             }
-            if (hasValue) return new MinMaxTuple<TSource>(minItem, maxItem);
+            if (hasValue) return new MinMaxPair<TSource>(minItem, maxItem);
             throw new ArgumentException("No element");
         }
 
-        public static MinMaxTuple<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, long?> selector) 
+        public static MinMaxPair<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, long?> selector) 
         {
             if (source == null) throw new ArgumentNullException("source");
             long? min = default(long?);
@@ -2573,8 +2592,7 @@ namespace CsUtility.Enumerable
                 x = selector(item);
                 if (hasValue) 
                 {
-				
-					 if( x == null)continue; 					 
+                    if( x == null)continue;  
                     if ( min == null || x < min ) {min = x; minItem = item;}
                     if ( max == null || x > max ) {max = x; maxItem = item;}
                 }
@@ -2587,11 +2605,11 @@ namespace CsUtility.Enumerable
                     maxItem = item;
                 }
             }
-            if (hasValue) return new MinMaxTuple<TSource>(minItem, maxItem);
+            if (hasValue) return new MinMaxPair<TSource>(minItem, maxItem);
             throw new ArgumentException("No element");
         }
 
-        public static MinMaxTuple<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, ulong> selector) 
+        public static MinMaxPair<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, ulong> selector) 
         {
             if (source == null) throw new ArgumentNullException("source");
             ulong min = default(ulong);
@@ -2605,8 +2623,7 @@ namespace CsUtility.Enumerable
                 x = selector(item);
                 if (hasValue) 
                 {
-				
-										 
+                     
                     if (x < min ) {min = x; minItem = item;}
                     if (x > max ) {max = x; maxItem = item;}
                 }
@@ -2619,11 +2636,11 @@ namespace CsUtility.Enumerable
                     maxItem = item;
                 }
             }
-            if (hasValue) return new MinMaxTuple<TSource>(minItem, maxItem);
+            if (hasValue) return new MinMaxPair<TSource>(minItem, maxItem);
             throw new ArgumentException("No element");
         }
 
-        public static MinMaxTuple<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, ulong?> selector) 
+        public static MinMaxPair<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, ulong?> selector) 
         {
             if (source == null) throw new ArgumentNullException("source");
             ulong? min = default(ulong?);
@@ -2637,8 +2654,7 @@ namespace CsUtility.Enumerable
                 x = selector(item);
                 if (hasValue) 
                 {
-				
-					 if( x == null)continue; 					 
+                    if( x == null)continue;  
                     if ( min == null || x < min ) {min = x; minItem = item;}
                     if ( max == null || x > max ) {max = x; maxItem = item;}
                 }
@@ -2651,11 +2667,11 @@ namespace CsUtility.Enumerable
                     maxItem = item;
                 }
             }
-            if (hasValue) return new MinMaxTuple<TSource>(minItem, maxItem);
+            if (hasValue) return new MinMaxPair<TSource>(minItem, maxItem);
             throw new ArgumentException("No element");
         }
 
-        public static MinMaxTuple<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, float> selector) 
+        public static MinMaxPair<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, float> selector) 
         {
             if (source == null) throw new ArgumentNullException("source");
             float min = default(float);
@@ -2669,8 +2685,7 @@ namespace CsUtility.Enumerable
                 x = selector(item);
                 if (hasValue) 
                 {
-				
-										 
+                     
                     if (x < min  || float.IsNaN(x)) {min = x; minItem = item;}
                     if (x > max  || float.IsNaN(max)) {max = x; maxItem = item;}
                 }
@@ -2683,11 +2698,11 @@ namespace CsUtility.Enumerable
                     maxItem = item;
                 }
             }
-            if (hasValue) return new MinMaxTuple<TSource>(minItem, maxItem);
+            if (hasValue) return new MinMaxPair<TSource>(minItem, maxItem);
             throw new ArgumentException("No element");
         }
 
-        public static MinMaxTuple<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, float?> selector) 
+        public static MinMaxPair<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, float?> selector) 
         {
             if (source == null) throw new ArgumentNullException("source");
             float? min = default(float?);
@@ -2701,8 +2716,7 @@ namespace CsUtility.Enumerable
                 x = selector(item);
                 if (hasValue) 
                 {
-				
-					 if( x == null)continue; 					 
+                    if( x == null)continue;  
                     if ( min == null || x < min  || float.IsNaN(x.Value)) {min = x; minItem = item;}
                     if ( max == null || x > max  || float.IsNaN(max.Value)) {max = x; maxItem = item;}
                 }
@@ -2715,11 +2729,11 @@ namespace CsUtility.Enumerable
                     maxItem = item;
                 }
             }
-            if (hasValue) return new MinMaxTuple<TSource>(minItem, maxItem);
+            if (hasValue) return new MinMaxPair<TSource>(minItem, maxItem);
             throw new ArgumentException("No element");
         }
 
-        public static MinMaxTuple<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, double> selector) 
+        public static MinMaxPair<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, double> selector) 
         {
             if (source == null) throw new ArgumentNullException("source");
             double min = default(double);
@@ -2733,8 +2747,7 @@ namespace CsUtility.Enumerable
                 x = selector(item);
                 if (hasValue) 
                 {
-				
-										 
+                     
                     if (x < min  || double.IsNaN(x)) {min = x; minItem = item;}
                     if (x > max  || double.IsNaN(max)) {max = x; maxItem = item;}
                 }
@@ -2747,11 +2760,11 @@ namespace CsUtility.Enumerable
                     maxItem = item;
                 }
             }
-            if (hasValue) return new MinMaxTuple<TSource>(minItem, maxItem);
+            if (hasValue) return new MinMaxPair<TSource>(minItem, maxItem);
             throw new ArgumentException("No element");
         }
 
-        public static MinMaxTuple<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, double?> selector) 
+        public static MinMaxPair<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, double?> selector) 
         {
             if (source == null) throw new ArgumentNullException("source");
             double? min = default(double?);
@@ -2765,8 +2778,7 @@ namespace CsUtility.Enumerable
                 x = selector(item);
                 if (hasValue) 
                 {
-				
-					 if( x == null)continue; 					 
+                    if( x == null)continue;  
                     if ( min == null || x < min  || double.IsNaN(x.Value)) {min = x; minItem = item;}
                     if ( max == null || x > max  || double.IsNaN(max.Value)) {max = x; maxItem = item;}
                 }
@@ -2779,11 +2791,11 @@ namespace CsUtility.Enumerable
                     maxItem = item;
                 }
             }
-            if (hasValue) return new MinMaxTuple<TSource>(minItem, maxItem);
+            if (hasValue) return new MinMaxPair<TSource>(minItem, maxItem);
             throw new ArgumentException("No element");
         }
 
-        public static MinMaxTuple<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, decimal> selector) 
+        public static MinMaxPair<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, decimal> selector) 
         {
             if (source == null) throw new ArgumentNullException("source");
             decimal min = default(decimal);
@@ -2797,8 +2809,7 @@ namespace CsUtility.Enumerable
                 x = selector(item);
                 if (hasValue) 
                 {
-				
-										 
+                     
                     if (x < min ) {min = x; minItem = item;}
                     if (x > max ) {max = x; maxItem = item;}
                 }
@@ -2811,11 +2822,11 @@ namespace CsUtility.Enumerable
                     maxItem = item;
                 }
             }
-            if (hasValue) return new MinMaxTuple<TSource>(minItem, maxItem);
+            if (hasValue) return new MinMaxPair<TSource>(minItem, maxItem);
             throw new ArgumentException("No element");
         }
 
-        public static MinMaxTuple<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, decimal?> selector) 
+        public static MinMaxPair<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, decimal?> selector) 
         {
             if (source == null) throw new ArgumentNullException("source");
             decimal? min = default(decimal?);
@@ -2829,8 +2840,7 @@ namespace CsUtility.Enumerable
                 x = selector(item);
                 if (hasValue) 
                 {
-				
-					 if( x == null)continue; 					 
+                    if( x == null)continue;  
                     if ( min == null || x < min ) {min = x; minItem = item;}
                     if ( max == null || x > max ) {max = x; maxItem = item;}
                 }
@@ -2843,7 +2853,7 @@ namespace CsUtility.Enumerable
                     maxItem = item;
                 }
             }
-            if (hasValue) return new MinMaxTuple<TSource>(minItem, maxItem);
+            if (hasValue) return new MinMaxPair<TSource>(minItem, maxItem);
             throw new ArgumentException("No element");
         }
 
