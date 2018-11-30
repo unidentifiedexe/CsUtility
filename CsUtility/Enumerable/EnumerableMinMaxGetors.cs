@@ -1364,122 +1364,122 @@ namespace CsUtility.Enumerable
         #region MinMax
         public static MinMaxTuple<sbyte> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, sbyte> selector) 
         {
-            return MinMax(Enumerable.Select(source, selector));
+            return MinMax(System.Linq.Enumerable.Select(source, selector));
         }
 
         public static MinMaxTuple<sbyte?> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, sbyte?> selector) 
         {
-            return MinMax(Enumerable.Select(source, selector));
+            return MinMax(System.Linq.Enumerable.Select(source, selector));
         }
 
         public static MinMaxTuple<byte> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, byte> selector) 
         {
-            return MinMax(Enumerable.Select(source, selector));
+            return MinMax(System.Linq.Enumerable.Select(source, selector));
         }
 
         public static MinMaxTuple<byte?> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, byte?> selector) 
         {
-            return MinMax(Enumerable.Select(source, selector));
+            return MinMax(System.Linq.Enumerable.Select(source, selector));
         }
 
         public static MinMaxTuple<char> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, char> selector) 
         {
-            return MinMax(Enumerable.Select(source, selector));
+            return MinMax(System.Linq.Enumerable.Select(source, selector));
         }
 
         public static MinMaxTuple<char?> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, char?> selector) 
         {
-            return MinMax(Enumerable.Select(source, selector));
+            return MinMax(System.Linq.Enumerable.Select(source, selector));
         }
 
         public static MinMaxTuple<short> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, short> selector) 
         {
-            return MinMax(Enumerable.Select(source, selector));
+            return MinMax(System.Linq.Enumerable.Select(source, selector));
         }
 
         public static MinMaxTuple<short?> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, short?> selector) 
         {
-            return MinMax(Enumerable.Select(source, selector));
+            return MinMax(System.Linq.Enumerable.Select(source, selector));
         }
 
         public static MinMaxTuple<ushort> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, ushort> selector) 
         {
-            return MinMax(Enumerable.Select(source, selector));
+            return MinMax(System.Linq.Enumerable.Select(source, selector));
         }
 
         public static MinMaxTuple<ushort?> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, ushort?> selector) 
         {
-            return MinMax(Enumerable.Select(source, selector));
+            return MinMax(System.Linq.Enumerable.Select(source, selector));
         }
 
         public static MinMaxTuple<int> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, int> selector) 
         {
-            return MinMax(Enumerable.Select(source, selector));
+            return MinMax(System.Linq.Enumerable.Select(source, selector));
         }
 
         public static MinMaxTuple<int?> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, int?> selector) 
         {
-            return MinMax(Enumerable.Select(source, selector));
+            return MinMax(System.Linq.Enumerable.Select(source, selector));
         }
 
         public static MinMaxTuple<uint> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, uint> selector) 
         {
-            return MinMax(Enumerable.Select(source, selector));
+            return MinMax(System.Linq.Enumerable.Select(source, selector));
         }
 
         public static MinMaxTuple<uint?> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, uint?> selector) 
         {
-            return MinMax(Enumerable.Select(source, selector));
+            return MinMax(System.Linq.Enumerable.Select(source, selector));
         }
 
         public static MinMaxTuple<long> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, long> selector) 
         {
-            return MinMax(Enumerable.Select(source, selector));
+            return MinMax(System.Linq.Enumerable.Select(source, selector));
         }
 
         public static MinMaxTuple<long?> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, long?> selector) 
         {
-            return MinMax(Enumerable.Select(source, selector));
+            return MinMax(System.Linq.Enumerable.Select(source, selector));
         }
 
         public static MinMaxTuple<ulong> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, ulong> selector) 
         {
-            return MinMax(Enumerable.Select(source, selector));
+            return MinMax(System.Linq.Enumerable.Select(source, selector));
         }
 
         public static MinMaxTuple<ulong?> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, ulong?> selector) 
         {
-            return MinMax(Enumerable.Select(source, selector));
+            return MinMax(System.Linq.Enumerable.Select(source, selector));
         }
 
         public static MinMaxTuple<float> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, float> selector) 
         {
-            return MinMax(Enumerable.Select(source, selector));
+            return MinMax(System.Linq.Enumerable.Select(source, selector));
         }
 
         public static MinMaxTuple<float?> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, float?> selector) 
         {
-            return MinMax(Enumerable.Select(source, selector));
+            return MinMax(System.Linq.Enumerable.Select(source, selector));
         }
 
         public static MinMaxTuple<double> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, double> selector) 
         {
-            return MinMax(Enumerable.Select(source, selector));
+            return MinMax(System.Linq.Enumerable.Select(source, selector));
         }
 
         public static MinMaxTuple<double?> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, double?> selector) 
         {
-            return MinMax(Enumerable.Select(source, selector));
+            return MinMax(System.Linq.Enumerable.Select(source, selector));
         }
 
         public static MinMaxTuple<decimal> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, decimal> selector) 
         {
-            return MinMax(Enumerable.Select(source, selector));
+            return MinMax(System.Linq.Enumerable.Select(source, selector));
         }
 
         public static MinMaxTuple<decimal?> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, decimal?> selector) 
         {
-            return MinMax(Enumerable.Select(source, selector));
+            return MinMax(System.Linq.Enumerable.Select(source, selector));
         }
 
 
