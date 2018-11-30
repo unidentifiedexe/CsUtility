@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Linq;
 
-namespace CsUtility.EnumerableUtillity
+namespace CsUtility.Enumerable
 {
 
     public static partial class EnumerableUtility
