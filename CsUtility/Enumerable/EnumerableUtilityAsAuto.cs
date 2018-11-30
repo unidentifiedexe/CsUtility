@@ -8,7 +8,7 @@ using System.Linq;
 namespace CsUtility.Enumerable
 {
 
-    public static partial class EnumerableUtility
+    public static partial class EnumerableUtilities
     {
     
         #region MinItem
