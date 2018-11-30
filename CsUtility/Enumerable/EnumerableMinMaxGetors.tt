@@ -9,29 +9,29 @@
 
 var types = new List<(string typeName, bool IsNullable, bool HasIsNaN)>()
 {
-        ("sbyte",	false, false),
-        ("sbyte?",	true , false),
-        ("byte",	false, false),
-        ("byte?",	true , false),
-        ("char",	false, false),
-        ("char?",	true , false),
-        ("short",	false, false),
-        ("short?",	true , false),
-        ("ushort",	false, false),
-        ("ushort?",	true , false),
-        ("int",		false, false),
-        ("int?",	true , false),
-        ("uint",	false, false),
-        ("uint?",	true , false),
-        ("long",	false, false),
-        ("long?",	true , false),
-        ("ulong",	false, false),
-        ("ulong?",	true , false),
-        ("float",	false, true),
-        ("float?",	true , true),
-        ("double",	false, true),
-        ("double?",	true , true),
-        ("decimal",	false, false),
+        ("sbyte",false, false),
+        ("sbyte?",true , false),
+        ("byte",false, false),
+        ("byte?",true , false),
+        ("char",false, false),
+        ("char?",true , false),
+        ("short",false, false),
+        ("short?",true , false),
+        ("ushort",false, false),
+        ("ushort?",true , false),
+        ("int",false, false),
+        ("int?",true , false),
+        ("uint",false, false),
+        ("uint?",true , false),
+        ("long",false, false),
+        ("long?",true , false),
+        ("ulong",false, false),
+        ("ulong?",true , false),
+        ("float",false, true),
+        ("float?",true , true),
+        ("double",false, true),
+        ("double?",true , true),
+        ("decimal",false, false),
         ("decimal?",true , false),
 };
 
@@ -63,17 +63,19 @@ namespace CsUtility.Enumerable
                 if (hasValue)
                 {
                     <#= typeName #> x = keySelector(item);
-                    <# if(isNullable){ #> if( x == null) continue; <# } #>
-					<# var oprText = "";
-					   if(isNullable) oprText += "value == null || " ;
-					   oprText += $"x {opr.Value} value ";
-						if (hasIsNaN)
-						{
-							var turgetVal = (opr.Key == "Max") ? "value" : "x";
-							if (isNullable) turgetVal += ".Value";
-							oprText += $" || {typeName.TrimEnd('?')}.IsNaN({turgetVal})";
-						}
-                    #>
+                    <# if(isNullable){ #>if( x == null) continue; <# } #>
+
+<#
+                       var oprText = "";
+                       if(isNullable) oprText += "value == null || " ;
+                       oprText += $"x {opr.Value} value ";
+                       if (hasIsNaN)
+                       {
+                           var turgetVal = (opr.Key == "Max") ? "value" : "x";
+                           if (isNullable) turgetVal += ".Value";
+                           oprText += $" || {typeName.TrimEnd('?')}.IsNaN({turgetVal})";
+                       }
+#>
                     if (<#= oprText #>)
                     {
                         value = x;
@@ -97,7 +99,7 @@ namespace CsUtility.Enumerable
 <# } #>
         #region MinMax
 <# foreach(var (typeName, isNullable, hasIsNaN) in types){ #>
-        public static MinMaxTuple<<#= typeName #>> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, <#= typeName #>> selector) 
+        public static MinMaxPair<<#= typeName #>> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, <#= typeName #>> selector) 
         {
             return MinMax(System.Linq.Enumerable.Select(source, selector));
         }
@@ -106,7 +108,7 @@ namespace CsUtility.Enumerable
 
 
 <# foreach(var (typeName, isNullable, hasIsNaN) in types){ #>
-        public static MinMaxTuple<<#= typeName #>> MinMax(this IEnumerable<<#= typeName #>> source) 
+        public static MinMaxPair<<#= typeName #>> MinMax(this IEnumerable<<#= typeName #>> source) 
         {
             if (source == null) throw new ArgumentNullException("source");
             <#= typeName #> min = default(<#= typeName #>);
@@ -116,20 +118,19 @@ namespace CsUtility.Enumerable
             {
                 if (hasValue) 
                 {
-					<# if(isNullable){ #> if( x == null) continue; <# } #>
-					<# 
-					   var minOprText = "";
-					   if(isNullable) minOprText += " min == null || " ;
-					   minOprText += $"x < min ";
-					   var turgetVal = isNullable ? ".Value" : "";
-					   if(hasIsNaN) minOprText += $" || {typeName.TrimEnd('?')}.IsNaN(x{turgetVal})";
-					   
-					   var maxOprText = "";
-					   if(isNullable) maxOprText += " max == null || " ;
-					   maxOprText += $"x > max ";
-					   if(hasIsNaN) maxOprText += $" || {typeName.TrimEnd('?')}.IsNaN(max{turgetVal})";
-					   
-                    #> 
+                    <# if(isNullable){ #>if( x == null) continue; <# } #>
+<# 
+                       var minOprText = "";
+                       if(isNullable) minOprText += " min == null || " ;
+                       minOprText += $"x < min ";
+                       var turgetVal = isNullable ? ".Value" : "";
+                       if(hasIsNaN) minOprText += $" || {typeName.TrimEnd('?')}.IsNaN(x{turgetVal})";
+                       
+                       var maxOprText = "";
+                       if(isNullable) maxOprText += " max == null || " ;
+                       maxOprText += $"x > max ";
+                       if(hasIsNaN) maxOprText += $" || {typeName.TrimEnd('?')}.IsNaN(max{turgetVal})";
+#> 
                     if (<#= minOprText #>) min = x;
                     if (<#= maxOprText #>) max = x;
                 }
@@ -140,31 +141,17 @@ namespace CsUtility.Enumerable
                     hasValue = true;
                 }
             }
-            if (hasValue) return new MinMaxTuple<<#= typeName #>>(min, max);
+            if (hasValue) return new MinMaxPair<<#= typeName #>>(min, max);
             throw new ArgumentException("No element");
         }
 <# } #>
-        public struct MinMaxTuple<T>
-        {
-            public T Min { get; }
-            public T Max { get; }
-
-            internal MinMaxTuple(T min, T max )
-            {
-                Min = min;
-                Max = max;
-            }
-
-            public void Deconstruct(out T min, out T max) => (min, max) = (Min, Max);
-
-        }
         
         #endregion
 
         #region MinMaxItem
 
 <# foreach(var (typeName, isNullable, hasIsNaN) in types){ #>
-        public static MinMaxTuple<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, <#= typeName #>> selector) 
+        public static MinMaxPair<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, <#= typeName #>> selector) 
         {
             if (source == null) throw new ArgumentNullException("source");
             <#= typeName #> min = default(<#= typeName #>);
@@ -178,21 +165,19 @@ namespace CsUtility.Enumerable
                 x = selector(item);
                 if (hasValue) 
                 {
-				
-					<# if(isNullable){ #> if( x == null)continue; <# } #>
-					<# 
-					   var minOprText = "";
-					   if(isNullable) minOprText += " min == null || " ;
-					   minOprText += $"x < min ";
-					   var turgetVal = isNullable ? ".Value" : "";
-					   if(hasIsNaN) minOprText += $" || {typeName.TrimEnd('?')}.IsNaN(x{turgetVal})";
-					   
-					   var maxOprText = "";
-					   if(isNullable) maxOprText += " max == null || " ;
-					   maxOprText += $"x > max ";
-					   if(hasIsNaN) maxOprText += $" || {typeName.TrimEnd('?')}.IsNaN(max{turgetVal})";
-					   
-                    #> 
+                    <# if(isNullable){ #>if( x == null)continue; <# } #>
+<# 
+                       var minOprText = "";
+                       if(isNullable) minOprText += " min == null || " ;
+                       minOprText += $"x < min ";
+                       var turgetVal = isNullable ? ".Value" : "";
+                       if(hasIsNaN) minOprText += $" || {typeName.TrimEnd('?')}.IsNaN(x{turgetVal})";
+                       
+                       var maxOprText = "";
+                       if(isNullable) maxOprText += " max == null || " ;
+                       maxOprText += $"x > max ";
+                       if(hasIsNaN) maxOprText += $" || {typeName.TrimEnd('?')}.IsNaN(max{turgetVal})";
+#> 
                     if (<#= minOprText #>) {min = x; minItem = item;}
                     if (<#= maxOprText #>) {max = x; maxItem = item;}
                 }
@@ -205,7 +190,7 @@ namespace CsUtility.Enumerable
                     maxItem = item;
                 }
             }
-            if (hasValue) return new MinMaxTuple<TSource>(minItem, maxItem);
+            if (hasValue) return new MinMaxPair<TSource>(minItem, maxItem);
             throw new ArgumentException("No element");
         }
 
