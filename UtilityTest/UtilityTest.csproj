@@ -56,7 +56,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TestGenerator.tt</DependentUpon>
     </Compile>
-    <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -73,7 +72,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CsUtility\CsUtility.csproj">
-      <Project>{b3531180-809b-4e9e-bb44-7999816e22f4}</Project>
+      <Project>{e39022b3-063b-45ec-a0f0-eea7e9befc94}</Project>
       <Name>CsUtility</Name>
     </ProjectReference>
   </ItemGroup>

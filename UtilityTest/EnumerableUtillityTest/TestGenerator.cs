@@ -3,7 +3,7 @@
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Linq;
-using CsUtility.EnumerableUtillity;
+using CsUtility.Enumerable;
 
 
 namespace UtilityTest.EnumerableUtillityTest

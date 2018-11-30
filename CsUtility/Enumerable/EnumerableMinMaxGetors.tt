@@ -99,7 +99,7 @@ namespace CsUtility.Enumerable
 <# foreach(var (typeName, isNullable, hasIsNaN) in types){ #>
         public static MinMaxTuple<<#= typeName #>> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, <#= typeName #>> selector) 
         {
-            return MinMax(Enumerable.Select(source, selector));
+            return MinMax(System.Linq.Enumerable.Select(source, selector));
         }
 
 <# } #>
