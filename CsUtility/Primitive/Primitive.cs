@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CsUtility.PrimitiveUtillity
+namespace CsUtility.Primitive
 {
-    static class Primitive
+    static partial class PrimitiveUtilities
     {
         public static bool IsNullOrEmpty(this string str)
         {

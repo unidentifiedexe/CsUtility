@@ -6,7 +6,7 @@ using System.Linq;
 namespace CsUtility.Enumerable
 {
 
-    public static partial class EnumerableUtility
+    public static partial class EnumerableUtilities
     {
         //public static TSource MinItem<TSource, T>(this IEnumerable<TSource> source, Func<TSource, T> keySelector) where T : IComparable<T>
         //{
@@ -152,4 +152,5 @@ namespace CsUtility.Enumerable
 
 
     }
+
 }
