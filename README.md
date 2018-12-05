@@ -3,6 +3,8 @@
 
 C#での個人的に欲しいと思ったメソッドやあると便利かもと思ったメソッドを実装  
 
+## 導入方法  
+プロジェクトフォルダにある CsUtility.dll および CsUtility.xml をダウンロードすれば使用できます。
 
 ## EnumerableUtility  
 
