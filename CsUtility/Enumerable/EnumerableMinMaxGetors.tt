@@ -49,12 +49,28 @@ namespace CsUtility.Enumerable
     public static partial class EnumerableUtilities
     {
     
-<# foreach(var opr in minMaxDic){ #>
+<# foreach(var opr in minMaxDic){ 
+var oprJaText = "";
+ if(opr.Key == "Min") oprJaText = "最小値";
+ else if(opr.Key == "Max") oprJaText = "最大値";
+ #>
         #region <#= opr.Key #>Item
+
 <# foreach(var (typeName, isNullable, hasIsNaN) in types){ #>
-        public static TSource <#= opr.Key #>Item<TSource>(this IEnumerable<TSource> source, Func<TSource, <#= typeName #>> keySelector)
+        /// <summary>
+        /// シーケンスの各要素に対して変換関数を呼び出し、<#= oprJaText #>を持つ要素を返します。
+        /// </summary>
+        /// <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
+        /// <param name="source"><#= oprJaText #>を確認する対象となるシーケンス。</param>
+        /// <param name="selector"> 各要素に適用する変換関数。</param>
+        /// <returns> <#= oprJaText #>を持つ要素。 </returns>
+        /// <exception cref="ArgumentNullException">
+        /// <paramref name="source"/> または <paramref name="selector"/> が null です。
+        /// </exception> 
+        public static TSource <#= opr.Key #>Item<TSource>(this IEnumerable<TSource> source, Func<TSource, <#= typeName #>> selector)
         {
-            if (source == null) throw new ArgumentNullException("source");
+            if (source == null) throw new ArgumentNullException(nameof(source));
+            if (selector == null) throw new ArgumentNullException(nameof(selector));
             <#= typeName #> value = default(<#= typeName #>);
             bool hasValue = false;
             TSource obj = default(TSource);
@@ -62,7 +78,7 @@ namespace CsUtility.Enumerable
             {
                 if (hasValue)
                 {
-                    <#= typeName #> x = keySelector(item);
+                    <#= typeName #> x = selector(item);
                     <# if(isNullable){ #>if( x == null) continue; <# } #>
 
 <#
@@ -84,7 +100,7 @@ namespace CsUtility.Enumerable
                 }
                 else
                 {
-                    value = keySelector(item);
+                    value = selector(item);
                     hasValue = true;
                     obj = item;
                 }
@@ -98,7 +114,18 @@ namespace CsUtility.Enumerable
 
 <# } #>
         #region MinMax
+
 <# foreach(var (typeName, isNullable, hasIsNaN) in types){ #>
+        /// <summary>
+        /// シーケンスの各要素に対して変換関数を呼び出し、最小値と最大値のペアを返します。
+        /// </summary>
+        /// <typeparam name="TSource"> <paramref name="source"/> 要素の型。</typeparam>
+        /// <param name="source"> 確認する対象となるシーケンス。</param>
+        /// <param name="selector"> 各要素に適用する変換関数。</param>
+        /// <returns> 最小値と最大値のペア。 </returns>
+        /// <exception cref="ArgumentNullException">
+        /// <paramref name="source"/> または <paramref name="selector"/> が null です。
+        /// </exception> 
         public static MinMaxPair<<#= typeName #>> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, <#= typeName #>> selector) 
         {
             return MinMax(System.Linq.Enumerable.Select(source, selector));
@@ -108,6 +135,12 @@ namespace CsUtility.Enumerable
 
 
 <# foreach(var (typeName, isNullable, hasIsNaN) in types){ #>
+        /// <summary>
+        /// シーケンスの各要素の最小値と最大値のペアを返します。
+        /// </summary>
+        /// <param name="source"> 確認する対象となるシーケンス。</param>
+        /// <returns> 最小値と最大値のペア。 </returns>
+        /// <exception cref="ArgumentNullException"> <paramref name="source"/> が null です。</exception> 
         public static MinMaxPair<<#= typeName #>> MinMax(this IEnumerable<<#= typeName #>> source) 
         {
             if (source == null) throw new ArgumentNullException("source");
@@ -151,6 +184,16 @@ namespace CsUtility.Enumerable
         #region MinMaxItem
 
 <# foreach(var (typeName, isNullable, hasIsNaN) in types){ #>
+        /// <summary>
+        /// シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素と最大値を持つ要素のペアを返します。
+        /// </summary>
+        /// <typeparam name="TSource"> <paramref name="source"/> 要素の型。</typeparam>
+        /// <param name="source"> 確認する対象となるシーケンス。</param>
+        /// <param name="selector"> 各要素に適用する変換関数。</param>
+        /// <returns> 最小値を持つ要素と最大値を持つ要素のペア。 </returns>
+        /// <exception cref="ArgumentNullException">
+        /// <paramref name="source"/> または <paramref name="selector"/> が null です。
+        /// </exception> 
         public static MinMaxPair<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, <#= typeName #>> selector) 
         {
             if (source == null) throw new ArgumentNullException("source");

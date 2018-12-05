@@ -6,14 +6,23 @@ using System.Collections;
 
 namespace CsUtility.Enumerable
 {
-
+    /// <summary>
+    /// <see cref="System.Linq.Enumerable"/> および <see cref="IEnumerable"/> の Utility コードを定義しているクラス。
+    /// </summary>
     public static partial class EnumerableUtilities
     {
         #region インナー構造体
 
+        /// <summary>
+        /// 前後をひとまとめにした構造体
+        /// </summary>
+        /// <typeparam name="T"> 要素の型。 </typeparam>
         public struct PrevNextPair<T>
         {
+            /// <summary> 前方の要素。</summary>
             public T Prev { get; }
+
+            /// <summary> 後方の要素。</summary>
             public T Next { get; }
 
             internal PrevNextPair(T prev, T next)
@@ -22,14 +31,21 @@ namespace CsUtility.Enumerable
                 Next = next;
             }
 
+            /// <summary> 前後の要素の分解を行います </summary>
+            /// <param name="prev"> 前方の要素。</param>
+            /// <param name="next"> 後方の要素。</param>
             public void Deconstruct(out T prev, out T next) => (prev, next) = (Prev, Next);
             
         }
 
-
+        /// <summary> 最小値と最大値の組を持つ構造体。 </summary>
+        /// <typeparam name="T"> 要素の型。 </typeparam>
         public struct MinMaxPair<T>
         {
+            /// <summary> 最大値。</summary>
             public T Min { get; }
+
+            /// <summary> 最小値。</summary>
             public T Max { get; }
 
             internal MinMaxPair(T min, T max)
@@ -38,13 +54,26 @@ namespace CsUtility.Enumerable
                 Max = max;
             }
 
+            /// <summary> 最大値/最小値の要素の分解を行います。 </summary>
+            /// <param name="min"> 最小値の要素。</param>
+            /// <param name="max"> 最大値の要素。</param>
             public void Deconstruct(out T min, out T max) => (min, max) = (Min, Max);
 
         }
 
         #endregion
-        
 
+        /// <summary>
+        /// 条件を満たす最初の要素を返します。存在しない場合は場合は与えられた初期値を返します。
+        /// </summary>
+        /// <typeparam name="TSource">要素の型</typeparam>
+        /// <param name="source">探索する対象</param>
+        /// <param name="predicate">各要素が条件を満たしているかどうかをテストする関数。</param>
+        /// <param name="defaultValue">初期値</param>
+        /// <exception cref="ArgumentNullException"> 
+        /// <paramref name="source"/> または <paramref name="predicate"/> が null です。
+        /// </exception>
+        /// <returns> 条件を満たす最初の要素。条件を満たす要素が無い場合は <paramref name="defaultValue"/> </returns>
         public static TSource FirstOrDefault<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate, TSource defaultValue)
         {
             if (source == null) throw new ArgumentNullException("source");
@@ -56,7 +85,17 @@ namespace CsUtility.Enumerable
             return defaultValue;
         }
 
-
+        /// <summary>
+        /// 条件を満たす最後の要素を返します。存在しない場合は場合は与えられた初期値を返します。
+        /// </summary>
+        /// <typeparam name="TSource"> 要素の型</typeparam>
+        /// <param name="source"> 探索する対象</param>
+        /// <param name="predicate"> 各要素が条件を満たしているかどうかをテストする関数。</param>
+        /// <param name="defaultValue"> 初期値。</param>
+        /// <exception cref="ArgumentNullException"> 
+        /// <paramref name="source"/> または <paramref name="predicate"/> が null です。
+        /// </exception>
+        /// <returns> 条件を満たす最後の要素。条件を満たす要素が無い場合は <paramref name="defaultValue"/> </returns>
         public static TSource LastOrDefault<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate, TSource defaultValue)
         {
             if (source == null) throw new ArgumentNullException("source");
@@ -72,7 +111,15 @@ namespace CsUtility.Enumerable
             return result;
         }
 
-
+        /// <summary>
+        /// 繰り返される 1 つのジェネレータにより生成されるシーケンスを生成します。
+        /// </summary>
+        /// <typeparam name="TResult"> 結果のシーケンスで繰り返される値の型。</typeparam>
+        /// <param name="generator"> シーケンスのジェネレータ。</param>
+        /// <param name="count"> シーケンスで生成を繰り返す回数。</param>
+        /// <returns> ジェネレータにより生成される要素を持つシーケンス </returns>
+        /// <exception cref="ArgumentNullException"> <paramref name="generator"/> が null です。</exception>
+        /// <exception cref="ArgumentOutOfRangeException"> <paramref name="count"/> が 0 未満です。</exception>
         public static IEnumerable<TResult> Repeat<TResult>(Func<TResult> generator, int count)
         {
             if (generator == null) throw new ArgumentNullException(nameof(generator));
@@ -80,7 +127,13 @@ namespace CsUtility.Enumerable
             for (int i = 0; i < count; i++) yield return generator();
         }
 
-
+        /// <summary>
+        /// 前後の要素をひとまとめにした構造体のシーケンスを生成します。
+        /// </summary>
+        /// <typeparam name="TSource"> 要素の型。</typeparam>
+        /// <param name="source"> ひとまとめにするシーケンス。</param>
+        /// <exception cref="ArgumentNullException"> <paramref name="source"/> が null です。</exception>
+        /// <returns> 前後の要素をひとまとめにした構造体のシーケンス。 </returns>
         public static IEnumerable<PrevNextPair<TSource>> ZipVicinity<TSource>(this IEnumerable<TSource> source)
         {
             if (source == null) throw new ArgumentNullException(nameof(source));
@@ -88,7 +141,17 @@ namespace CsUtility.Enumerable
             return VicinityZipIterator(source, resultSelector);
         }
 
-
+        /// <summary>
+        /// 前後の要素を元に射影を行います。
+        /// </summary>
+        /// <typeparam name="TSource"> 要素の型。</typeparam>
+        /// <typeparam name="TResult"> 返されるシーケンスの要素の型。</typeparam>
+        /// <param name="source"> ひとまとめにするシーケンス。</param>
+        /// <param name="resultSelector"> 各要素組に適用する変換関数。</param>
+        /// <exception cref="ArgumentNullException">
+        /// <paramref name="source"/> または <paramref name="resultSelector"/> が null です。
+        /// </exception>
+        /// <returns> 射影されたシーケンス。 </returns>
         public static IEnumerable<TResult> ZipVicinity<TSource, TResult>(this IEnumerable<TSource> source, Func<TSource, TSource, TResult> resultSelector)
         {
             if (source == null) throw new ArgumentNullException(nameof(source));
@@ -116,24 +179,32 @@ namespace CsUtility.Enumerable
             }
         }
 
-
-        public static IEnumerable<IEnumerable<TSource>> Split<TSource>(this IEnumerable<TSource> source, int num)
+        /// <summary>
+        /// 指定数毎に切り分けられたシーケンスを返します。
+        /// </summary>
+        /// <typeparam name="TSource"> シーケンスの要素の型。 </typeparam>
+        /// <param name="source"> 切り分けれられるシーケンス。 </param>
+        /// <param name="number"> 切り分けるシーケンスの数。 </param>
+        /// <exception cref="ArgumentNullException"> <paramref name="source"/> が null です。 </exception>
+        /// <exception cref="ArgumentOutOfRangeException"> <paramref name="number"/> が 1 未満です。 </exception>
+        /// <returns> 切り分けられたシーケンス。</returns>
+        public static IEnumerable<IEnumerable<TSource>> Split<TSource>(this IEnumerable<TSource> source, int number)
         {
             if (source == null) throw new ArgumentNullException(nameof(source));
-            if (num < 1) throw new ArgumentOutOfRangeException(nameof(num));
-            if (num == 1) foreach (var item in source) yield return new[] { item };
+            if (number < 1) throw new ArgumentOutOfRangeException(nameof(number));
+            if (number == 1) foreach (var item in source) yield return new[] { item };
 
-            var retArray = new TSource[num];
+            var retArray = new TSource[number];
             int count = 0;
 
             foreach (var item in source)
             {
                 retArray[count] = item;
                 count++;
-                if (count == num)
+                if (count == number)
                 {
                     yield return retArray;
-                    retArray = new TSource[num];
+                    retArray = new TSource[number];
                     count = 0;
                 }
             }
@@ -145,7 +216,16 @@ namespace CsUtility.Enumerable
             }
         }
 
-
+        /// <summary>
+        /// 指定条件の要素の間で切り分けられたシーケンスを返します。
+        /// </summary>
+        /// <typeparam name="TSource"> シーケンスの要素の型。 </typeparam>
+        /// <param name="source"> 切り分けれられるシーケンス。 </param>
+        /// <param name="predicate"> 切り分ける条件を示す関数。 </param>
+        /// <exception cref="ArgumentNullException">
+        /// <paramref name="source"/> または <paramref name="predicate"/> が null です。
+        /// </exception>
+        /// <returns> 切り分けられたシーケンス。</returns>
         public static IEnumerable<IEnumerable<TSource>> SplitIf<TSource>(this IEnumerable<TSource> source, Func<TSource, TSource, bool> predicate)
         {
             if (source == null) throw new ArgumentNullException(nameof(source));
@@ -188,6 +268,19 @@ namespace CsUtility.Enumerable
 
         }
 
+        /// <summary>
+        /// シーケンスにアキュムレータ関数を適用しその過程を要素とするシーケンスを返します。
+        /// 指定されたシード値が最初のアキュムレータ値として使用されます。
+        /// </summary>
+        /// <typeparam name="TSource"> 集計対象となるシーケンスの要素の型。 </typeparam>
+        /// <typeparam name="TAccumulate"> アキュムレータ値の型 </typeparam>
+        /// <param name="source"> 集計対象となるシーケンス </param>
+        /// <param name="seed"> 最初のアキュムレータ値。 </param>
+        /// <param name="func"> 各要素に対して呼び出すアキュムレータ関数。</param>
+        /// <exception cref="ArgumentNullException">
+        /// <paramref name="source"/> または <paramref name="func"/> が null です。
+        /// </exception>
+        /// <returns>アキュムレータ関数を適用の過程を要素とするシーケンス</returns>
         public static IEnumerable<TAccumulate> AggregateSelect<TSource, TAccumulate>(this IEnumerable<TSource> source, TAccumulate seed, Func<TAccumulate, TSource, TAccumulate> func)
         {
             if (source == null) throw new ArgumentNullException("source");
@@ -197,6 +290,16 @@ namespace CsUtility.Enumerable
         }
 
 
+        /// <summary>
+        /// シーケンスにアキュムレータ関数を適用しその過程を要素とするシーケンスを返します。
+        /// </summary>
+        /// <typeparam name="TSource"> 集計対象となるシーケンスの要素の型。 </typeparam>
+        /// <param name="source"> 集計対象となるシーケンス </param>
+        /// <param name="func"> 各要素に対して呼び出すアキュムレータ関数。</param>
+        /// <exception cref="ArgumentNullException">
+        /// <paramref name="source"/> または <paramref name="func"/> が null です。
+        /// </exception>
+        /// <returns>アキュムレータ関数を適用の過程を要素とするシーケンス</returns>
         public static IEnumerable<TSource> AggregateSelect<TSource>(this IEnumerable<TSource> source, Func<TSource, TSource, TSource> func)
         {
             if (source == null) throw new ArgumentNullException("source");
@@ -212,6 +315,19 @@ namespace CsUtility.Enumerable
         }
 
         //TODO:仕様決定
+        /// <summary>
+        /// シーケンスにアキュムレータ関数を適用しその過程の結果を射影したシーケンスを返します。
+        /// </summary>
+        /// <typeparam name="TSource"> 集計対象となるシーケンスの要素の型。 </typeparam>
+        /// <typeparam name="TAccumulate"> アキュムレータ値の型 </typeparam>
+        /// <typeparam name="TResult"> 返り値のシーケンスの型。 </typeparam>
+        /// <param name="source"> 集計対象となるシーケンス </param>
+        /// <param name="seed"> 最初のアキュムレータ値。 </param>
+        /// <param name="func"> 各要素に対して呼び出すアキュムレータと要素の射影を行う関数。</param>
+        /// <returns>アキュムレータ関数を適用の過程より射影されたシーケンス。</returns>
+        /// <exception cref="ArgumentNullException">
+        /// <paramref name="source"/> または <paramref name="func"/> が null です。
+        /// </exception>
         [Obsolete("仕様が未定です。非推奨です。")]
         public static IEnumerable<TResult> AggregateSelect<TSource, TAccumulate, TResult>(this IEnumerable<TSource> source, TAccumulate seed, Func<TAccumulate, TSource, (TAccumulate Ag, TResult Re)> func)
         {
@@ -226,7 +342,22 @@ namespace CsUtility.Enumerable
                 yield return ret;
             }
         }
+
         
+        /// <summary>
+        /// シーケンスにアキュムレータ関数を適用しその過程の結果を射影したシーケンスを返します。
+        /// </summary>
+        /// <typeparam name="TSource"> 集計対象となるシーケンスの要素の型。 </typeparam>
+        /// <typeparam name="TAccumulate"> アキュムレータ値の型 </typeparam>
+        /// <typeparam name="TResult"> 返り値のシーケンスの型。 </typeparam>
+        /// <param name="source"> 集計対象となるシーケンス </param>
+        /// <param name="func"> 各要素に対して呼び出すアキュムレータ関数。</param>
+        /// <param name="seed"> 最初のアキュムレータ値。 </param>
+        /// <param name="resultSelector"> アキュムレータ値と要素から結果を射影する関数。 </param>
+        /// <returns>アキュムレータ関数を適用の過程から射影されたシーケンス。</returns>
+        /// <exception cref="ArgumentNullException">
+        /// <paramref name="source"/> または <paramref name="func"/> または <paramref name="resultSelector"/> が null です。
+        /// </exception>
         public static IEnumerable<TResult> AggregateSelect<TSource, TAccumulate, TResult>(this IEnumerable<TSource> source, TAccumulate seed, Func<TAccumulate, TSource, TAccumulate> func ,Func<TAccumulate,TSource,TResult> resultSelector)
         {
             if (source == null) throw new ArgumentNullException("source");
