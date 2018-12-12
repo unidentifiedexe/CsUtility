@@ -5,7 +5,7 @@ using System.Text;
 
 namespace CsUtility.Primitive
 {
-    static partial class PrimitiveUtilities
+    public static partial class PrimitiveUtilities
     {
 
         public static bool IsNaN(this float val)

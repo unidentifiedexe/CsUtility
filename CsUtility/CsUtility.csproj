@@ -48,6 +48,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EnumerableMinMaxGetors.tt</DependentUpon>
     </Compile>
+    <Compile Include="Generic\ReadSafeDictionary.cs" />
     <Compile Include="Primitive\Primitive.cs" />
     <Compile Include="Primitive\PrimitiveFloatingTypesChecker.cs">
       <AutoGen>True</AutoGen>

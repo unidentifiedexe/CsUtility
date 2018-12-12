@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CsUtility.Primitive
 {
-    static partial class PrimitiveUtilities
+    public static partial class PrimitiveUtilities
     {
         public static bool IsNullOrEmpty(this string str)
         {
