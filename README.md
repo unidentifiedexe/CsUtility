@@ -28,7 +28,7 @@ Repeeat：ジェネレータを指定することにより、参照型におい�
 
 ### 使い方  
 
-工事中  
+工事中(使用例のコードを作成する予定)  
 
 ## PrimitiveUtility  
 組み込み型に関するユーティリティメソッドをまとめたクラス。  
@@ -36,6 +36,29 @@ Repeeat：ジェネレータを指定することにより、参照型におい�
 ### メソッドの概要  
 工事中  
 
-
 ### 使い方  
 工事中  
+
+
+## GenericUtility
+
+ジェネリックの主にコレクション関係のユーティリティークラスを定義します。
+
+### ReadSafeDictionary
+読み取り時に```KeyNotFoundException```を発生させないディクリョナリクラスです。
+読み取り時にキーに紐付された値が存在しない場合は、予め設定された規定値よりディクショナリの要素を追加します。
+
+#### コード例
+```cs
+var dic = new ReadSafeDictionary("None");//規定値として"None"を与える
+dic.Add( 0, "Zero");
+
+Console.WriteLine(dic[10]);
+//　出力：None
+```
+
+```cs
+var nDic = new Dictionary();
+Console.WriteLine(dic.GetValueOrDefault(10,"None"));//通常のディクショナリから安全に取り出せる。
+//　出力：None
+```

@@ -348,6 +348,7 @@ namespace CsUtility.Generic
             }
         }
         
+
         /// <summary>
         /// <see cref="System.Runtime.Serialization.ISerializable"/> インターフェイスを実装し、
         /// <see cref="ReadSafeDictionary{TKey,TValue}"/> インスタンスをシリアル化するために必要なデータを返します。
