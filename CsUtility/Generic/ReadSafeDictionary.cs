@@ -10,7 +10,7 @@ namespace CsUtility.Generic
     /// <summary>
     /// <seealso cref="ReadSafeDictionary{TKey, TValue}"/> の操作をサポートするクラス
     /// </summary>
-    static class ReadSafeDictionary
+    public static class ReadSafeDictionary
     {
 
         /// <summary>
@@ -285,7 +285,27 @@ namespace CsUtility.Generic
         {
             _defaultValue = defaultValue;
         }
-        
+
+
+        /// <summary>
+        /// シリアル化したデータを使用して、<see cref="ReadSafeDictionary{TKey,TValue}"/> クラスの新しいインスタンスを初期化します。
+        /// </summary>
+        /// <param name="info">
+        /// <see cref="ReadSafeDictionary{TKey,TValue}"/> をシリアル化するために必要な情報を格納している 
+        /// <see cref="System.Runtime.Serialization.SerializationInfo"/> オブジェクト。
+        /// </param>
+        /// <param name="context">
+        /// <see cref="ReadSafeDictionary{TKey,TValue}"/> に関連付けられているシリアル化ストリームの送信元および送信先を格納している
+        /// <see cref="System.Runtime.Serialization.StreamingContext"/> 構造体。
+        /// </param>
+        protected ReadSafeDictionary(SerializationInfo info, StreamingContext context)
+            : base(info, context)
+        {
+            // Reset the property value using the GetValue method.
+            _defaultValue = (TValue)info.GetValue(_defaultValueName, typeof(TValue));
+        }
+
+
         /// <summary>
         /// 指定されたキーに関連付けられている値を取得または設定します。
         /// </summary>
@@ -327,9 +347,20 @@ namespace CsUtility.Generic
                 return ret;
             }
         }
-
-        // Implement this method to serialize data. The method is called 
-        // on serialization.
+        
+        /// <summary>
+        /// <see cref="System.Runtime.Serialization.ISerializable"/> インターフェイスを実装し、
+        /// <see cref="ReadSafeDictionary{TKey,TValue}"/> インスタンスをシリアル化するために必要なデータを返します。
+        /// </summary>
+        /// <param name="info">
+        /// <see cref="ReadSafeDictionary{TKey,TValue}"/> をシリアル化するために必要な情報を格納している 
+        /// <see cref="System.Runtime.Serialization.SerializationInfo"/> オブジェクト。
+        /// </param>
+        /// <param name="context">
+        /// <see cref="ReadSafeDictionary{TKey,TValue}"/> に関連付けられているシリアル化ストリームの送信元および送信先を格納している
+        /// <see cref="System.Runtime.Serialization.StreamingContext"/> 構造体。
+        /// </param>
+        /// <exception cref="ArgumentNullException"> <paramref name="info"/> は null です。</exception>
         [System.Security.SecurityCritical]
         public override void GetObjectData(SerializationInfo info, StreamingContext context)
         {
@@ -338,13 +369,6 @@ namespace CsUtility.Generic
             info.AddValue(_defaultValueName,_defaultValue, typeof(TValue));
 
         }
-
-        // The special constructor is used to deserialize values.
-        protected ReadSafeDictionary(SerializationInfo info, StreamingContext context)
-            : base(info, context)
-        {
-            // Reset the property value using the GetValue method.
-            _defaultValue = (TValue)info.GetValue(_defaultValueName, typeof(TValue));
-        }
+        
     }
 }
