@@ -14,8 +14,37 @@ namespace CsUtility.Primitive
     public static partial class PrimitiveUtilities
     {
 <# foreach( var typeName in new[]{"float", "double"}){ #>
-<# foreach( var methodName in new[]{"IsNaN", "IsInfinity", "IsPositiveInfinity", "IsNegativeInfinity"}){ #>
+<# foreach( var methodName in new[]{"IsNaN", "IsInfinity", "IsPositiveInfinity", "IsNegativeInfinity"}){ 
+    var summaryText = "";
+	var returnsText = "";
+	switch (methodName){
+	case "IsNaN" : 
+		summaryText = $"非数値 (<see cref=\"{typeName}.NaN\"/>) "; 
+		returnsText = $"非数 (<see cref=\"{typeName}.NaN\"/>) "; 
+		break;
+	case "IsInfinity" : 
+		summaryText = $"負または正の無限大と評価される";
+		returnsText = $" <see cref=\"{typeName}.PositiveInfinity\"/> または <see cref=\"{typeName}.NegativeInfinity\"/> "; 
+		break;
+	case "IsPositiveInfinity" : 
+		summaryText = $"正の無限大と評価される";
+		returnsText = $" <see cref=\"{typeName}.PositiveInfinity\"/> "; 
+		break;
+	case "IsNegativeInfinity" : 
+		summaryText = $"負の無限大と評価される";
+		returnsText = $" <see cref=\"{typeName}.NegativeInfinity\"/> "; 
+		break;
+	}
 
+#>
+
+        /// <summary>
+        /// 指定した値が<#= summaryText #>かどうかを示す値を返します。
+        /// </summary>
+        /// <param name="val"> 評価する値。 </param>
+        /// <returns>
+        /// <paramref name="val"/> が<#= returnsText #>と評価される場合は true。それ以外の場合は false。
+        /// </returns>
         public static bool <#= methodName #>(this <#= typeName #> val)
         {
             return <#= typeName #>.<#= methodName #>(val);
