@@ -9,29 +9,27 @@ namespace UtilityTest.EnumerableUtillityTest
     [TestClass]
     public partial class EnumerableUtillityTest
     {
-        //[TestMethod]
-        //public void MinMaxTextOfFloatNaNValue()
-        //{
-        //    var testArray = new[] { float.MinValue, float.MaxValue, float.NegativeInfinity, float.NaN };
-        //    var nomalTestData = testArray.Select(p => new { Value = p }).ToArray();
+        [TestMethod]
+        public void SplitTest()
+        {
+            var array = new[] { 0, 12, 31, 23, 64, 234, 546, 865, 234, 213 }.Select(p=>p.ToString()).ToArray();
+            var splitCount = 3;
+            var splitedArrayByOld =
+                array
+                .Select((p, i) => (Index: i, Item: p))
+                .ToLookup(p => p.Index / splitCount, p => p.Item)
+                .Select(p => p.ToArray());
+
+            var splitedArrayByUtil = array.Split(splitCount);
+
+            var isSame = splitedArrayByOld.Count() == splitedArrayByUtil.Count();
+            if (isSame)
+               isSame |= splitedArrayByOld.Zip(splitedArrayByUtil, (old, util) => old.SequenceEqual(util)).All(p => p == true);
+
+            Assert.IsTrue(isSame);
 
 
-        //    var min = nomalTestData.Min(p => p.Value);
-        //    var max = nomalTestData.Max(p => p.Value);
-        //    var minItem = nomalTestData.First(p => p.Value == min);
-        //    var maxItem = nomalTestData.First(p => p.Value == max);
-
-        //    var (utillMin, utillMax) = nomalTestData.MinMax(p => p.Value);
-        //    var (utillMinItem, utillMaxItem) = nomalTestData.MinMaxItem(p => p.Value);
-
-        //    Assert.AreEqual(min, utillMin);
-        //    Assert.AreEqual(max, utillMax);
-        //    Assert.AreEqual(minItem, utillMinItem);
-        //    Assert.AreEqual(maxItem, utillMaxItem);
-        //    Assert.AreEqual(minItem, nomalTestData.MinItem(p => p.Value));
-        //    Assert.AreEqual(maxItem, nomalTestData.MaxItem(p => p.Value));
-
-        //}
+        }
 
     }
 }
