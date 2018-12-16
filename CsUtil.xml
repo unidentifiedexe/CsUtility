@@ -1530,6 +1530,20 @@
             <seealso cref="T:CsUtility.Generic.ReadSafeDictionary`2"/> の操作をサポートするクラス
             </summary>
         </member>
+        <member name="M:CsUtility.Generic.ReadSafeDictionary.GetValueOrDefault``2(System.Collections.Generic.IDictionary{``0,``1},``0,``1,System.Boolean)">
+            <summary>
+            指定されたキーに関連付けられている値を取得します。存在しない場合は指定した初期値を返します。
+            </summary>
+            <param name="dictionary"> 読取を試みるディクショナリ。 </param>
+            <param name="key">取得または値のキー。</param>
+            <param name="defaultValue"> 指定したキーが見つからなかった場合に返す値。 </param>
+            <param name="isSetValue"> 指定したキーが見つからなかった場合に値をセットするかを指定します。 </param>
+            <returns>
+            指定されたキーに関連付けられている値。 
+            指定したキーが見つからなかった場合初期値を返します
+            </returns>
+            <exception cref="T:System.ArgumentNullException"> <paramref name="key"/> または <paramref name="dictionary"/> は null です。</exception>
+        </member>
         <member name="M:CsUtility.Generic.ReadSafeDictionary.ToReadSafeDictionary``2(System.Collections.Generic.IDictionary{``0,``1})">
             <summary>
             指定した <see cref="T:System.Collections.Generic.IDictionary`2"/> から要素をコピーして格納し、
@@ -1743,6 +1757,19 @@
             <exception cref="T:System.ArgumentNullException"> <paramref name="dictionary"/> は null です。</exception>
             <exception cref="T:System.ArgumentException"> <paramref name="dictionary"/> には 1 つまたは複数の重複するキーが含まれます。</exception>
         </member>
+        <member name="M:CsUtility.Generic.ReadSafeDictionary`2.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            シリアル化したデータを使用して、<see cref="T:CsUtility.Generic.ReadSafeDictionary`2"/> クラスの新しいインスタンスを初期化します。
+            </summary>
+            <param name="info">
+            <see cref="T:CsUtility.Generic.ReadSafeDictionary`2"/> をシリアル化するために必要な情報を格納している 
+            <see cref="T:System.Runtime.Serialization.SerializationInfo"/> オブジェクト。
+            </param>
+            <param name="context">
+            <see cref="T:CsUtility.Generic.ReadSafeDictionary`2"/> に関連付けられているシリアル化ストリームの送信元および送信先を格納している
+            <see cref="T:System.Runtime.Serialization.StreamingContext"/> 構造体。
+            </param>
+        </member>
         <member name="P:CsUtility.Generic.ReadSafeDictionary`2.Item(`0)">
             <summary>
             指定されたキーに関連付けられている値を取得または設定します。
@@ -1756,17 +1783,33 @@
             </returns>
             <exception cref="T:System.ArgumentNullException"> key は null です。</exception>
         </member>
-        <member name="M:CsUtility.Generic.ReadSafeDictionary`2.GetValueOrDefault(`0,`1)">
+        <member name="M:CsUtility.Generic.ReadSafeDictionary`2.GetValueOrDefault(`0,`1,System.Boolean)">
             <summary>
-            指定されたキーに関連付けられている値を取得します。存在しない場合は指定した初期値の要セオを作成しそれを取得します。
+            指定されたキーに関連付けられている値を取得します。存在しない場合は指定した初期値を返します。
             </summary>
             <param name="key">取得または値のキー。</param>
-            <param name="defaultValue"> 指定したキーが見つからなかった場合に返す値 </param>
+            <param name="defaultValue"> 指定したキーが見つからなかった場合に返す値。 </param>
+            <param name="isSet"> 指定したキーが見つからなかった場合に値をセットするかを指定します。 </param>
             <returns>
             指定されたキーに関連付けられている値。 
             指定したキーが見つからなかった場合初期値を返します
             </returns>
             <exception cref="T:System.ArgumentNullException"> key は null です。</exception>
+        </member>
+        <member name="M:CsUtility.Generic.ReadSafeDictionary`2.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            <see cref="T:System.Runtime.Serialization.ISerializable"/> インターフェイスを実装し、
+            <see cref="T:CsUtility.Generic.ReadSafeDictionary`2"/> インスタンスをシリアル化するために必要なデータを返します。
+            </summary>
+            <param name="info">
+            <see cref="T:CsUtility.Generic.ReadSafeDictionary`2"/> をシリアル化するために必要な情報を格納している 
+            <see cref="T:System.Runtime.Serialization.SerializationInfo"/> オブジェクト。
+            </param>
+            <param name="context">
+            <see cref="T:CsUtility.Generic.ReadSafeDictionary`2"/> に関連付けられているシリアル化ストリームの送信元および送信先を格納している
+            <see cref="T:System.Runtime.Serialization.StreamingContext"/> 構造体。
+            </param>
+            <exception cref="T:System.ArgumentNullException"> <paramref name="info"/> は null です。</exception>
         </member>
         <member name="T:CsUtility.Primitive.PrimitiveUtilities">
             <summary>
