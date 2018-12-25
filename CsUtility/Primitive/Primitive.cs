@@ -30,5 +30,14 @@ namespace CsUtility.Primitive
         {
             return string.IsNullOrWhiteSpace(value); 
         }
+
+
+        /// <summary> 真理値の否定を返します。 </summary>
+        /// <param name="value"> 否定する真理値 </param>
+        /// <returns> 否定された真理値 </returns>
+        public static bool Not(this bool value)
+        {
+            return !value;
+        }
     }
 }

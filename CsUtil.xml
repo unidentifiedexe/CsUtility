@@ -1832,6 +1832,11 @@
             value パラメーターが null または System.String.Empty であるか、value が空白文字だけで構成されている場合は。 true
             </returns>
         </member>
+        <member name="M:CsUtility.Primitive.PrimitiveUtilities.Not(System.Boolean)">
+            <summary> 真理値の否定を返します。 </summary>
+            <param name="value"> 否定する真理値 </param>
+            <returns> 否定された真理値 </returns>
+        </member>
         <member name="M:CsUtility.Primitive.PrimitiveUtilities.IsNaN(System.Single)">
             <summary>
             指定した値が非数値 (<see cref="F:System.Single.NaN"/>) かどうかを示す値を返します。
