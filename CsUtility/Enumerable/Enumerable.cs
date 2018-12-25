@@ -371,7 +371,61 @@ namespace CsUtility.Enumerable
                 yield return resultSelector(result, element);
             }
         }
-        
-    }
 
+
+        /// <summary>
+        /// 型の規定の比較子を用いてシーケンスの全ての値が等しいかどうかを取得します。
+        /// </summary>
+        /// <typeparam name="TSource"> source の要素の型。</typeparam>
+        /// <param name="source"> 精査する対象となるシーケンス。</param>
+        /// <returns> 全ての要素が等しい場合 true。そうでない場合は false </returns>
+        static bool AllEqual<TSource>(this IEnumerable<TSource> source)
+        {
+            if (source == null) throw new ArgumentNullException(nameof(source));
+            return AllEqualIterator(source, EqualityComparer<TSource>.Default);
+        }
+
+        /// <summary>
+        /// 指定の比較子を用いてシーケンスの全ての値が等しいかどうかを取得します。
+        /// </summary>
+        /// <typeparam name="TSource"> source の要素の型。</typeparam>
+        /// <param name="source"> 精査する対象となるシーケンス。</param>
+        /// <param name="comparer"> 値を比較する <see cref="IEqualityComparer{TSource}"/>。</param>
+        /// <returns> 全ての要素が等しい場合 true。そうでない場合は false </returns>
+        static bool AllEqual<TSource>(this IEnumerable<TSource> source ,IEqualityComparer<TSource> comparer)
+        {
+            if (source == null) throw new ArgumentNullException(nameof(source));
+            return AllEqualIterator(source, comparer ?? EqualityComparer<TSource>.Default);
+        }
+
+        private static bool AllEqualIterator<TSource>(this IEnumerable<TSource> source, IEqualityComparer<TSource> comparer)
+        {
+            using (IEnumerator<TSource> e = source.GetEnumerator())
+            {
+                if (!e.MoveNext()) throw new ArgumentException();
+                TSource first = e.Current;
+                while (e.MoveNext())
+                    if (!comparer.Equals(first, e.Current))
+                        return false;
+
+                return true;
+            }
+
+        }
+
+        /// <summary>
+        /// 2 次元のジャグシーケンスを平滑化します
+        /// </summary>
+        /// <typeparam name="TSource"> <paramref name="source"/> の要素の型。 </typeparam>
+        /// <param name="source"> 平坦化する 2 次元のジャグシーケンス。 </param>
+        /// <returns> 平坦化されたシーケンス。 </returns>
+        public static IEnumerable<TSource> SelectMany<TSource>(this IEnumerable<IEnumerable<TSource>> source)
+        {
+            foreach (IEnumerable<TSource> element in source)
+                foreach (TSource subElement in element)
+                    yield return subElement;
+        }
+
+
+    }
 }
