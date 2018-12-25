@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Text;
 using System.Linq;
 using System.Collections;
-
 namespace CsUtility.Enumerable
 {
     /// <summary>
@@ -288,8 +287,7 @@ namespace CsUtility.Enumerable
             TAccumulate result = seed;
             foreach (TSource element in source) yield return result = func(result, element);
         }
-
-
+        
         /// <summary>
         /// シーケンスにアキュムレータ関数を適用しその過程を要素とするシーケンスを返します。
         /// </summary>
@@ -313,6 +311,7 @@ namespace CsUtility.Enumerable
                 while (e.MoveNext()) yield return result = func(result, e.Current);
             }
         }
+
 
         //TODO:仕様決定
         /// <summary>
@@ -378,7 +377,8 @@ namespace CsUtility.Enumerable
         /// </summary>
         /// <typeparam name="TSource"> source の要素の型。</typeparam>
         /// <param name="source"> 精査する対象となるシーケンス。</param>
-        /// <returns> 全ての要素が等しい場合 true。そうでない場合は false </returns>
+        /// <returns> 全ての要素が等しい場合 true。そうでない場合は false </return
+        /// <exception cref="ArgumentNullException"> <paramref name="source"/> が null です。 </exception>s>
         static bool AllEqual<TSource>(this IEnumerable<TSource> source)
         {
             if (source == null) throw new ArgumentNullException(nameof(source));
@@ -392,10 +392,49 @@ namespace CsUtility.Enumerable
         /// <param name="source"> 精査する対象となるシーケンス。</param>
         /// <param name="comparer"> 値を比較する <see cref="IEqualityComparer{TSource}"/>。</param>
         /// <returns> 全ての要素が等しい場合 true。そうでない場合は false </returns>
-        static bool AllEqual<TSource>(this IEnumerable<TSource> source ,IEqualityComparer<TSource> comparer)
+        /// <exception cref="ArgumentNullException"> <paramref name="source"/> が null です。 </exception>
+        static bool AllEqual<TSource>(this IEnumerable<TSource> source, IEqualityComparer<TSource> comparer)
         {
             if (source == null) throw new ArgumentNullException(nameof(source));
             return AllEqualIterator(source, comparer ?? EqualityComparer<TSource>.Default);
+        }
+
+
+        /// <summary>
+        /// 指定のの比較子を用いて射影されたシーケンスの全ての値が等しいかどうかを取得します。
+        /// </summary>
+        /// <typeparam name="TSource"> source の要素の型。</typeparam>
+        /// <typeparam name="TSelect"> 比較する要素の型。</typeparam>
+        /// <param name="source"> 精査する対象となるシーケンス。</param>
+        /// <param name="selector"> 射影する関数。 </param>
+        /// <returns> 全ての要素が等しい場合 true。そうでない場合は false </returns>
+        /// <exception cref="ArgumentNullException"> 
+        /// <paramref name="source"/> または <paramref name="selector"/> が null です。
+        /// </exception>
+        static bool AllEqual<TSource,TSelect>(this IEnumerable<TSource> source,Func<TSource, TSelect>selector)
+        {
+            if (source == null) throw new ArgumentNullException(nameof(source));
+            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            return AllEqualIterator(System.Linq.Enumerable.Select(source, selector), EqualityComparer<TSelect>.Default);
+        }
+
+        /// <summary>
+        /// 型の規定の比較子を用いて射影されたシーケンスの全ての値が等しいかどうかを取得します。
+        /// </summary>
+        /// <typeparam name="TSource"> source の要素の型。</typeparam>
+        /// <typeparam name="TSelect"> 比較する要素の型。</typeparam>
+        /// <param name="source"> 精査する対象となるシーケンス。</param>
+        /// <param name="comparer"> 値を比較する <see cref="IEqualityComparer{TSource}"/>。</param>
+        /// <param name="selector"> 射影する関数。 </param>
+        /// <returns> 全ての要素が等しい場合 true。そうでない場合は false </returns>
+        /// <exception cref="ArgumentNullException"> 
+        /// <paramref name="source"/> または <paramref name="selector"/> が null です。
+        /// </exception>
+        static bool AllEqual<TSource, TSelect>(this IEnumerable<TSource> source, Func<TSource, TSelect> selector, IEqualityComparer<TSelect> comparer)
+        {
+            if (source == null) throw new ArgumentNullException(nameof(source));
+            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            return AllEqualIterator(System.Linq.Enumerable.Select(source, selector), comparer ?? EqualityComparer<TSelect>.Default);
         }
 
         private static bool AllEqualIterator<TSource>(this IEnumerable<TSource> source, IEqualityComparer<TSource> comparer)
