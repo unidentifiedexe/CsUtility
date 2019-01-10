@@ -9,6 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
+using CsUtility;
 
 <# 
 var nums = Enumerable.Range(1,5).Skip(2).ToArray();
@@ -60,7 +61,7 @@ namespace CsUtility.Enumerable
             Func<<#= types #>> resultSelector)
         {
 <# foreach(var txt in Enumerable.Range(1,num).Select(p=>names[p].Camel).Append("resultSelector")){ #>
-            if (<#= txt #> == null)  throw new ArgumentNullException(nameof(<#= txt #>));
+            if (<#= txt #> == null)  throw Error.ArgumentNull(nameof(<#= txt #>));
 <# } #>
             return ZipIterator(<#= string.Join(", ",Enumerable.Range(1,num).Select(p=>names[p].Camel))#>, resultSelector);
         }

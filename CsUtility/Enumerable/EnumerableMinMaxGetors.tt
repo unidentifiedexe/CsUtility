@@ -69,8 +69,8 @@ var oprJaText = "";
         /// </exception> 
         public static TSource <#= opr.Key #>Item<TSource>(this IEnumerable<TSource> source, Func<TSource, <#= typeName #>> selector)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (selector == null) throw Error.ArgumentNull(nameof(selector));
             <#= typeName #> value = default(<#= typeName #>);
             bool hasValue = false;
             TSource obj = default(TSource);
@@ -106,7 +106,7 @@ var oprJaText = "";
                 }
             }
             if (hasValue) return obj;
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
 <# } #>
@@ -143,7 +143,7 @@ var oprJaText = "";
         /// <exception cref="ArgumentNullException"> <paramref name="source"/> が null です。</exception> 
         public static MinMaxPair<<#= typeName #>> MinMax(this IEnumerable<<#= typeName #>> source) 
         {
-            if (source == null) throw new ArgumentNullException("source");
+            if (source == null) throw Error.ArgumentNull("source");
             <#= typeName #> min = default(<#= typeName #>);
             <#= typeName #> max = default(<#= typeName #>);
             bool hasValue = false;
@@ -175,7 +175,7 @@ var oprJaText = "";
                 }
             }
             if (hasValue) return new MinMaxPair<<#= typeName #>>(min, max);
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 <# } #>
         
@@ -196,7 +196,7 @@ var oprJaText = "";
         /// </exception> 
         public static MinMaxPair<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, <#= typeName #>> selector) 
         {
-            if (source == null) throw new ArgumentNullException("source");
+            if (source == null) throw Error.ArgumentNull("source");
             <#= typeName #> min = default(<#= typeName #>);
             <#= typeName #> max = default(<#= typeName #>);
             TSource minItem = default(TSource);
@@ -234,7 +234,7 @@ var oprJaText = "";
                 }
             }
             if (hasValue) return new MinMaxPair<TSource>(minItem, maxItem);
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
 <# } #>

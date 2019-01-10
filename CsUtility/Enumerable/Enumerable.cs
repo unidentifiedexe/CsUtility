@@ -75,8 +75,8 @@ namespace CsUtility.Enumerable
         /// <returns> 条件を満たす最初の要素。条件を満たす要素が無い場合は <paramref name="defaultValue"/> </returns>
         public static TSource FirstOrDefault<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate, TSource defaultValue)
         {
-            if (source == null) throw new ArgumentNullException("source");
-            if (predicate == null) throw new ArgumentNullException("predicate");
+            if (source == null) throw Error.ArgumentNull("source");
+            if (predicate == null) throw Error.ArgumentNull("predicate");
             foreach (TSource element in source)
             {
                 if (predicate(element)) return element;
@@ -97,8 +97,8 @@ namespace CsUtility.Enumerable
         /// <returns> 条件を満たす最後の要素。条件を満たす要素が無い場合は <paramref name="defaultValue"/> </returns>
         public static TSource LastOrDefault<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate, TSource defaultValue)
         {
-            if (source == null) throw new ArgumentNullException("source");
-            if (predicate == null) throw new ArgumentNullException("predicate");
+            if (source == null) throw Error.ArgumentNull("source");
+            if (predicate == null) throw Error.ArgumentNull("predicate");
             TSource result = defaultValue;
             foreach (TSource element in source)
             {
@@ -121,8 +121,8 @@ namespace CsUtility.Enumerable
         /// <exception cref="ArgumentOutOfRangeException"> <paramref name="count"/> が 0 未満です。</exception>
         public static IEnumerable<TResult> Repeat<TResult>(Func<TResult> generator, int count)
         {
-            if (generator == null) throw new ArgumentNullException(nameof(generator));
-            if (count < 0) throw new ArgumentOutOfRangeException("count");
+            if (generator == null) throw Error.ArgumentNull(nameof(generator));
+            if (count < 0) throw Error.ArgumentOutOfRange("count");
             for (int i = 0; i < count; i++) yield return generator();
         }
 
@@ -135,7 +135,7 @@ namespace CsUtility.Enumerable
         /// <returns> 前後の要素をひとまとめにした構造体のシーケンス。 </returns>
         public static IEnumerable<PrevNextPair<TSource>> ZipVicinity<TSource>(this IEnumerable<TSource> source)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
             PrevNextPair<TSource> resultSelector(TSource p, TSource n) => new PrevNextPair<TSource>(p, n);
             return VicinityZipIterator(source, resultSelector);
         }
@@ -153,8 +153,8 @@ namespace CsUtility.Enumerable
         /// <returns> 射影されたシーケンス。 </returns>
         public static IEnumerable<TResult> ZipVicinity<TSource, TResult>(this IEnumerable<TSource> source, Func<TSource, TSource, TResult> resultSelector)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (resultSelector == null) throw new ArgumentNullException(nameof(resultSelector));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (resultSelector == null) throw Error.ArgumentNull(nameof(resultSelector));
             return VicinityZipIterator(source, resultSelector);
         }
         
@@ -188,8 +188,8 @@ namespace CsUtility.Enumerable
         /// <returns> 切り分けられたシーケンス。</returns>
         public static IEnumerable<IEnumerable<TSource>> Split<TSource>(this IEnumerable<TSource> source, int number)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (number < 1) throw new ArgumentOutOfRangeException(nameof(number));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (number < 1) throw Error.ArgumentOutOfRange(nameof(number));
             if (number == 1) foreach (var item in source) yield return new[] { item };
 
             var retArray = new TSource[number];
@@ -226,8 +226,8 @@ namespace CsUtility.Enumerable
         /// <returns> 切り分けられたシーケンス。</returns>
         public static IEnumerable<IEnumerable<TSource>> SplitIf<TSource>(this IEnumerable<TSource> source, Func<TSource, TSource, bool> predicate)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (predicate == null) throw new ArgumentNullException(nameof(predicate));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (predicate == null) throw Error.ArgumentNull(nameof(predicate));
             var tempArray = new TSource[4];
             var previous = default(TSource);
             bool hasValue = false;
@@ -281,8 +281,8 @@ namespace CsUtility.Enumerable
         /// <returns>アキュムレータ関数を適用の過程を要素とするシーケンス</returns>
         public static IEnumerable<TAccumulate> AggregateSelect<TSource, TAccumulate>(this IEnumerable<TSource> source, TAccumulate seed, Func<TAccumulate, TSource, TAccumulate> func)
         {
-            if (source == null) throw new ArgumentNullException("source");
-            if (func == null) throw new ArgumentNullException("func");
+            if (source == null) throw Error.ArgumentNull("source");
+            if (func == null) throw Error.ArgumentNull("func");
             TAccumulate result = seed;
             foreach (TSource element in source) yield return result = func(result, element);
         }
@@ -299,12 +299,12 @@ namespace CsUtility.Enumerable
         /// <returns>アキュムレータ関数を適用の過程を要素とするシーケンス</returns>
         public static IEnumerable<TSource> AggregateSelect<TSource>(this IEnumerable<TSource> source, Func<TSource, TSource, TSource> func)
         {
-            if (source == null) throw new ArgumentNullException("source");
-            if (func == null) throw new ArgumentNullException("func");
+            if (source == null) throw Error.ArgumentNull("source");
+            if (func == null) throw Error.ArgumentNull("func");
 
             using (IEnumerator<TSource> e = source.GetEnumerator())
             {
-                if (!e.MoveNext()) throw new ArgumentException(nameof(source));
+                if (!e.MoveNext()) throw Error.NoElements();
                 TSource result;
                 yield return result = e.Current;
                 while (e.MoveNext()) yield return result = func(result, e.Current);
@@ -329,8 +329,8 @@ namespace CsUtility.Enumerable
         [Obsolete("仕様が未定です。非推奨です。")]
         public static IEnumerable<TResult> AggregateSelect<TSource, TAccumulate, TResult>(this IEnumerable<TSource> source, TAccumulate seed, Func<TAccumulate, TSource, (TAccumulate Ag, TResult Re)> func)
         {
-            if (source == null) throw new ArgumentNullException("source");
-            if (func == null) throw new ArgumentNullException("func");
+            if (source == null) throw Error.ArgumentNull("source");
+            if (func == null) throw Error.ArgumentNull("func");
 
             TAccumulate result = seed;
             TResult ret;
@@ -358,9 +358,9 @@ namespace CsUtility.Enumerable
         /// </exception>
         public static IEnumerable<TResult> AggregateSelect<TSource, TAccumulate, TResult>(this IEnumerable<TSource> source, TAccumulate seed, Func<TAccumulate, TSource, TAccumulate> func ,Func<TAccumulate,TSource,TResult> resultSelector)
         {
-            if (source == null) throw new ArgumentNullException("source");
-            if (func == null) throw new ArgumentNullException("func");
-            if (resultSelector == null) throw new ArgumentNullException(nameof(resultSelector));
+            if (source == null) throw Error.ArgumentNull("source");
+            if (func == null) throw Error.ArgumentNull("func");
+            if (resultSelector == null) throw Error.ArgumentNull(nameof(resultSelector));
 
             TAccumulate result = seed;
             foreach (TSource element in source)
@@ -380,7 +380,7 @@ namespace CsUtility.Enumerable
         /// <exception cref="ArgumentNullException"> <paramref name="source"/> が null です。 </exception>s>
         static bool AllEqual<TSource>(this IEnumerable<TSource> source)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
             return AllEqualIterator(source, EqualityComparer<TSource>.Default);
         }
 
@@ -394,7 +394,7 @@ namespace CsUtility.Enumerable
         /// <exception cref="ArgumentNullException"> <paramref name="source"/> が null です。 </exception>
         static bool AllEqual<TSource>(this IEnumerable<TSource> source, IEqualityComparer<TSource> comparer)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
             return AllEqualIterator(source, comparer ?? EqualityComparer<TSource>.Default);
         }
 
@@ -412,8 +412,8 @@ namespace CsUtility.Enumerable
         /// </exception>
         static bool AllEqual<TSource,TSelect>(this IEnumerable<TSource> source,Func<TSource, TSelect>selector)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (selector == null) throw Error.ArgumentNull(nameof(selector));
             return AllEqualIterator(System.Linq.Enumerable.Select(source, selector), EqualityComparer<TSelect>.Default);
         }
 
@@ -431,8 +431,8 @@ namespace CsUtility.Enumerable
         /// </exception>
         static bool AllEqual<TSource, TSelect>(this IEnumerable<TSource> source, Func<TSource, TSelect> selector, IEqualityComparer<TSelect> comparer)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (selector == null) throw Error.ArgumentNull(nameof(selector));
             return AllEqualIterator(System.Linq.Enumerable.Select(source, selector), comparer ?? EqualityComparer<TSelect>.Default);
         }
 
@@ -440,7 +440,7 @@ namespace CsUtility.Enumerable
         {
             using (IEnumerator<TSource> e = source.GetEnumerator())
             {
-                if (!e.MoveNext()) throw new InvalidOperationException();
+                if (!e.MoveNext()) throw Error.NoElements();
                 TSource first = e.Current;
                 while (e.MoveNext())
                     if (!comparer.Equals(first, e.Current))

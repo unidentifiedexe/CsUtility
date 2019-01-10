@@ -25,8 +25,8 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static TSource MinItem<TSource>(this IEnumerable<TSource> source, Func<TSource, sbyte> selector)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (selector == null) throw Error.ArgumentNull(nameof(selector));
             sbyte value = default(sbyte);
             bool hasValue = false;
             TSource obj = default(TSource);
@@ -50,7 +50,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return obj;
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -65,8 +65,8 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static TSource MinItem<TSource>(this IEnumerable<TSource> source, Func<TSource, sbyte?> selector)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (selector == null) throw Error.ArgumentNull(nameof(selector));
             sbyte? value = default(sbyte?);
             bool hasValue = false;
             TSource obj = default(TSource);
@@ -90,7 +90,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return obj;
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -105,8 +105,8 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static TSource MinItem<TSource>(this IEnumerable<TSource> source, Func<TSource, byte> selector)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (selector == null) throw Error.ArgumentNull(nameof(selector));
             byte value = default(byte);
             bool hasValue = false;
             TSource obj = default(TSource);
@@ -130,7 +130,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return obj;
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -145,8 +145,8 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static TSource MinItem<TSource>(this IEnumerable<TSource> source, Func<TSource, byte?> selector)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (selector == null) throw Error.ArgumentNull(nameof(selector));
             byte? value = default(byte?);
             bool hasValue = false;
             TSource obj = default(TSource);
@@ -170,7 +170,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return obj;
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -185,8 +185,8 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static TSource MinItem<TSource>(this IEnumerable<TSource> source, Func<TSource, char> selector)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (selector == null) throw Error.ArgumentNull(nameof(selector));
             char value = default(char);
             bool hasValue = false;
             TSource obj = default(TSource);
@@ -210,7 +210,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return obj;
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -225,8 +225,8 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static TSource MinItem<TSource>(this IEnumerable<TSource> source, Func<TSource, char?> selector)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (selector == null) throw Error.ArgumentNull(nameof(selector));
             char? value = default(char?);
             bool hasValue = false;
             TSource obj = default(TSource);
@@ -250,7 +250,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return obj;
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -265,8 +265,8 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static TSource MinItem<TSource>(this IEnumerable<TSource> source, Func<TSource, short> selector)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (selector == null) throw Error.ArgumentNull(nameof(selector));
             short value = default(short);
             bool hasValue = false;
             TSource obj = default(TSource);
@@ -290,7 +290,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return obj;
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -305,8 +305,8 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static TSource MinItem<TSource>(this IEnumerable<TSource> source, Func<TSource, short?> selector)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (selector == null) throw Error.ArgumentNull(nameof(selector));
             short? value = default(short?);
             bool hasValue = false;
             TSource obj = default(TSource);
@@ -330,7 +330,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return obj;
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -345,8 +345,8 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static TSource MinItem<TSource>(this IEnumerable<TSource> source, Func<TSource, ushort> selector)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (selector == null) throw Error.ArgumentNull(nameof(selector));
             ushort value = default(ushort);
             bool hasValue = false;
             TSource obj = default(TSource);
@@ -370,7 +370,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return obj;
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -385,8 +385,8 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static TSource MinItem<TSource>(this IEnumerable<TSource> source, Func<TSource, ushort?> selector)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (selector == null) throw Error.ArgumentNull(nameof(selector));
             ushort? value = default(ushort?);
             bool hasValue = false;
             TSource obj = default(TSource);
@@ -410,7 +410,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return obj;
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -425,8 +425,8 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static TSource MinItem<TSource>(this IEnumerable<TSource> source, Func<TSource, int> selector)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (selector == null) throw Error.ArgumentNull(nameof(selector));
             int value = default(int);
             bool hasValue = false;
             TSource obj = default(TSource);
@@ -450,7 +450,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return obj;
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -465,8 +465,8 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static TSource MinItem<TSource>(this IEnumerable<TSource> source, Func<TSource, int?> selector)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (selector == null) throw Error.ArgumentNull(nameof(selector));
             int? value = default(int?);
             bool hasValue = false;
             TSource obj = default(TSource);
@@ -490,7 +490,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return obj;
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -505,8 +505,8 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static TSource MinItem<TSource>(this IEnumerable<TSource> source, Func<TSource, uint> selector)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (selector == null) throw Error.ArgumentNull(nameof(selector));
             uint value = default(uint);
             bool hasValue = false;
             TSource obj = default(TSource);
@@ -530,7 +530,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return obj;
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -545,8 +545,8 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static TSource MinItem<TSource>(this IEnumerable<TSource> source, Func<TSource, uint?> selector)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (selector == null) throw Error.ArgumentNull(nameof(selector));
             uint? value = default(uint?);
             bool hasValue = false;
             TSource obj = default(TSource);
@@ -570,7 +570,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return obj;
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -585,8 +585,8 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static TSource MinItem<TSource>(this IEnumerable<TSource> source, Func<TSource, long> selector)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (selector == null) throw Error.ArgumentNull(nameof(selector));
             long value = default(long);
             bool hasValue = false;
             TSource obj = default(TSource);
@@ -610,7 +610,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return obj;
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -625,8 +625,8 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static TSource MinItem<TSource>(this IEnumerable<TSource> source, Func<TSource, long?> selector)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (selector == null) throw Error.ArgumentNull(nameof(selector));
             long? value = default(long?);
             bool hasValue = false;
             TSource obj = default(TSource);
@@ -650,7 +650,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return obj;
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -665,8 +665,8 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static TSource MinItem<TSource>(this IEnumerable<TSource> source, Func<TSource, ulong> selector)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (selector == null) throw Error.ArgumentNull(nameof(selector));
             ulong value = default(ulong);
             bool hasValue = false;
             TSource obj = default(TSource);
@@ -690,7 +690,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return obj;
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -705,8 +705,8 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static TSource MinItem<TSource>(this IEnumerable<TSource> source, Func<TSource, ulong?> selector)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (selector == null) throw Error.ArgumentNull(nameof(selector));
             ulong? value = default(ulong?);
             bool hasValue = false;
             TSource obj = default(TSource);
@@ -730,7 +730,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return obj;
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -745,8 +745,8 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static TSource MinItem<TSource>(this IEnumerable<TSource> source, Func<TSource, float> selector)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (selector == null) throw Error.ArgumentNull(nameof(selector));
             float value = default(float);
             bool hasValue = false;
             TSource obj = default(TSource);
@@ -770,7 +770,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return obj;
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -785,8 +785,8 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static TSource MinItem<TSource>(this IEnumerable<TSource> source, Func<TSource, float?> selector)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (selector == null) throw Error.ArgumentNull(nameof(selector));
             float? value = default(float?);
             bool hasValue = false;
             TSource obj = default(TSource);
@@ -810,7 +810,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return obj;
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -825,8 +825,8 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static TSource MinItem<TSource>(this IEnumerable<TSource> source, Func<TSource, double> selector)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (selector == null) throw Error.ArgumentNull(nameof(selector));
             double value = default(double);
             bool hasValue = false;
             TSource obj = default(TSource);
@@ -850,7 +850,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return obj;
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -865,8 +865,8 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static TSource MinItem<TSource>(this IEnumerable<TSource> source, Func<TSource, double?> selector)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (selector == null) throw Error.ArgumentNull(nameof(selector));
             double? value = default(double?);
             bool hasValue = false;
             TSource obj = default(TSource);
@@ -890,7 +890,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return obj;
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -905,8 +905,8 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static TSource MinItem<TSource>(this IEnumerable<TSource> source, Func<TSource, decimal> selector)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (selector == null) throw Error.ArgumentNull(nameof(selector));
             decimal value = default(decimal);
             bool hasValue = false;
             TSource obj = default(TSource);
@@ -930,7 +930,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return obj;
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -945,8 +945,8 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static TSource MinItem<TSource>(this IEnumerable<TSource> source, Func<TSource, decimal?> selector)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (selector == null) throw Error.ArgumentNull(nameof(selector));
             decimal? value = default(decimal?);
             bool hasValue = false;
             TSource obj = default(TSource);
@@ -970,7 +970,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return obj;
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         #endregion
@@ -989,8 +989,8 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static TSource MaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, sbyte> selector)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (selector == null) throw Error.ArgumentNull(nameof(selector));
             sbyte value = default(sbyte);
             bool hasValue = false;
             TSource obj = default(TSource);
@@ -1014,7 +1014,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return obj;
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -1029,8 +1029,8 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static TSource MaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, sbyte?> selector)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (selector == null) throw Error.ArgumentNull(nameof(selector));
             sbyte? value = default(sbyte?);
             bool hasValue = false;
             TSource obj = default(TSource);
@@ -1054,7 +1054,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return obj;
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -1069,8 +1069,8 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static TSource MaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, byte> selector)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (selector == null) throw Error.ArgumentNull(nameof(selector));
             byte value = default(byte);
             bool hasValue = false;
             TSource obj = default(TSource);
@@ -1094,7 +1094,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return obj;
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -1109,8 +1109,8 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static TSource MaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, byte?> selector)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (selector == null) throw Error.ArgumentNull(nameof(selector));
             byte? value = default(byte?);
             bool hasValue = false;
             TSource obj = default(TSource);
@@ -1134,7 +1134,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return obj;
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -1149,8 +1149,8 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static TSource MaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, char> selector)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (selector == null) throw Error.ArgumentNull(nameof(selector));
             char value = default(char);
             bool hasValue = false;
             TSource obj = default(TSource);
@@ -1174,7 +1174,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return obj;
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -1189,8 +1189,8 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static TSource MaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, char?> selector)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (selector == null) throw Error.ArgumentNull(nameof(selector));
             char? value = default(char?);
             bool hasValue = false;
             TSource obj = default(TSource);
@@ -1214,7 +1214,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return obj;
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -1229,8 +1229,8 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static TSource MaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, short> selector)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (selector == null) throw Error.ArgumentNull(nameof(selector));
             short value = default(short);
             bool hasValue = false;
             TSource obj = default(TSource);
@@ -1254,7 +1254,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return obj;
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -1269,8 +1269,8 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static TSource MaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, short?> selector)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (selector == null) throw Error.ArgumentNull(nameof(selector));
             short? value = default(short?);
             bool hasValue = false;
             TSource obj = default(TSource);
@@ -1294,7 +1294,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return obj;
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -1309,8 +1309,8 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static TSource MaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, ushort> selector)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (selector == null) throw Error.ArgumentNull(nameof(selector));
             ushort value = default(ushort);
             bool hasValue = false;
             TSource obj = default(TSource);
@@ -1334,7 +1334,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return obj;
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -1349,8 +1349,8 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static TSource MaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, ushort?> selector)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (selector == null) throw Error.ArgumentNull(nameof(selector));
             ushort? value = default(ushort?);
             bool hasValue = false;
             TSource obj = default(TSource);
@@ -1374,7 +1374,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return obj;
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -1389,8 +1389,8 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static TSource MaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, int> selector)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (selector == null) throw Error.ArgumentNull(nameof(selector));
             int value = default(int);
             bool hasValue = false;
             TSource obj = default(TSource);
@@ -1414,7 +1414,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return obj;
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -1429,8 +1429,8 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static TSource MaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, int?> selector)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (selector == null) throw Error.ArgumentNull(nameof(selector));
             int? value = default(int?);
             bool hasValue = false;
             TSource obj = default(TSource);
@@ -1454,7 +1454,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return obj;
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -1469,8 +1469,8 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static TSource MaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, uint> selector)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (selector == null) throw Error.ArgumentNull(nameof(selector));
             uint value = default(uint);
             bool hasValue = false;
             TSource obj = default(TSource);
@@ -1494,7 +1494,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return obj;
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -1509,8 +1509,8 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static TSource MaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, uint?> selector)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (selector == null) throw Error.ArgumentNull(nameof(selector));
             uint? value = default(uint?);
             bool hasValue = false;
             TSource obj = default(TSource);
@@ -1534,7 +1534,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return obj;
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -1549,8 +1549,8 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static TSource MaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, long> selector)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (selector == null) throw Error.ArgumentNull(nameof(selector));
             long value = default(long);
             bool hasValue = false;
             TSource obj = default(TSource);
@@ -1574,7 +1574,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return obj;
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -1589,8 +1589,8 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static TSource MaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, long?> selector)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (selector == null) throw Error.ArgumentNull(nameof(selector));
             long? value = default(long?);
             bool hasValue = false;
             TSource obj = default(TSource);
@@ -1614,7 +1614,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return obj;
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -1629,8 +1629,8 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static TSource MaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, ulong> selector)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (selector == null) throw Error.ArgumentNull(nameof(selector));
             ulong value = default(ulong);
             bool hasValue = false;
             TSource obj = default(TSource);
@@ -1654,7 +1654,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return obj;
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -1669,8 +1669,8 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static TSource MaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, ulong?> selector)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (selector == null) throw Error.ArgumentNull(nameof(selector));
             ulong? value = default(ulong?);
             bool hasValue = false;
             TSource obj = default(TSource);
@@ -1694,7 +1694,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return obj;
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -1709,8 +1709,8 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static TSource MaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, float> selector)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (selector == null) throw Error.ArgumentNull(nameof(selector));
             float value = default(float);
             bool hasValue = false;
             TSource obj = default(TSource);
@@ -1734,7 +1734,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return obj;
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -1749,8 +1749,8 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static TSource MaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, float?> selector)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (selector == null) throw Error.ArgumentNull(nameof(selector));
             float? value = default(float?);
             bool hasValue = false;
             TSource obj = default(TSource);
@@ -1774,7 +1774,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return obj;
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -1789,8 +1789,8 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static TSource MaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, double> selector)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (selector == null) throw Error.ArgumentNull(nameof(selector));
             double value = default(double);
             bool hasValue = false;
             TSource obj = default(TSource);
@@ -1814,7 +1814,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return obj;
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -1829,8 +1829,8 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static TSource MaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, double?> selector)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (selector == null) throw Error.ArgumentNull(nameof(selector));
             double? value = default(double?);
             bool hasValue = false;
             TSource obj = default(TSource);
@@ -1854,7 +1854,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return obj;
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -1869,8 +1869,8 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static TSource MaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, decimal> selector)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (selector == null) throw Error.ArgumentNull(nameof(selector));
             decimal value = default(decimal);
             bool hasValue = false;
             TSource obj = default(TSource);
@@ -1894,7 +1894,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return obj;
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -1909,8 +1909,8 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static TSource MaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, decimal?> selector)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (selector == null) throw Error.ArgumentNull(nameof(selector));
             decimal? value = default(decimal?);
             bool hasValue = false;
             TSource obj = default(TSource);
@@ -1934,7 +1934,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return obj;
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         #endregion
@@ -2311,7 +2311,7 @@ namespace CsUtility.Enumerable
         /// <exception cref="ArgumentNullException"> <paramref name="source"/> が null です。</exception> 
         public static MinMaxPair<sbyte> MinMax(this IEnumerable<sbyte> source) 
         {
-            if (source == null) throw new ArgumentNullException("source");
+            if (source == null) throw Error.ArgumentNull("source");
             sbyte min = default(sbyte);
             sbyte max = default(sbyte);
             bool hasValue = false;
@@ -2331,7 +2331,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return new MinMaxPair<sbyte>(min, max);
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
         /// <summary>
         /// シーケンスの各要素の最小値と最大値のペアを返します。
@@ -2341,7 +2341,7 @@ namespace CsUtility.Enumerable
         /// <exception cref="ArgumentNullException"> <paramref name="source"/> が null です。</exception> 
         public static MinMaxPair<sbyte?> MinMax(this IEnumerable<sbyte?> source) 
         {
-            if (source == null) throw new ArgumentNullException("source");
+            if (source == null) throw Error.ArgumentNull("source");
             sbyte? min = default(sbyte?);
             sbyte? max = default(sbyte?);
             bool hasValue = false;
@@ -2361,7 +2361,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return new MinMaxPair<sbyte?>(min, max);
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
         /// <summary>
         /// シーケンスの各要素の最小値と最大値のペアを返します。
@@ -2371,7 +2371,7 @@ namespace CsUtility.Enumerable
         /// <exception cref="ArgumentNullException"> <paramref name="source"/> が null です。</exception> 
         public static MinMaxPair<byte> MinMax(this IEnumerable<byte> source) 
         {
-            if (source == null) throw new ArgumentNullException("source");
+            if (source == null) throw Error.ArgumentNull("source");
             byte min = default(byte);
             byte max = default(byte);
             bool hasValue = false;
@@ -2391,7 +2391,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return new MinMaxPair<byte>(min, max);
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
         /// <summary>
         /// シーケンスの各要素の最小値と最大値のペアを返します。
@@ -2401,7 +2401,7 @@ namespace CsUtility.Enumerable
         /// <exception cref="ArgumentNullException"> <paramref name="source"/> が null です。</exception> 
         public static MinMaxPair<byte?> MinMax(this IEnumerable<byte?> source) 
         {
-            if (source == null) throw new ArgumentNullException("source");
+            if (source == null) throw Error.ArgumentNull("source");
             byte? min = default(byte?);
             byte? max = default(byte?);
             bool hasValue = false;
@@ -2421,7 +2421,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return new MinMaxPair<byte?>(min, max);
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
         /// <summary>
         /// シーケンスの各要素の最小値と最大値のペアを返します。
@@ -2431,7 +2431,7 @@ namespace CsUtility.Enumerable
         /// <exception cref="ArgumentNullException"> <paramref name="source"/> が null です。</exception> 
         public static MinMaxPair<char> MinMax(this IEnumerable<char> source) 
         {
-            if (source == null) throw new ArgumentNullException("source");
+            if (source == null) throw Error.ArgumentNull("source");
             char min = default(char);
             char max = default(char);
             bool hasValue = false;
@@ -2451,7 +2451,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return new MinMaxPair<char>(min, max);
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
         /// <summary>
         /// シーケンスの各要素の最小値と最大値のペアを返します。
@@ -2461,7 +2461,7 @@ namespace CsUtility.Enumerable
         /// <exception cref="ArgumentNullException"> <paramref name="source"/> が null です。</exception> 
         public static MinMaxPair<char?> MinMax(this IEnumerable<char?> source) 
         {
-            if (source == null) throw new ArgumentNullException("source");
+            if (source == null) throw Error.ArgumentNull("source");
             char? min = default(char?);
             char? max = default(char?);
             bool hasValue = false;
@@ -2481,7 +2481,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return new MinMaxPair<char?>(min, max);
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
         /// <summary>
         /// シーケンスの各要素の最小値と最大値のペアを返します。
@@ -2491,7 +2491,7 @@ namespace CsUtility.Enumerable
         /// <exception cref="ArgumentNullException"> <paramref name="source"/> が null です。</exception> 
         public static MinMaxPair<short> MinMax(this IEnumerable<short> source) 
         {
-            if (source == null) throw new ArgumentNullException("source");
+            if (source == null) throw Error.ArgumentNull("source");
             short min = default(short);
             short max = default(short);
             bool hasValue = false;
@@ -2511,7 +2511,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return new MinMaxPair<short>(min, max);
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
         /// <summary>
         /// シーケンスの各要素の最小値と最大値のペアを返します。
@@ -2521,7 +2521,7 @@ namespace CsUtility.Enumerable
         /// <exception cref="ArgumentNullException"> <paramref name="source"/> が null です。</exception> 
         public static MinMaxPair<short?> MinMax(this IEnumerable<short?> source) 
         {
-            if (source == null) throw new ArgumentNullException("source");
+            if (source == null) throw Error.ArgumentNull("source");
             short? min = default(short?);
             short? max = default(short?);
             bool hasValue = false;
@@ -2541,7 +2541,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return new MinMaxPair<short?>(min, max);
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
         /// <summary>
         /// シーケンスの各要素の最小値と最大値のペアを返します。
@@ -2551,7 +2551,7 @@ namespace CsUtility.Enumerable
         /// <exception cref="ArgumentNullException"> <paramref name="source"/> が null です。</exception> 
         public static MinMaxPair<ushort> MinMax(this IEnumerable<ushort> source) 
         {
-            if (source == null) throw new ArgumentNullException("source");
+            if (source == null) throw Error.ArgumentNull("source");
             ushort min = default(ushort);
             ushort max = default(ushort);
             bool hasValue = false;
@@ -2571,7 +2571,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return new MinMaxPair<ushort>(min, max);
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
         /// <summary>
         /// シーケンスの各要素の最小値と最大値のペアを返します。
@@ -2581,7 +2581,7 @@ namespace CsUtility.Enumerable
         /// <exception cref="ArgumentNullException"> <paramref name="source"/> が null です。</exception> 
         public static MinMaxPair<ushort?> MinMax(this IEnumerable<ushort?> source) 
         {
-            if (source == null) throw new ArgumentNullException("source");
+            if (source == null) throw Error.ArgumentNull("source");
             ushort? min = default(ushort?);
             ushort? max = default(ushort?);
             bool hasValue = false;
@@ -2601,7 +2601,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return new MinMaxPair<ushort?>(min, max);
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
         /// <summary>
         /// シーケンスの各要素の最小値と最大値のペアを返します。
@@ -2611,7 +2611,7 @@ namespace CsUtility.Enumerable
         /// <exception cref="ArgumentNullException"> <paramref name="source"/> が null です。</exception> 
         public static MinMaxPair<int> MinMax(this IEnumerable<int> source) 
         {
-            if (source == null) throw new ArgumentNullException("source");
+            if (source == null) throw Error.ArgumentNull("source");
             int min = default(int);
             int max = default(int);
             bool hasValue = false;
@@ -2631,7 +2631,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return new MinMaxPair<int>(min, max);
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
         /// <summary>
         /// シーケンスの各要素の最小値と最大値のペアを返します。
@@ -2641,7 +2641,7 @@ namespace CsUtility.Enumerable
         /// <exception cref="ArgumentNullException"> <paramref name="source"/> が null です。</exception> 
         public static MinMaxPair<int?> MinMax(this IEnumerable<int?> source) 
         {
-            if (source == null) throw new ArgumentNullException("source");
+            if (source == null) throw Error.ArgumentNull("source");
             int? min = default(int?);
             int? max = default(int?);
             bool hasValue = false;
@@ -2661,7 +2661,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return new MinMaxPair<int?>(min, max);
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
         /// <summary>
         /// シーケンスの各要素の最小値と最大値のペアを返します。
@@ -2671,7 +2671,7 @@ namespace CsUtility.Enumerable
         /// <exception cref="ArgumentNullException"> <paramref name="source"/> が null です。</exception> 
         public static MinMaxPair<uint> MinMax(this IEnumerable<uint> source) 
         {
-            if (source == null) throw new ArgumentNullException("source");
+            if (source == null) throw Error.ArgumentNull("source");
             uint min = default(uint);
             uint max = default(uint);
             bool hasValue = false;
@@ -2691,7 +2691,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return new MinMaxPair<uint>(min, max);
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
         /// <summary>
         /// シーケンスの各要素の最小値と最大値のペアを返します。
@@ -2701,7 +2701,7 @@ namespace CsUtility.Enumerable
         /// <exception cref="ArgumentNullException"> <paramref name="source"/> が null です。</exception> 
         public static MinMaxPair<uint?> MinMax(this IEnumerable<uint?> source) 
         {
-            if (source == null) throw new ArgumentNullException("source");
+            if (source == null) throw Error.ArgumentNull("source");
             uint? min = default(uint?);
             uint? max = default(uint?);
             bool hasValue = false;
@@ -2721,7 +2721,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return new MinMaxPair<uint?>(min, max);
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
         /// <summary>
         /// シーケンスの各要素の最小値と最大値のペアを返します。
@@ -2731,7 +2731,7 @@ namespace CsUtility.Enumerable
         /// <exception cref="ArgumentNullException"> <paramref name="source"/> が null です。</exception> 
         public static MinMaxPair<long> MinMax(this IEnumerable<long> source) 
         {
-            if (source == null) throw new ArgumentNullException("source");
+            if (source == null) throw Error.ArgumentNull("source");
             long min = default(long);
             long max = default(long);
             bool hasValue = false;
@@ -2751,7 +2751,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return new MinMaxPair<long>(min, max);
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
         /// <summary>
         /// シーケンスの各要素の最小値と最大値のペアを返します。
@@ -2761,7 +2761,7 @@ namespace CsUtility.Enumerable
         /// <exception cref="ArgumentNullException"> <paramref name="source"/> が null です。</exception> 
         public static MinMaxPair<long?> MinMax(this IEnumerable<long?> source) 
         {
-            if (source == null) throw new ArgumentNullException("source");
+            if (source == null) throw Error.ArgumentNull("source");
             long? min = default(long?);
             long? max = default(long?);
             bool hasValue = false;
@@ -2781,7 +2781,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return new MinMaxPair<long?>(min, max);
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
         /// <summary>
         /// シーケンスの各要素の最小値と最大値のペアを返します。
@@ -2791,7 +2791,7 @@ namespace CsUtility.Enumerable
         /// <exception cref="ArgumentNullException"> <paramref name="source"/> が null です。</exception> 
         public static MinMaxPair<ulong> MinMax(this IEnumerable<ulong> source) 
         {
-            if (source == null) throw new ArgumentNullException("source");
+            if (source == null) throw Error.ArgumentNull("source");
             ulong min = default(ulong);
             ulong max = default(ulong);
             bool hasValue = false;
@@ -2811,7 +2811,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return new MinMaxPair<ulong>(min, max);
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
         /// <summary>
         /// シーケンスの各要素の最小値と最大値のペアを返します。
@@ -2821,7 +2821,7 @@ namespace CsUtility.Enumerable
         /// <exception cref="ArgumentNullException"> <paramref name="source"/> が null です。</exception> 
         public static MinMaxPair<ulong?> MinMax(this IEnumerable<ulong?> source) 
         {
-            if (source == null) throw new ArgumentNullException("source");
+            if (source == null) throw Error.ArgumentNull("source");
             ulong? min = default(ulong?);
             ulong? max = default(ulong?);
             bool hasValue = false;
@@ -2841,7 +2841,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return new MinMaxPair<ulong?>(min, max);
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
         /// <summary>
         /// シーケンスの各要素の最小値と最大値のペアを返します。
@@ -2851,7 +2851,7 @@ namespace CsUtility.Enumerable
         /// <exception cref="ArgumentNullException"> <paramref name="source"/> が null です。</exception> 
         public static MinMaxPair<float> MinMax(this IEnumerable<float> source) 
         {
-            if (source == null) throw new ArgumentNullException("source");
+            if (source == null) throw Error.ArgumentNull("source");
             float min = default(float);
             float max = default(float);
             bool hasValue = false;
@@ -2871,7 +2871,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return new MinMaxPair<float>(min, max);
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
         /// <summary>
         /// シーケンスの各要素の最小値と最大値のペアを返します。
@@ -2881,7 +2881,7 @@ namespace CsUtility.Enumerable
         /// <exception cref="ArgumentNullException"> <paramref name="source"/> が null です。</exception> 
         public static MinMaxPair<float?> MinMax(this IEnumerable<float?> source) 
         {
-            if (source == null) throw new ArgumentNullException("source");
+            if (source == null) throw Error.ArgumentNull("source");
             float? min = default(float?);
             float? max = default(float?);
             bool hasValue = false;
@@ -2901,7 +2901,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return new MinMaxPair<float?>(min, max);
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
         /// <summary>
         /// シーケンスの各要素の最小値と最大値のペアを返します。
@@ -2911,7 +2911,7 @@ namespace CsUtility.Enumerable
         /// <exception cref="ArgumentNullException"> <paramref name="source"/> が null です。</exception> 
         public static MinMaxPair<double> MinMax(this IEnumerable<double> source) 
         {
-            if (source == null) throw new ArgumentNullException("source");
+            if (source == null) throw Error.ArgumentNull("source");
             double min = default(double);
             double max = default(double);
             bool hasValue = false;
@@ -2931,7 +2931,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return new MinMaxPair<double>(min, max);
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
         /// <summary>
         /// シーケンスの各要素の最小値と最大値のペアを返します。
@@ -2941,7 +2941,7 @@ namespace CsUtility.Enumerable
         /// <exception cref="ArgumentNullException"> <paramref name="source"/> が null です。</exception> 
         public static MinMaxPair<double?> MinMax(this IEnumerable<double?> source) 
         {
-            if (source == null) throw new ArgumentNullException("source");
+            if (source == null) throw Error.ArgumentNull("source");
             double? min = default(double?);
             double? max = default(double?);
             bool hasValue = false;
@@ -2961,7 +2961,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return new MinMaxPair<double?>(min, max);
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
         /// <summary>
         /// シーケンスの各要素の最小値と最大値のペアを返します。
@@ -2971,7 +2971,7 @@ namespace CsUtility.Enumerable
         /// <exception cref="ArgumentNullException"> <paramref name="source"/> が null です。</exception> 
         public static MinMaxPair<decimal> MinMax(this IEnumerable<decimal> source) 
         {
-            if (source == null) throw new ArgumentNullException("source");
+            if (source == null) throw Error.ArgumentNull("source");
             decimal min = default(decimal);
             decimal max = default(decimal);
             bool hasValue = false;
@@ -2991,7 +2991,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return new MinMaxPair<decimal>(min, max);
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
         /// <summary>
         /// シーケンスの各要素の最小値と最大値のペアを返します。
@@ -3001,7 +3001,7 @@ namespace CsUtility.Enumerable
         /// <exception cref="ArgumentNullException"> <paramref name="source"/> が null です。</exception> 
         public static MinMaxPair<decimal?> MinMax(this IEnumerable<decimal?> source) 
         {
-            if (source == null) throw new ArgumentNullException("source");
+            if (source == null) throw Error.ArgumentNull("source");
             decimal? min = default(decimal?);
             decimal? max = default(decimal?);
             bool hasValue = false;
@@ -3021,7 +3021,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return new MinMaxPair<decimal?>(min, max);
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
         
         #endregion
@@ -3040,7 +3040,7 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static MinMaxPair<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, sbyte> selector) 
         {
-            if (source == null) throw new ArgumentNullException("source");
+            if (source == null) throw Error.ArgumentNull("source");
             sbyte min = default(sbyte);
             sbyte max = default(sbyte);
             TSource minItem = default(TSource);
@@ -3066,7 +3066,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return new MinMaxPair<TSource>(minItem, maxItem);
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -3081,7 +3081,7 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static MinMaxPair<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, sbyte?> selector) 
         {
-            if (source == null) throw new ArgumentNullException("source");
+            if (source == null) throw Error.ArgumentNull("source");
             sbyte? min = default(sbyte?);
             sbyte? max = default(sbyte?);
             TSource minItem = default(TSource);
@@ -3107,7 +3107,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return new MinMaxPair<TSource>(minItem, maxItem);
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -3122,7 +3122,7 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static MinMaxPair<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, byte> selector) 
         {
-            if (source == null) throw new ArgumentNullException("source");
+            if (source == null) throw Error.ArgumentNull("source");
             byte min = default(byte);
             byte max = default(byte);
             TSource minItem = default(TSource);
@@ -3148,7 +3148,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return new MinMaxPair<TSource>(minItem, maxItem);
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -3163,7 +3163,7 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static MinMaxPair<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, byte?> selector) 
         {
-            if (source == null) throw new ArgumentNullException("source");
+            if (source == null) throw Error.ArgumentNull("source");
             byte? min = default(byte?);
             byte? max = default(byte?);
             TSource minItem = default(TSource);
@@ -3189,7 +3189,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return new MinMaxPair<TSource>(minItem, maxItem);
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -3204,7 +3204,7 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static MinMaxPair<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, char> selector) 
         {
-            if (source == null) throw new ArgumentNullException("source");
+            if (source == null) throw Error.ArgumentNull("source");
             char min = default(char);
             char max = default(char);
             TSource minItem = default(TSource);
@@ -3230,7 +3230,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return new MinMaxPair<TSource>(minItem, maxItem);
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -3245,7 +3245,7 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static MinMaxPair<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, char?> selector) 
         {
-            if (source == null) throw new ArgumentNullException("source");
+            if (source == null) throw Error.ArgumentNull("source");
             char? min = default(char?);
             char? max = default(char?);
             TSource minItem = default(TSource);
@@ -3271,7 +3271,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return new MinMaxPair<TSource>(minItem, maxItem);
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -3286,7 +3286,7 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static MinMaxPair<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, short> selector) 
         {
-            if (source == null) throw new ArgumentNullException("source");
+            if (source == null) throw Error.ArgumentNull("source");
             short min = default(short);
             short max = default(short);
             TSource minItem = default(TSource);
@@ -3312,7 +3312,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return new MinMaxPair<TSource>(minItem, maxItem);
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -3327,7 +3327,7 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static MinMaxPair<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, short?> selector) 
         {
-            if (source == null) throw new ArgumentNullException("source");
+            if (source == null) throw Error.ArgumentNull("source");
             short? min = default(short?);
             short? max = default(short?);
             TSource minItem = default(TSource);
@@ -3353,7 +3353,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return new MinMaxPair<TSource>(minItem, maxItem);
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -3368,7 +3368,7 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static MinMaxPair<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, ushort> selector) 
         {
-            if (source == null) throw new ArgumentNullException("source");
+            if (source == null) throw Error.ArgumentNull("source");
             ushort min = default(ushort);
             ushort max = default(ushort);
             TSource minItem = default(TSource);
@@ -3394,7 +3394,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return new MinMaxPair<TSource>(minItem, maxItem);
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -3409,7 +3409,7 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static MinMaxPair<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, ushort?> selector) 
         {
-            if (source == null) throw new ArgumentNullException("source");
+            if (source == null) throw Error.ArgumentNull("source");
             ushort? min = default(ushort?);
             ushort? max = default(ushort?);
             TSource minItem = default(TSource);
@@ -3435,7 +3435,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return new MinMaxPair<TSource>(minItem, maxItem);
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -3450,7 +3450,7 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static MinMaxPair<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, int> selector) 
         {
-            if (source == null) throw new ArgumentNullException("source");
+            if (source == null) throw Error.ArgumentNull("source");
             int min = default(int);
             int max = default(int);
             TSource minItem = default(TSource);
@@ -3476,7 +3476,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return new MinMaxPair<TSource>(minItem, maxItem);
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -3491,7 +3491,7 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static MinMaxPair<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, int?> selector) 
         {
-            if (source == null) throw new ArgumentNullException("source");
+            if (source == null) throw Error.ArgumentNull("source");
             int? min = default(int?);
             int? max = default(int?);
             TSource minItem = default(TSource);
@@ -3517,7 +3517,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return new MinMaxPair<TSource>(minItem, maxItem);
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -3532,7 +3532,7 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static MinMaxPair<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, uint> selector) 
         {
-            if (source == null) throw new ArgumentNullException("source");
+            if (source == null) throw Error.ArgumentNull("source");
             uint min = default(uint);
             uint max = default(uint);
             TSource minItem = default(TSource);
@@ -3558,7 +3558,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return new MinMaxPair<TSource>(minItem, maxItem);
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -3573,7 +3573,7 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static MinMaxPair<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, uint?> selector) 
         {
-            if (source == null) throw new ArgumentNullException("source");
+            if (source == null) throw Error.ArgumentNull("source");
             uint? min = default(uint?);
             uint? max = default(uint?);
             TSource minItem = default(TSource);
@@ -3599,7 +3599,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return new MinMaxPair<TSource>(minItem, maxItem);
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -3614,7 +3614,7 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static MinMaxPair<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, long> selector) 
         {
-            if (source == null) throw new ArgumentNullException("source");
+            if (source == null) throw Error.ArgumentNull("source");
             long min = default(long);
             long max = default(long);
             TSource minItem = default(TSource);
@@ -3640,7 +3640,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return new MinMaxPair<TSource>(minItem, maxItem);
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -3655,7 +3655,7 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static MinMaxPair<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, long?> selector) 
         {
-            if (source == null) throw new ArgumentNullException("source");
+            if (source == null) throw Error.ArgumentNull("source");
             long? min = default(long?);
             long? max = default(long?);
             TSource minItem = default(TSource);
@@ -3681,7 +3681,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return new MinMaxPair<TSource>(minItem, maxItem);
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -3696,7 +3696,7 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static MinMaxPair<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, ulong> selector) 
         {
-            if (source == null) throw new ArgumentNullException("source");
+            if (source == null) throw Error.ArgumentNull("source");
             ulong min = default(ulong);
             ulong max = default(ulong);
             TSource minItem = default(TSource);
@@ -3722,7 +3722,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return new MinMaxPair<TSource>(minItem, maxItem);
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -3737,7 +3737,7 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static MinMaxPair<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, ulong?> selector) 
         {
-            if (source == null) throw new ArgumentNullException("source");
+            if (source == null) throw Error.ArgumentNull("source");
             ulong? min = default(ulong?);
             ulong? max = default(ulong?);
             TSource minItem = default(TSource);
@@ -3763,7 +3763,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return new MinMaxPair<TSource>(minItem, maxItem);
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -3778,7 +3778,7 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static MinMaxPair<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, float> selector) 
         {
-            if (source == null) throw new ArgumentNullException("source");
+            if (source == null) throw Error.ArgumentNull("source");
             float min = default(float);
             float max = default(float);
             TSource minItem = default(TSource);
@@ -3804,7 +3804,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return new MinMaxPair<TSource>(minItem, maxItem);
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -3819,7 +3819,7 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static MinMaxPair<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, float?> selector) 
         {
-            if (source == null) throw new ArgumentNullException("source");
+            if (source == null) throw Error.ArgumentNull("source");
             float? min = default(float?);
             float? max = default(float?);
             TSource minItem = default(TSource);
@@ -3845,7 +3845,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return new MinMaxPair<TSource>(minItem, maxItem);
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -3860,7 +3860,7 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static MinMaxPair<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, double> selector) 
         {
-            if (source == null) throw new ArgumentNullException("source");
+            if (source == null) throw Error.ArgumentNull("source");
             double min = default(double);
             double max = default(double);
             TSource minItem = default(TSource);
@@ -3886,7 +3886,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return new MinMaxPair<TSource>(minItem, maxItem);
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -3901,7 +3901,7 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static MinMaxPair<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, double?> selector) 
         {
-            if (source == null) throw new ArgumentNullException("source");
+            if (source == null) throw Error.ArgumentNull("source");
             double? min = default(double?);
             double? max = default(double?);
             TSource minItem = default(TSource);
@@ -3927,7 +3927,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return new MinMaxPair<TSource>(minItem, maxItem);
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -3942,7 +3942,7 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static MinMaxPair<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, decimal> selector) 
         {
-            if (source == null) throw new ArgumentNullException("source");
+            if (source == null) throw Error.ArgumentNull("source");
             decimal min = default(decimal);
             decimal max = default(decimal);
             TSource minItem = default(TSource);
@@ -3968,7 +3968,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return new MinMaxPair<TSource>(minItem, maxItem);
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         /// <summary>
@@ -3983,7 +3983,7 @@ namespace CsUtility.Enumerable
         /// </exception> 
         public static MinMaxPair<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, decimal?> selector) 
         {
-            if (source == null) throw new ArgumentNullException("source");
+            if (source == null) throw Error.ArgumentNull("source");
             decimal? min = default(decimal?);
             decimal? max = default(decimal?);
             TSource minItem = default(TSource);
@@ -4009,7 +4009,7 @@ namespace CsUtility.Enumerable
                 }
             }
             if (hasValue) return new MinMaxPair<TSource>(minItem, maxItem);
-            throw new ArgumentException("No element");
+            throw Error.NoElements();
         }
 
         #endregion
