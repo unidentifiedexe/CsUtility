@@ -157,8 +157,7 @@ namespace CsUtility.Enumerable
             if (resultSelector == null) throw new ArgumentNullException(nameof(resultSelector));
             return VicinityZipIterator(source, resultSelector);
         }
-
-
+        
         private static IEnumerable<TResult> VicinityZipIterator<TSource, TResult>(IEnumerable<TSource> source, Func<TSource, TSource, TResult> resultSelector)
         {
             bool hasValue = false;
@@ -377,7 +376,7 @@ namespace CsUtility.Enumerable
         /// </summary>
         /// <typeparam name="TSource"> source の要素の型。</typeparam>
         /// <param name="source"> 精査する対象となるシーケンス。</param>
-        /// <returns> 全ての要素が等しい場合 true。そうでない場合は false </return
+        /// <returns> 全ての要素が等しい場合 true。そうでない場合は false </returns>
         /// <exception cref="ArgumentNullException"> <paramref name="source"/> が null です。 </exception>s>
         static bool AllEqual<TSource>(this IEnumerable<TSource> source)
         {
@@ -441,7 +440,7 @@ namespace CsUtility.Enumerable
         {
             using (IEnumerator<TSource> e = source.GetEnumerator())
             {
-                if (!e.MoveNext()) throw new ArgumentException();
+                if (!e.MoveNext()) throw new InvalidOperationException();
                 TSource first = e.Current;
                 while (e.MoveNext())
                     if (!comparer.Equals(first, e.Current))
@@ -465,6 +464,7 @@ namespace CsUtility.Enumerable
                     yield return subElement;
         }
 
+        
 
     }
 }
