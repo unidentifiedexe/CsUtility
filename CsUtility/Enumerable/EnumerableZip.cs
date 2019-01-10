@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
+using CsUtility;
 
 
 namespace CsUtility.Enumerable
@@ -30,10 +31,10 @@ namespace CsUtility.Enumerable
             IEnumerable<TThird> third,
             Func<TFirst, TSecond, TThird, TResult> resultSelector)
         {
-            if (first == null)  throw new ArgumentNullException(nameof(first));
-            if (second == null)  throw new ArgumentNullException(nameof(second));
-            if (third == null)  throw new ArgumentNullException(nameof(third));
-            if (resultSelector == null)  throw new ArgumentNullException(nameof(resultSelector));
+            if (first == null)  throw Error.ArgumentNull(nameof(first));
+            if (second == null)  throw Error.ArgumentNull(nameof(second));
+            if (third == null)  throw Error.ArgumentNull(nameof(third));
+            if (resultSelector == null)  throw Error.ArgumentNull(nameof(resultSelector));
             return ZipIterator(first, second, third, resultSelector);
         }
 
@@ -72,11 +73,11 @@ namespace CsUtility.Enumerable
             IEnumerable<TFourth> fourth,
             Func<TFirst, TSecond, TThird, TFourth, TResult> resultSelector)
         {
-            if (first == null)  throw new ArgumentNullException(nameof(first));
-            if (second == null)  throw new ArgumentNullException(nameof(second));
-            if (third == null)  throw new ArgumentNullException(nameof(third));
-            if (fourth == null)  throw new ArgumentNullException(nameof(fourth));
-            if (resultSelector == null)  throw new ArgumentNullException(nameof(resultSelector));
+            if (first == null)  throw Error.ArgumentNull(nameof(first));
+            if (second == null)  throw Error.ArgumentNull(nameof(second));
+            if (third == null)  throw Error.ArgumentNull(nameof(third));
+            if (fourth == null)  throw Error.ArgumentNull(nameof(fourth));
+            if (resultSelector == null)  throw Error.ArgumentNull(nameof(resultSelector));
             return ZipIterator(first, second, third, fourth, resultSelector);
         }
 
@@ -120,12 +121,12 @@ namespace CsUtility.Enumerable
             IEnumerable<TFifth> fifth,
             Func<TFirst, TSecond, TThird, TFourth, TFifth, TResult> resultSelector)
         {
-            if (first == null)  throw new ArgumentNullException(nameof(first));
-            if (second == null)  throw new ArgumentNullException(nameof(second));
-            if (third == null)  throw new ArgumentNullException(nameof(third));
-            if (fourth == null)  throw new ArgumentNullException(nameof(fourth));
-            if (fifth == null)  throw new ArgumentNullException(nameof(fifth));
-            if (resultSelector == null)  throw new ArgumentNullException(nameof(resultSelector));
+            if (first == null)  throw Error.ArgumentNull(nameof(first));
+            if (second == null)  throw Error.ArgumentNull(nameof(second));
+            if (third == null)  throw Error.ArgumentNull(nameof(third));
+            if (fourth == null)  throw Error.ArgumentNull(nameof(fourth));
+            if (fifth == null)  throw Error.ArgumentNull(nameof(fifth));
+            if (resultSelector == null)  throw Error.ArgumentNull(nameof(resultSelector));
             return ZipIterator(first, second, third, fourth, fifth, resultSelector);
         }
 
