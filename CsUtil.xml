@@ -181,6 +181,60 @@
             <paramref name="source"/> または <paramref name="func"/> または <paramref name="resultSelector"/> が null です。
             </exception>
         </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.AllEqual``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            型の規定の比較子を用いてシーケンスの全ての値が等しいかどうかを取得します。
+            </summary>
+            <typeparam name="TSource"> source の要素の型。</typeparam>
+            <param name="source"> 精査する対象となるシーケンス。</param>
+            <returns> 全ての要素が等しい場合 true。そうでない場合は false </returns>
+            <exception cref="T:System.ArgumentNullException"> <paramref name="source"/> が null です。 </exception>s>
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.AllEqual``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEqualityComparer{``0})">
+            <summary>
+            指定の比較子を用いてシーケンスの全ての値が等しいかどうかを取得します。
+            </summary>
+            <typeparam name="TSource"> source の要素の型。</typeparam>
+            <param name="source"> 精査する対象となるシーケンス。</param>
+            <param name="comparer"> 値を比較する <see cref="T:System.Collections.Generic.IEqualityComparer`1"/>。</param>
+            <returns> 全ての要素が等しい場合 true。そうでない場合は false </returns>
+            <exception cref="T:System.ArgumentNullException"> <paramref name="source"/> が null です。 </exception>
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.AllEqual``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})">
+            <summary>
+            指定のの比較子を用いて射影されたシーケンスの全ての値が等しいかどうかを取得します。
+            </summary>
+            <typeparam name="TSource"> source の要素の型。</typeparam>
+            <typeparam name="TSelect"> 比較する要素の型。</typeparam>
+            <param name="source"> 精査する対象となるシーケンス。</param>
+            <param name="selector"> 射影する関数。 </param>
+            <returns> 全ての要素が等しい場合 true。そうでない場合は false </returns>
+            <exception cref="T:System.ArgumentNullException"> 
+            <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception>
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.AllEqual``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1},System.Collections.Generic.IEqualityComparer{``1})">
+            <summary>
+            型の規定の比較子を用いて射影されたシーケンスの全ての値が等しいかどうかを取得します。
+            </summary>
+            <typeparam name="TSource"> source の要素の型。</typeparam>
+            <typeparam name="TSelect"> 比較する要素の型。</typeparam>
+            <param name="source"> 精査する対象となるシーケンス。</param>
+            <param name="comparer"> 値を比較する <see cref="T:System.Collections.Generic.IEqualityComparer`1"/>。</param>
+            <param name="selector"> 射影する関数。 </param>
+            <returns> 全ての要素が等しい場合 true。そうでない場合は false </returns>
+            <exception cref="T:System.ArgumentNullException"> 
+            <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception>
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.SelectMany``1(System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{``0}})">
+            <summary>
+            2 次元のジャグシーケンスを平滑化します
+            </summary>
+            <typeparam name="TSource"> <paramref name="source"/> の要素の型。 </typeparam>
+            <param name="source"> 平坦化する 2 次元のジャグシーケンス。 </param>
+            <returns> 平坦化されたシーケンス。 </returns>
+        </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.SByte})">
             <summary>
             シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素を返します。
@@ -1524,6 +1578,63 @@
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
             </exception> 
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.Zip``4(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``1},System.Collections.Generic.IEnumerable{``2},System.Func{``0,``1,``2,``3})">
+            <summary>
+            指定された関数を結果のシーケンスを生成する 3 個のシーケンスに対応する要素に適用します。
+            </summary>
+            <typeparam name="TFirst"> 1 番目の入力シーケンスの要素の型。 </typeparam>
+            <typeparam name="TSecond"> 2 番目の入力シーケンスの要素の型。 </typeparam>
+            <typeparam name="TThird"> 3 番目の入力シーケンスの要素の型。 </typeparam>
+            <typeparam name="TResult"> 結果のシーケンスの要素の型。 </typeparam>
+            <param name="first"> マージする 1 番目のシーケンス。</param>
+            <param name="second"> マージする 2 番目のシーケンス。</param>
+            <param name="third"> マージする 3 番目のシーケンス。</param>
+            <param name="resultSelector"> 3 個のシーケンスから要素を結合する方法を指定する関数。 </param>
+            <returns> 3 個の入力シーケンスの結合の要素を格納します </returns>
+            <exception cref="T:System.ArgumentNullException">
+            入力シーケンスまたは  が null です。
+            </exception>
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.Zip``5(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``1},System.Collections.Generic.IEnumerable{``2},System.Collections.Generic.IEnumerable{``3},System.Func{``0,``1,``2,``3,``4})">
+            <summary>
+            指定された関数を結果のシーケンスを生成する 4 個のシーケンスに対応する要素に適用します。
+            </summary>
+            <typeparam name="TFirst"> 1 番目の入力シーケンスの要素の型。 </typeparam>
+            <typeparam name="TSecond"> 2 番目の入力シーケンスの要素の型。 </typeparam>
+            <typeparam name="TThird"> 3 番目の入力シーケンスの要素の型。 </typeparam>
+            <typeparam name="TFourth"> 4 番目の入力シーケンスの要素の型。 </typeparam>
+            <typeparam name="TResult"> 結果のシーケンスの要素の型。 </typeparam>
+            <param name="first"> マージする 1 番目のシーケンス。</param>
+            <param name="second"> マージする 2 番目のシーケンス。</param>
+            <param name="third"> マージする 3 番目のシーケンス。</param>
+            <param name="fourth"> マージする 4 番目のシーケンス。</param>
+            <param name="resultSelector"> 4 個のシーケンスから要素を結合する方法を指定する関数。 </param>
+            <returns> 4 個の入力シーケンスの結合の要素を格納します </returns>
+            <exception cref="T:System.ArgumentNullException">
+            入力シーケンスまたは  が null です。
+            </exception>
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.Zip``6(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``1},System.Collections.Generic.IEnumerable{``2},System.Collections.Generic.IEnumerable{``3},System.Collections.Generic.IEnumerable{``4},System.Func{``0,``1,``2,``3,``4,``5})">
+            <summary>
+            指定された関数を結果のシーケンスを生成する 5 個のシーケンスに対応する要素に適用します。
+            </summary>
+            <typeparam name="TFirst"> 1 番目の入力シーケンスの要素の型。 </typeparam>
+            <typeparam name="TSecond"> 2 番目の入力シーケンスの要素の型。 </typeparam>
+            <typeparam name="TThird"> 3 番目の入力シーケンスの要素の型。 </typeparam>
+            <typeparam name="TFourth"> 4 番目の入力シーケンスの要素の型。 </typeparam>
+            <typeparam name="TFifth"> 5 番目の入力シーケンスの要素の型。 </typeparam>
+            <typeparam name="TResult"> 結果のシーケンスの要素の型。 </typeparam>
+            <param name="first"> マージする 1 番目のシーケンス。</param>
+            <param name="second"> マージする 2 番目のシーケンス。</param>
+            <param name="third"> マージする 3 番目のシーケンス。</param>
+            <param name="fourth"> マージする 4 番目のシーケンス。</param>
+            <param name="fifth"> マージする 5 番目のシーケンス。</param>
+            <param name="resultSelector"> 5 個のシーケンスから要素を結合する方法を指定する関数。 </param>
+            <returns> 5 個の入力シーケンスの結合の要素を格納します </returns>
+            <exception cref="T:System.ArgumentNullException">
+            入力シーケンスまたは  が null です。
+            </exception>
         </member>
         <member name="T:CsUtility.Generic.ReadSafeDictionary">
             <summary>

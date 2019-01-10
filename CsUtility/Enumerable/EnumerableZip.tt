@@ -1,0 +1,83 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ output extension=".cs" #>
+
+using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Linq;
+
+<# 
+var nums = Enumerable.Range(1,5).Skip(2).ToArray();
+var names = new Dictionary<int,(string Pascal,string Camel)>(){
+	{1 ,("First"  ,"first"  ) },
+	{2 ,("Second" ,"second" ) },
+	{3 ,("Third"  ,"third"  ) },
+	{4 ,("Fourth" ,"fourth" ) },
+	{5 ,("Fifth"  ,"fifth"  ) },
+	{6 ,("Sixth"  ,"sixth"  ) },
+	{7 ,("Seventh","seventh") },
+	{8 ,("Eighth" ,"eighth" ) },
+	{9 ,("Ninth"  ,"ninth"  ) },
+	{10,("Tenth"  ,"tenth"  ) },
+};
+#>
+
+namespace CsUtility.Enumerable
+{
+
+    public static partial class EnumerableUtilities
+    {
+	<# foreach( var num in nums)
+	{
+		string types = string.Join(", ",Enumerable.Range(1,num).Select(p=>$"T{names[p].Pascal}").Append("TResult"));
+		var args = 
+			Enumerable.Range(1,num).Select(p=>names[p])
+			.Select(p=>$"IEnumerable<T{p.Pascal}> {p.Camel}");
+	#>
+
+        /// <summary>
+        /// 指定された関数を結果のシーケンスを生成する <#= num#> 個のシーケンスに対応する要素に適用します。
+        /// </summary>
+<# foreach(var i in Enumerable.Range(1,num)){ #>
+        /// <typeparam name="T<#= names[i].Pascal #>"> <#= i #> 番目の入力シーケンスの要素の型。 </typeparam>
+<# } #>
+        /// <typeparam name="TResult"> 結果のシーケンスの要素の型。 </typeparam>
+<# foreach(var i in Enumerable.Range(1,num)){ #>
+        /// <param name="<#= names[i].Camel #>"> マージする <#= i #> 番目のシーケンス。</param>
+<# } #>
+        /// <param name="resultSelector"> <#= num#> 個のシーケンスから要素を結合する方法を指定する関数。 </param>
+        /// <returns> <#= num#> 個の入力シーケンスの結合の要素を格納します </returns>
+        /// <exception cref="ArgumentNullException"> 入力シーケンスまたは  が null です。 </exception>
+        public static IEnumerable<TResult> Zip<<#= types #>>(
+            this <#= args.First() #>,
+<# foreach(var txt in args.Skip(1)){ #>
+            <#= txt #>,
+<# } #>
+            Func<<#= types #>> resultSelector)
+        {
+<# foreach(var txt in Enumerable.Range(1,num).Select(p=>names[p].Camel).Append("resultSelector")){ #>
+            if (<#= txt #> == null)  throw new ArgumentNullException(nameof(<#= txt #>));
+<# } #>
+            return ZipIterator(<#= string.Join(", ",Enumerable.Range(1,num).Select(p=>names[p].Camel))#>, resultSelector);
+        }
+
+        private static IEnumerable<TResult> ZipIterator<<#= types #>>(
+            this <#= args.First() #>,
+<# foreach(var txt in args.Skip(1)){ #>
+            <#= txt #>,
+<# } #>
+            Func<<#= types #>> resultSelector)
+        {
+<# foreach(var i in Enumerable.Range(1,num)){ #>
+            using (IEnumerator<T<#= names[i].Pascal #>> e<#= i #> = <#= names[i].Camel #>.GetEnumerator())
+<# } #>
+                while (<#= string.Join(" && ",Enumerable.Range(1,num).Select(p=>$"e{p}.MoveNext()"))#>)
+                    yield return resultSelector(<#= string.Join(", ",Enumerable.Range(1,num).Select(p=>$"e{p}.Current"))#>);
+        }
+	<#}#>
+	}
+}

@@ -49,6 +49,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EnumerableMinMaxGetors.tt</DependentUpon>
     </Compile>
+    <Compile Include="Enumerable\EnumerableZip.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EnumerableZip.tt</DependentUpon>
+    </Compile>
     <Compile Include="Enumerable\Enumerator.cs" />
     <Compile Include="Generic\ReadSafeDictionary.cs" />
     <Compile Include="Primitive\Primitive.cs" />
@@ -63,6 +68,10 @@
     <Content Include="Enumerable\EnumerableMinMaxGetors.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>EnumerableMinMaxGetors.cs</LastGenOutput>
+    </Content>
+    <Content Include="Enumerable\EnumerableZip.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>EnumerableZip.cs</LastGenOutput>
     </Content>
     <Content Include="Primitive\PrimitiveFloatingTypesChecker.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
