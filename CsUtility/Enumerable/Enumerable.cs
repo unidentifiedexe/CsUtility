@@ -464,7 +464,57 @@ namespace CsUtility.Enumerable
                     yield return subElement;
         }
 
-        
 
+
+        /// <summary>
+        /// 指定された関数を結果のシーケンスを生成する 任意数のシーケンスに対応する要素に適用します。
+        /// </summary>
+        /// <typeparam name="TSource"> 入力シーケンスの要素の型。 </typeparam>
+        /// <typeparam name="TResult"> 結果のシーケンスの要素の型。 </typeparam>
+        /// <param name="sources"> マージする 1 番目のシーケンス。</param>
+        /// <param name="resultSelector"> 3 個のシーケンスから要素を結合する方法を指定する関数。 </param>
+        /// <returns> 入力シーケンスの結合の要素を格納します </returns>
+        /// <exception cref="ArgumentNullException"> 入力シーケンスまたは  が null です。 </exception>
+        public static IEnumerable<TResult> Zip<TSource, TResult>(
+            this IEnumerable<IEnumerable<TSource>> sources,
+            Func<IEnumerable<TSource>, TResult> resultSelector)
+        {
+            if (sources == null) throw Error.ArgumentNull(nameof(sources));
+            if (resultSelector == null) throw Error.ArgumentNull(nameof(resultSelector));
+            return ZipIterator(sources, resultSelector);
+        }
+
+        private static IEnumerable<TResult> ZipIterator<TSource, TResult>(
+            this IEnumerable<IEnumerable<TSource>> sources,
+            Func<IEnumerable<TSource>, TResult> resultSelector)
+        {
+            IEnumerator<TSource>[] enumerators = sources.Select(p => p.GetEnumerator()).ToArray();
+
+            try
+            {
+                while (enumerators.All(p => p.MoveNext()))
+                    yield return resultSelector(enumerators.Select(p => p.Current));
+            }
+            finally
+            {
+                foreach (var item in enumerators)
+                    item.Dispose();
+            }
+        }
+        
+        /// <summary>
+        /// 要素を as 演算子を用いてキャストし、指定した型の <seealso cref="IEnumerable{TResult}"/> にします。
+        /// </summary>
+        /// <typeparam name="TResult"> 要素をキャストする型。 </typeparam>
+        /// <param name="source"> <typeparamref name="TResult"/> 型にキャストする要素を含む <seealso cref="IEnumerable"/> </param>
+        /// <returns> 指定した型にキャストした各要素を含むシーケンス。 </returns>
+        /// <exception cref="ArgumentException"> <paramref name="source"/> は null です。 </exception>
+        public static IEnumerable<TResult> CastAs<TResult>(this IEnumerable source)  where TResult : class
+        {
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            foreach (var item in source)
+                yield return item as TResult;
+        }
+        
     }
 }

@@ -235,6 +235,26 @@
             <param name="source"> 平坦化する 2 次元のジャグシーケンス。 </param>
             <returns> 平坦化されたシーケンス。 </returns>
         </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.Zip``2(System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{``0}},System.Func{System.Collections.Generic.IEnumerable{``0},``1})">
+            <summary>
+            指定された関数を結果のシーケンスを生成する 任意数のシーケンスに対応する要素に適用します。
+            </summary>
+            <typeparam name="TSource"> 入力シーケンスの要素の型。 </typeparam>
+            <typeparam name="TResult"> 結果のシーケンスの要素の型。 </typeparam>
+            <param name="sources"> マージする 1 番目のシーケンス。</param>
+            <param name="resultSelector"> 3 個のシーケンスから要素を結合する方法を指定する関数。 </param>
+            <returns> 入力シーケンスの結合の要素を格納します </returns>
+            <exception cref="T:System.ArgumentNullException"> 入力シーケンスまたは  が null です。 </exception>
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.CastAs``1(System.Collections.IEnumerable)">
+            <summary>
+            要素を as 演算子を用いてキャストし、指定した型の <seealso cref="T:System.Collections.Generic.IEnumerable`1"/> にします。
+            </summary>
+            <typeparam name="TResult"> 要素をキャストする型。 </typeparam>
+            <param name="source"> <typeparamref name="TResult"/> 型にキャストする要素を含む <seealso cref="T:System.Collections.IEnumerable"/> </param>
+            <returns> 指定した型にキャストした各要素を含むシーケンス。 </returns>
+            <exception cref="T:System.ArgumentException"> <paramref name="source"/> は null です。 </exception>
+        </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.SByte})">
             <summary>
             シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素を返します。

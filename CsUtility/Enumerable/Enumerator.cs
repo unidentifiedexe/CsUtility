@@ -5,18 +5,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CsUtil.Enumerable
+namespace CsUtility.Enumerable
 {
-    static class Enumerator
+    public static class Enumerator
     {
-        public static IEnumerator<T> GetDefaultValueEnumerator<T>(this IEnumerator<T> baseObj, T defaultValue)
+        public static IEnumerator<T> GetDefaultValueEnumerator<T>(this IEnumerable<T> baseObj, T defaultValue)
         {
-            if (baseObj == null) return null;
-            else
-                return new DefaultValueEnumerator<T>(baseObj, default(T));
+            if (baseObj == null) throw Error.ArgumentNull(nameof(baseObj));
+            return new DefaultValueEnumerator<T>(baseObj, default(T));
         }
         
-        public static IEnumerator<T> GetDefaultValueEnumerator<T>(this IEnumerator<T> baseObj)
+        public static IEnumerator<T> GetDefaultValueEnumerator<T>(this IEnumerable<T> baseObj)
         {
             return GetDefaultValueEnumerator(baseObj, default(T));
         }
@@ -29,7 +28,7 @@ namespace CsUtil.Enumerable
 
         public override T Current => _hasValue ? _builder.Current : _defaultValue;
 
-        public DefaultValueEnumerator(IEnumerator<T> builder , T defaultValue)
+        public DefaultValueEnumerator(IEnumerable<T> builder , T defaultValue)
             :base(builder)
         {
             _defaultValue = defaultValue;
@@ -48,9 +47,9 @@ namespace CsUtil.Enumerable
 
         T IEnumerator<T>.Current => Current;
 
-        protected EnumeratorWappaer(IEnumerator<T> builder)
+        protected EnumeratorWappaer(IEnumerable<T> builder)
         {
-            _builder = builder;
+            _builder = builder.GetEnumerator();
         }
 
         public bool MoveNext()
