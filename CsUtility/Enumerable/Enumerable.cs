@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Text;
 using System.Linq;
 using System.Collections;
+
+
 namespace CsUtility.Enumerable
 {
     /// <summary>
@@ -12,53 +14,7 @@ namespace CsUtility.Enumerable
     {
         #region インナー構造体
 
-        /// <summary>
-        /// 前後をひとまとめにした構造体
-        /// </summary>
-        /// <typeparam name="T"> 要素の型。 </typeparam>
-        public struct PrevNextPair<T>
-        {
-            /// <summary> 前方の要素。</summary>
-            public T Prev { get; }
 
-            /// <summary> 後方の要素。</summary>
-            public T Next { get; }
-
-            internal PrevNextPair(T prev, T next)
-            {
-                Prev = prev;
-                Next = next;
-            }
-
-            /// <summary> 前後の要素の分解を行います </summary>
-            /// <param name="prev"> 前方の要素。</param>
-            /// <param name="next"> 後方の要素。</param>
-            public void Deconstruct(out T prev, out T next) => (prev, next) = (Prev, Next);
-            
-        }
-
-        /// <summary> 最小値と最大値の組を持つ構造体。 </summary>
-        /// <typeparam name="T"> 要素の型。 </typeparam>
-        public struct MinMaxPair<T>
-        {
-            /// <summary> 最大値。</summary>
-            public T Min { get; }
-
-            /// <summary> 最小値。</summary>
-            public T Max { get; }
-
-            internal MinMaxPair(T min, T max)
-            {
-                Min = min;
-                Max = max;
-            }
-
-            /// <summary> 最大値/最小値の要素の分解を行います。 </summary>
-            /// <param name="min"> 最小値の要素。</param>
-            /// <param name="max"> 最大値の要素。</param>
-            public void Deconstruct(out T min, out T max) => (min, max) = (Min, Max);
-
-        }
 
         #endregion
 
@@ -397,7 +353,7 @@ namespace CsUtility.Enumerable
             if (func == null) throw Error.ArgumentNull("func");
             if (resultSelector == null) throw Error.ArgumentNull(nameof(resultSelector));
 
-            return AggregateSelectIterator<TSource, TAccumulate, TResult>(source, seed, func, resultSelector;
+            return AggregateSelectIterator<TSource, TAccumulate, TResult>(source, seed, func, resultSelector);
         }
 
         private static IEnumerable<TResult> AggregateSelectIterator<TSource, TAccumulate, TResult>(IEnumerable<TSource> source, TAccumulate seed, Func<TAccumulate, TSource, TAccumulate> func, Func<TAccumulate, TSource, TResult> resultSelector)

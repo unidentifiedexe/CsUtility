@@ -7,8 +7,8 @@
     <ProjectGuid>{E39022B3-063B-45EC-A0F0-EEA7E9BEFC94}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CsUtil</RootNamespace>
-    <AssemblyName>CsUtil</AssemblyName>
+    <RootNamespace>CsUtility</RootNamespace>
+    <AssemblyName>CsUtility</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -21,7 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\CsUtil.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\CsUtility.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -30,7 +30,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Release\CsUtil.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\CsUtility.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -55,6 +55,8 @@
       <DependentUpon>EnumerableZip.tt</DependentUpon>
     </Compile>
     <Compile Include="Enumerable\Enumerator.cs" />
+    <Compile Include="Enumerable\Structs\MinMaxPair.cs" />
+    <Compile Include="Enumerable\Structs\PrevNextPair.cs" />
     <Compile Include="Error.cs" />
     <Compile Include="Generic\ReadSafeDictionary.cs" />
     <Compile Include="Primitive\Primitive.cs" />
@@ -82,6 +84,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>copy /Y /V $(TargetPath) $(SolutionDir)

@@ -1,45 +1,13 @@
 <?xml version="1.0"?>
 <doc>
     <assembly>
-        <name>CsUtil</name>
+        <name>CsUtility</name>
     </assembly>
     <members>
         <member name="T:CsUtility.Enumerable.EnumerableUtilities">
             <summary>
             <see cref="T:System.Linq.Enumerable"/> および <see cref="T:System.Collections.IEnumerable"/> の Utility コードを定義しているクラス。
             </summary>
-        </member>
-        <member name="T:CsUtility.Enumerable.EnumerableUtilities.PrevNextPair`1">
-            <summary>
-            前後をひとまとめにした構造体
-            </summary>
-            <typeparam name="T"> 要素の型。 </typeparam>
-        </member>
-        <member name="P:CsUtility.Enumerable.EnumerableUtilities.PrevNextPair`1.Prev">
-            <summary> 前方の要素。</summary>
-        </member>
-        <member name="P:CsUtility.Enumerable.EnumerableUtilities.PrevNextPair`1.Next">
-            <summary> 後方の要素。</summary>
-        </member>
-        <member name="M:CsUtility.Enumerable.EnumerableUtilities.PrevNextPair`1.Deconstruct(`0@,`0@)">
-            <summary> 前後の要素の分解を行います </summary>
-            <param name="prev"> 前方の要素。</param>
-            <param name="next"> 後方の要素。</param>
-        </member>
-        <member name="T:CsUtility.Enumerable.EnumerableUtilities.MinMaxPair`1">
-            <summary> 最小値と最大値の組を持つ構造体。 </summary>
-            <typeparam name="T"> 要素の型。 </typeparam>
-        </member>
-        <member name="P:CsUtility.Enumerable.EnumerableUtilities.MinMaxPair`1.Min">
-            <summary> 最大値。</summary>
-        </member>
-        <member name="P:CsUtility.Enumerable.EnumerableUtilities.MinMaxPair`1.Max">
-            <summary> 最小値。</summary>
-        </member>
-        <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMaxPair`1.Deconstruct(`0@,`0@)">
-            <summary> 最大値/最小値の要素の分解を行います。 </summary>
-            <param name="min"> 最小値の要素。</param>
-            <param name="max"> 最大値の要素。</param>
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.FirstOrDefault``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},``0)">
             <summary>
@@ -1629,6 +1597,38 @@
             <param name="resultSelector"> 5 個のシーケンスから要素を結合する方法を指定する関数。 </param>
             <returns> 5 個の入力シーケンスの結合の要素を格納します </returns>
             <exception cref="T:System.ArgumentNullException"> 入力シーケンスまたは  が null です。 </exception>
+        </member>
+        <member name="T:CsUtility.Enumerable.EnumerableUtilities.MinMaxPair`1">
+            <summary> 最小値と最大値の組を持つ構造体。 </summary>
+            <typeparam name="T"> 要素の型。 </typeparam>
+        </member>
+        <member name="P:CsUtility.Enumerable.EnumerableUtilities.MinMaxPair`1.Min">
+            <summary> 最大値。</summary>
+        </member>
+        <member name="P:CsUtility.Enumerable.EnumerableUtilities.MinMaxPair`1.Max">
+            <summary> 最小値。</summary>
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMaxPair`1.Deconstruct(`0@,`0@)">
+            <summary> 最大値/最小値の要素の分解を行います。 </summary>
+            <param name="min"> 最小値の要素。</param>
+            <param name="max"> 最大値の要素。</param>
+        </member>
+        <member name="T:CsUtility.Enumerable.EnumerableUtilities.PrevNextPair`1">
+            <summary>
+            前後をひとまとめにした構造体
+            </summary>
+            <typeparam name="T"> 要素の型。 </typeparam>
+        </member>
+        <member name="P:CsUtility.Enumerable.EnumerableUtilities.PrevNextPair`1.Prev">
+            <summary> 前方の要素。</summary>
+        </member>
+        <member name="P:CsUtility.Enumerable.EnumerableUtilities.PrevNextPair`1.Next">
+            <summary> 後方の要素。</summary>
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.PrevNextPair`1.Deconstruct(`0@,`0@)">
+            <summary> 前後の要素の分解を行います </summary>
+            <param name="prev"> 前方の要素。</param>
+            <param name="next"> 後方の要素。</param>
         </member>
         <member name="T:CsUtility.Generic.ReadSafeDictionary">
             <summary>

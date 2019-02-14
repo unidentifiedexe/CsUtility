@@ -20,7 +20,6 @@ namespace UtilityTest.EnumerableUtillityTest
             var max = testData.Max(p => p.SByteValue);
             var minItem = testData.First(p => p.SByteValue == min);
             var maxItem = testData.First(p => p.SByteValue == max);
-
             var (utillMin, utillMax) = testData.AsEnumerable().MinMax(p => p.SByteValue);
             var (utillMinItem, utillMaxItem) = testData.AsEnumerable().MinMaxItem(p => p.SByteValue);
 
