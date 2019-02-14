@@ -365,9 +365,7 @@ namespace CsUtility.Enumerable
                 yield return resultSelector(result, element);
             }
         }
-
-
-
+        
 
         /// <summary>
         /// 型の規定の比較子を用いてシーケンスの全ての値が等しいかどうかを取得します。
@@ -457,12 +455,18 @@ namespace CsUtility.Enumerable
         /// <returns> 平坦化されたシーケンス。 </returns>
         public static IEnumerable<TSource> SelectMany<TSource>(this IEnumerable<IEnumerable<TSource>> source)
         {
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            return SelectManyIterator(source);
+        }
+
+        static IEnumerable<TSource> SelectManyIterator<TSource>(this IEnumerable<IEnumerable<TSource>> source)
+        {
             foreach (IEnumerable<TSource> element in source)
                 foreach (TSource subElement in element)
                     yield return subElement;
         }
 
-        
+
 
     }
 }
