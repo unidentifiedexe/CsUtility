@@ -123,7 +123,13 @@ namespace CsUtility.Enumerable
         {
             if (generator == null) throw Error.ArgumentNull(nameof(generator));
             if (count < 0) throw Error.ArgumentOutOfRange("count");
-            for (int i = 0; i < count; i++) yield return generator();
+
+            IEnumerable<TResult> repeatIterator()
+            {
+                for (int i = 0; i < count; i++) yield return generator();
+            }
+
+            return repeatIterator();
         }
 
         /// <summary>
@@ -190,7 +196,12 @@ namespace CsUtility.Enumerable
         {
             if (source == null) throw Error.ArgumentNull(nameof(source));
             if (number < 1) throw Error.ArgumentOutOfRange(nameof(number));
-            if (number == 1) foreach (var item in source) yield return new[] { item };
+            else if (number == 1) return source.Select(p => new[] { p });
+            else return SplitIteretor(source, number);
+        }
+
+        private static IEnumerable<IEnumerable<TSource>> SplitIteretor<TSource>(IEnumerable<TSource> source, int number)
+        {
 
             var retArray = new TSource[number];
             int count = 0;
@@ -215,19 +226,27 @@ namespace CsUtility.Enumerable
         }
 
         /// <summary>
-        /// 指定条件の要素の間で切り分けられたシーケンスを返します。
-        /// </summary>
-        /// <typeparam name="TSource"> シーケンスの要素の型。 </typeparam>
-        /// <param name="source"> 切り分けれられるシーケンス。 </param>
-        /// <param name="predicate"> 切り分ける条件を示す関数。 </param>
-        /// <exception cref="ArgumentNullException">
-        /// <paramref name="source"/> または <paramref name="predicate"/> が null です。
-        /// </exception>
-        /// <returns> 切り分けられたシーケンス。</returns>
+            /// 指定条件の要素の間で切り分けられたシーケンスを返します。
+            /// </summary>
+            /// <typeparam name="TSource"> シーケンスの要素の型。 </typeparam>
+            /// <param name="source"> 切り分けれられるシーケンス。 </param>
+            /// <param name="predicate"> 切り分ける条件を示す関数。 </param>
+            /// <exception cref="ArgumentNullException">
+            /// <paramref name="source"/> または <paramref name="predicate"/> が null です。
+            /// </exception>
+            /// <returns> 切り分けられたシーケンス。</returns>
         public static IEnumerable<IEnumerable<TSource>> SplitIf<TSource>(this IEnumerable<TSource> source, Func<TSource, TSource, bool> predicate)
         {
             if (source == null) throw Error.ArgumentNull(nameof(source));
             if (predicate == null) throw Error.ArgumentNull(nameof(predicate));
+
+            return SplitIfIteretor(source, predicate);
+
+        }
+
+
+        private static IEnumerable<IEnumerable<TSource>> SplitIfIteretor<TSource>(IEnumerable<TSource> source, Func<TSource, TSource, bool> predicate)
+        {
             var tempArray = new TSource[4];
             var previous = default(TSource);
             bool hasValue = false;
@@ -283,10 +302,15 @@ namespace CsUtility.Enumerable
         {
             if (source == null) throw Error.ArgumentNull("source");
             if (func == null) throw Error.ArgumentNull("func");
+            return AggregateSelectIterator(source, seed, func);
+        }
+
+        private  static IEnumerable<TAccumulate> AggregateSelectIterator<TSource, TAccumulate>(IEnumerable<TSource> source, TAccumulate seed, Func<TAccumulate, TSource, TAccumulate> func)
+        {
             TAccumulate result = seed;
             foreach (TSource element in source) yield return result = func(result, element);
         }
-        
+
         /// <summary>
         /// シーケンスにアキュムレータ関数を適用しその過程を要素とするシーケンスを返します。
         /// </summary>
@@ -302,6 +326,11 @@ namespace CsUtility.Enumerable
             if (source == null) throw Error.ArgumentNull("source");
             if (func == null) throw Error.ArgumentNull("func");
 
+            return AggregateSelectIterator(source, func);
+        }
+
+        private static IEnumerable<TSource> AggregateSelectIterator<TSource>(IEnumerable<TSource> source, Func<TSource, TSource, TSource> func)
+        {
             using (IEnumerator<TSource> e = source.GetEnumerator())
             {
                 if (!e.MoveNext()) throw Error.NoElements();
@@ -331,7 +360,13 @@ namespace CsUtility.Enumerable
         {
             if (source == null) throw Error.ArgumentNull("source");
             if (func == null) throw Error.ArgumentNull("func");
+            return AggregateSelectIterator<TSource, TAccumulate, TResult>(source, seed, func);
 
+
+        }
+
+        private static IEnumerable<TResult> AggregateSelectIterator<TSource, TAccumulate, TResult>(IEnumerable<TSource> source, TAccumulate seed, Func<TAccumulate, TSource, (TAccumulate Ag, TResult Re)> func)
+        {
             TAccumulate result = seed;
             TResult ret;
             foreach (TSource element in source)
@@ -341,7 +376,7 @@ namespace CsUtility.Enumerable
             }
         }
 
-        
+
         /// <summary>
         /// シーケンスにアキュムレータ関数を適用しその過程の結果を射影したシーケンスを返します。
         /// </summary>
@@ -356,12 +391,17 @@ namespace CsUtility.Enumerable
         /// <exception cref="ArgumentNullException">
         /// <paramref name="source"/> または <paramref name="func"/> または <paramref name="resultSelector"/> が null です。
         /// </exception>
-        public static IEnumerable<TResult> AggregateSelect<TSource, TAccumulate, TResult>(this IEnumerable<TSource> source, TAccumulate seed, Func<TAccumulate, TSource, TAccumulate> func ,Func<TAccumulate,TSource,TResult> resultSelector)
+        public static IEnumerable<TResult> AggregateSelect<TSource, TAccumulate, TResult>(this IEnumerable<TSource> source, TAccumulate seed, Func<TAccumulate, TSource, TAccumulate> func, Func<TAccumulate, TSource, TResult> resultSelector)
         {
             if (source == null) throw Error.ArgumentNull("source");
             if (func == null) throw Error.ArgumentNull("func");
             if (resultSelector == null) throw Error.ArgumentNull(nameof(resultSelector));
 
+            return AggregateSelectIterator<TSource, TAccumulate, TResult>(source, seed, func, resultSelector;
+        }
+
+        private static IEnumerable<TResult> AggregateSelectIterator<TSource, TAccumulate, TResult>(IEnumerable<TSource> source, TAccumulate seed, Func<TAccumulate, TSource, TAccumulate> func, Func<TAccumulate, TSource, TResult> resultSelector)
+        {
             TAccumulate result = seed;
             foreach (TSource element in source)
             {
@@ -369,6 +409,8 @@ namespace CsUtility.Enumerable
                 yield return resultSelector(result, element);
             }
         }
+
+
 
 
         /// <summary>
