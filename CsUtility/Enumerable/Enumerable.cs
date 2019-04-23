@@ -12,11 +12,6 @@ namespace CsUtility.Enumerable
     /// </summary>
     public static partial class EnumerableUtilities
     {
-        #region インナー構造体
-
-
-
-        #endregion
 
         /// <summary>
         /// 条件を満たす最初の要素を返します。存在しない場合は場合は与えられた初期値を返します。
@@ -465,8 +460,20 @@ namespace CsUtility.Enumerable
                 foreach (TSource subElement in element)
                     yield return subElement;
         }
+        
 
+        public static IEnumerable<TResult> Zip<TSource,TResult>(this IEnumerable<IEnumerable<TSource>> source, Func<IEnumerable<TSource>, TResult> resultSelector)
+        {
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (resultSelector == null) throw Error.ArgumentNull(nameof(resultSelector));
 
+            IEnumerable<TResult> iterator()
+            {
+                foreach (var item in source)
+                    yield return resultSelector(item);
+            }
 
+            return iterator();
+        }
     }
 }

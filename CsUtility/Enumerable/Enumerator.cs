@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CsUtil.Enumerable
+namespace CsUtility.Enumerable
 {
-    static class Enumerator
+    static public class Enumerator
     {
         public static IEnumerator<T> GetDefaultValueEnumerator<T>(this IEnumerator<T> baseObj, T defaultValue)
         {

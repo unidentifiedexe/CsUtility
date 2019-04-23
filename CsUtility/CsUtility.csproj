@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Comparer\Comparer.cs" />
     <Compile Include="Enumerable\Enumerable.cs" />
     <Compile Include="Enumerable\EnumerableMinMaxGetors.cs">
       <AutoGen>True</AutoGen>
