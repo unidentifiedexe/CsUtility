@@ -230,9 +230,12 @@ namespace CsUtility.Enumerable
                 previous = item;
                 count++;
             }
-            ret = new TSource[count];
-            Array.Copy(tempArray, 0, ret, 0, count);
-            yield return ret;
+            if (count != 0)
+            {
+                ret = new TSource[count];
+                Array.Copy(tempArray, 0, ret, 0, count);
+                yield return ret;
+            }
 
         }
 
