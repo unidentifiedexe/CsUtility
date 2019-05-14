@@ -464,19 +464,18 @@ namespace CsUtility.Enumerable
                     yield return subElement;
         }
         
+        //public static IEnumerable<TResult> Zip<TSource,TResult>(this IEnumerable<IEnumerable<TSource>> source, Func<IEnumerable<TSource>, TResult> resultSelector)
+        //{
+        //    if (source == null) throw Error.ArgumentNull(nameof(source));
+        //    if (resultSelector == null) throw Error.ArgumentNull(nameof(resultSelector));
 
-        public static IEnumerable<TResult> Zip<TSource,TResult>(this IEnumerable<IEnumerable<TSource>> source, Func<IEnumerable<TSource>, TResult> resultSelector)
-        {
-            if (source == null) throw Error.ArgumentNull(nameof(source));
-            if (resultSelector == null) throw Error.ArgumentNull(nameof(resultSelector));
+        //    IEnumerable<TResult> iterator()
+        //    {
+        //        foreach (var item in source)
+        //            yield return resultSelector(item);
+        //    }
 
-            IEnumerable<TResult> iterator()
-            {
-                foreach (var item in source)
-                    yield return resultSelector(item);
-            }
-
-            return iterator();
-        }
+        //    return iterator();
+        //}
     }
 }
