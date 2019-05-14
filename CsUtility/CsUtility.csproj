@@ -60,6 +60,7 @@
     <Compile Include="Enumerable\Structs\PrevNextPair.cs" />
     <Compile Include="Error.cs" />
     <Compile Include="Generic\ReadSafeDictionary.cs" />
+    <Compile Include="Path\PathUtils.cs" />
     <Compile Include="Primitive\Primitive.cs" />
     <Compile Include="Primitive\PrimitiveFloatingTypesChecker.cs">
       <AutoGen>True</AutoGen>
@@ -85,7 +86,9 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Comparer\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>copy /Y /V $(TargetPath) $(SolutionDir)
