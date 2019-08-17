@@ -228,6 +228,9 @@
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
             </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.SByte}})">
             <summary>
@@ -239,6 +242,9 @@
             <returns> 最小値を持つ要素。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Byte})">
@@ -252,6 +258,9 @@
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
             </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Byte}})">
             <summary>
@@ -263,6 +272,9 @@
             <returns> 最小値を持つ要素。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Char})">
@@ -276,6 +288,9 @@
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
             </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Char}})">
             <summary>
@@ -287,6 +302,9 @@
             <returns> 最小値を持つ要素。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Int16})">
@@ -300,6 +318,9 @@
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
             </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Int16}})">
             <summary>
@@ -311,6 +332,9 @@
             <returns> 最小値を持つ要素。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.UInt16})">
@@ -324,6 +348,9 @@
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
             </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.UInt16}})">
             <summary>
@@ -335,6 +362,9 @@
             <returns> 最小値を持つ要素。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Int32})">
@@ -348,6 +378,9 @@
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
             </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Int32}})">
             <summary>
@@ -359,6 +392,9 @@
             <returns> 最小値を持つ要素。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.UInt32})">
@@ -372,6 +408,9 @@
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
             </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.UInt32}})">
             <summary>
@@ -383,6 +422,9 @@
             <returns> 最小値を持つ要素。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Int64})">
@@ -396,6 +438,9 @@
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
             </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Int64}})">
             <summary>
@@ -407,6 +452,9 @@
             <returns> 最小値を持つ要素。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.UInt64})">
@@ -420,6 +468,9 @@
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
             </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.UInt64}})">
             <summary>
@@ -431,6 +482,9 @@
             <returns> 最小値を持つ要素。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Single})">
@@ -444,6 +498,9 @@
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
             </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Single}})">
             <summary>
@@ -455,6 +512,9 @@
             <returns> 最小値を持つ要素。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Double})">
@@ -468,6 +528,9 @@
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
             </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Double}})">
             <summary>
@@ -479,6 +542,9 @@
             <returns> 最小値を持つ要素。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Decimal})">
@@ -492,6 +558,9 @@
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
             </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Decimal}})">
             <summary>
@@ -503,6 +572,9 @@
             <returns> 最小値を持つ要素。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.SByte})">
@@ -516,6 +588,9 @@
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
             </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.SByte}})">
             <summary>
@@ -527,6 +602,9 @@
             <returns> 最大値を持つ要素。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Byte})">
@@ -540,6 +618,9 @@
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
             </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Byte}})">
             <summary>
@@ -551,6 +632,9 @@
             <returns> 最大値を持つ要素。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Char})">
@@ -564,6 +648,9 @@
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
             </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Char}})">
             <summary>
@@ -575,6 +662,9 @@
             <returns> 最大値を持つ要素。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Int16})">
@@ -588,6 +678,9 @@
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
             </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Int16}})">
             <summary>
@@ -599,6 +692,9 @@
             <returns> 最大値を持つ要素。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.UInt16})">
@@ -612,6 +708,9 @@
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
             </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.UInt16}})">
             <summary>
@@ -623,6 +722,9 @@
             <returns> 最大値を持つ要素。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Int32})">
@@ -636,6 +738,9 @@
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
             </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Int32}})">
             <summary>
@@ -647,6 +752,9 @@
             <returns> 最大値を持つ要素。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.UInt32})">
@@ -660,6 +768,9 @@
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
             </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.UInt32}})">
             <summary>
@@ -671,6 +782,9 @@
             <returns> 最大値を持つ要素。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Int64})">
@@ -684,6 +798,9 @@
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
             </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Int64}})">
             <summary>
@@ -695,6 +812,9 @@
             <returns> 最大値を持つ要素。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.UInt64})">
@@ -708,6 +828,9 @@
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
             </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.UInt64}})">
             <summary>
@@ -719,6 +842,9 @@
             <returns> 最大値を持つ要素。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Single})">
@@ -732,6 +858,9 @@
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
             </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Single}})">
             <summary>
@@ -743,6 +872,9 @@
             <returns> 最大値を持つ要素。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Double})">
@@ -756,6 +888,9 @@
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
             </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Double}})">
             <summary>
@@ -767,6 +902,9 @@
             <returns> 最大値を持つ要素。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Decimal})">
@@ -780,6 +918,9 @@
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
             </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Decimal}})">
             <summary>
@@ -791,6 +932,9 @@
             <returns> 最大値を持つ要素。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMax``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.SByte})">
@@ -804,6 +948,9 @@
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
             </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMax``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.SByte}})">
             <summary>
@@ -815,6 +962,9 @@
             <returns> 最小値と最大値のペア。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMax``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Byte})">
@@ -828,6 +978,9 @@
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
             </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMax``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Byte}})">
             <summary>
@@ -839,6 +992,9 @@
             <returns> 最小値と最大値のペア。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMax``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Char})">
@@ -852,6 +1008,9 @@
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
             </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMax``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Char}})">
             <summary>
@@ -863,6 +1022,9 @@
             <returns> 最小値と最大値のペア。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMax``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Int16})">
@@ -876,6 +1038,9 @@
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
             </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMax``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Int16}})">
             <summary>
@@ -887,6 +1052,9 @@
             <returns> 最小値と最大値のペア。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMax``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.UInt16})">
@@ -900,6 +1068,9 @@
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
             </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMax``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.UInt16}})">
             <summary>
@@ -911,6 +1082,9 @@
             <returns> 最小値と最大値のペア。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMax``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Int32})">
@@ -924,6 +1098,9 @@
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
             </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMax``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Int32}})">
             <summary>
@@ -935,6 +1112,9 @@
             <returns> 最小値と最大値のペア。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMax``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.UInt32})">
@@ -948,6 +1128,9 @@
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
             </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMax``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.UInt32}})">
             <summary>
@@ -959,6 +1142,9 @@
             <returns> 最小値と最大値のペア。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMax``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Int64})">
@@ -972,6 +1158,9 @@
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
             </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMax``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Int64}})">
             <summary>
@@ -983,6 +1172,9 @@
             <returns> 最小値と最大値のペア。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMax``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.UInt64})">
@@ -996,6 +1188,9 @@
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
             </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMax``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.UInt64}})">
             <summary>
@@ -1007,6 +1202,9 @@
             <returns> 最小値と最大値のペア。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMax``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Single})">
@@ -1020,6 +1218,9 @@
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
             </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMax``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Single}})">
             <summary>
@@ -1031,6 +1232,9 @@
             <returns> 最小値と最大値のペア。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMax``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Double})">
@@ -1044,6 +1248,9 @@
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
             </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMax``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Double}})">
             <summary>
@@ -1055,6 +1262,9 @@
             <returns> 最小値と最大値のペア。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMax``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Decimal})">
@@ -1068,6 +1278,9 @@
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
             </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMax``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Decimal}})">
             <summary>
@@ -1080,6 +1293,9 @@
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
             </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMax(System.Collections.Generic.IEnumerable{System.SByte})">
             <summary>
@@ -1088,6 +1304,9 @@
             <param name="source"> 確認する対象となるシーケンス。</param>
             <returns> 最小値と最大値のペア。 </returns>
             <exception cref="T:System.ArgumentNullException"> <paramref name="source"/> が null です。</exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMax(System.Collections.Generic.IEnumerable{System.Nullable{System.SByte}})">
             <summary>
@@ -1096,6 +1315,9 @@
             <param name="source"> 確認する対象となるシーケンス。</param>
             <returns> 最小値と最大値のペア。 </returns>
             <exception cref="T:System.ArgumentNullException"> <paramref name="source"/> が null です。</exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMax(System.Collections.Generic.IEnumerable{System.Byte})">
             <summary>
@@ -1104,6 +1326,9 @@
             <param name="source"> 確認する対象となるシーケンス。</param>
             <returns> 最小値と最大値のペア。 </returns>
             <exception cref="T:System.ArgumentNullException"> <paramref name="source"/> が null です。</exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMax(System.Collections.Generic.IEnumerable{System.Nullable{System.Byte}})">
             <summary>
@@ -1112,6 +1337,9 @@
             <param name="source"> 確認する対象となるシーケンス。</param>
             <returns> 最小値と最大値のペア。 </returns>
             <exception cref="T:System.ArgumentNullException"> <paramref name="source"/> が null です。</exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMax(System.Collections.Generic.IEnumerable{System.Char})">
             <summary>
@@ -1120,6 +1348,9 @@
             <param name="source"> 確認する対象となるシーケンス。</param>
             <returns> 最小値と最大値のペア。 </returns>
             <exception cref="T:System.ArgumentNullException"> <paramref name="source"/> が null です。</exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMax(System.Collections.Generic.IEnumerable{System.Nullable{System.Char}})">
             <summary>
@@ -1128,6 +1359,9 @@
             <param name="source"> 確認する対象となるシーケンス。</param>
             <returns> 最小値と最大値のペア。 </returns>
             <exception cref="T:System.ArgumentNullException"> <paramref name="source"/> が null です。</exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMax(System.Collections.Generic.IEnumerable{System.Int16})">
             <summary>
@@ -1136,6 +1370,9 @@
             <param name="source"> 確認する対象となるシーケンス。</param>
             <returns> 最小値と最大値のペア。 </returns>
             <exception cref="T:System.ArgumentNullException"> <paramref name="source"/> が null です。</exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMax(System.Collections.Generic.IEnumerable{System.Nullable{System.Int16}})">
             <summary>
@@ -1144,6 +1381,9 @@
             <param name="source"> 確認する対象となるシーケンス。</param>
             <returns> 最小値と最大値のペア。 </returns>
             <exception cref="T:System.ArgumentNullException"> <paramref name="source"/> が null です。</exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMax(System.Collections.Generic.IEnumerable{System.UInt16})">
             <summary>
@@ -1152,6 +1392,9 @@
             <param name="source"> 確認する対象となるシーケンス。</param>
             <returns> 最小値と最大値のペア。 </returns>
             <exception cref="T:System.ArgumentNullException"> <paramref name="source"/> が null です。</exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMax(System.Collections.Generic.IEnumerable{System.Nullable{System.UInt16}})">
             <summary>
@@ -1160,6 +1403,9 @@
             <param name="source"> 確認する対象となるシーケンス。</param>
             <returns> 最小値と最大値のペア。 </returns>
             <exception cref="T:System.ArgumentNullException"> <paramref name="source"/> が null です。</exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMax(System.Collections.Generic.IEnumerable{System.Int32})">
             <summary>
@@ -1168,6 +1414,9 @@
             <param name="source"> 確認する対象となるシーケンス。</param>
             <returns> 最小値と最大値のペア。 </returns>
             <exception cref="T:System.ArgumentNullException"> <paramref name="source"/> が null です。</exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMax(System.Collections.Generic.IEnumerable{System.Nullable{System.Int32}})">
             <summary>
@@ -1176,6 +1425,9 @@
             <param name="source"> 確認する対象となるシーケンス。</param>
             <returns> 最小値と最大値のペア。 </returns>
             <exception cref="T:System.ArgumentNullException"> <paramref name="source"/> が null です。</exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMax(System.Collections.Generic.IEnumerable{System.UInt32})">
             <summary>
@@ -1184,6 +1436,9 @@
             <param name="source"> 確認する対象となるシーケンス。</param>
             <returns> 最小値と最大値のペア。 </returns>
             <exception cref="T:System.ArgumentNullException"> <paramref name="source"/> が null です。</exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMax(System.Collections.Generic.IEnumerable{System.Nullable{System.UInt32}})">
             <summary>
@@ -1192,6 +1447,9 @@
             <param name="source"> 確認する対象となるシーケンス。</param>
             <returns> 最小値と最大値のペア。 </returns>
             <exception cref="T:System.ArgumentNullException"> <paramref name="source"/> が null です。</exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMax(System.Collections.Generic.IEnumerable{System.Int64})">
             <summary>
@@ -1200,6 +1458,9 @@
             <param name="source"> 確認する対象となるシーケンス。</param>
             <returns> 最小値と最大値のペア。 </returns>
             <exception cref="T:System.ArgumentNullException"> <paramref name="source"/> が null です。</exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMax(System.Collections.Generic.IEnumerable{System.Nullable{System.Int64}})">
             <summary>
@@ -1208,6 +1469,9 @@
             <param name="source"> 確認する対象となるシーケンス。</param>
             <returns> 最小値と最大値のペア。 </returns>
             <exception cref="T:System.ArgumentNullException"> <paramref name="source"/> が null です。</exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMax(System.Collections.Generic.IEnumerable{System.UInt64})">
             <summary>
@@ -1216,6 +1480,9 @@
             <param name="source"> 確認する対象となるシーケンス。</param>
             <returns> 最小値と最大値のペア。 </returns>
             <exception cref="T:System.ArgumentNullException"> <paramref name="source"/> が null です。</exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMax(System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}})">
             <summary>
@@ -1224,6 +1491,9 @@
             <param name="source"> 確認する対象となるシーケンス。</param>
             <returns> 最小値と最大値のペア。 </returns>
             <exception cref="T:System.ArgumentNullException"> <paramref name="source"/> が null です。</exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMax(System.Collections.Generic.IEnumerable{System.Single})">
             <summary>
@@ -1232,6 +1502,9 @@
             <param name="source"> 確認する対象となるシーケンス。</param>
             <returns> 最小値と最大値のペア。 </returns>
             <exception cref="T:System.ArgumentNullException"> <paramref name="source"/> が null です。</exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMax(System.Collections.Generic.IEnumerable{System.Nullable{System.Single}})">
             <summary>
@@ -1240,6 +1513,9 @@
             <param name="source"> 確認する対象となるシーケンス。</param>
             <returns> 最小値と最大値のペア。 </returns>
             <exception cref="T:System.ArgumentNullException"> <paramref name="source"/> が null です。</exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMax(System.Collections.Generic.IEnumerable{System.Double})">
             <summary>
@@ -1248,6 +1524,9 @@
             <param name="source"> 確認する対象となるシーケンス。</param>
             <returns> 最小値と最大値のペア。 </returns>
             <exception cref="T:System.ArgumentNullException"> <paramref name="source"/> が null です。</exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMax(System.Collections.Generic.IEnumerable{System.Nullable{System.Double}})">
             <summary>
@@ -1256,6 +1535,9 @@
             <param name="source"> 確認する対象となるシーケンス。</param>
             <returns> 最小値と最大値のペア。 </returns>
             <exception cref="T:System.ArgumentNullException"> <paramref name="source"/> が null です。</exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMax(System.Collections.Generic.IEnumerable{System.Decimal})">
             <summary>
@@ -1264,6 +1546,9 @@
             <param name="source"> 確認する対象となるシーケンス。</param>
             <returns> 最小値と最大値のペア。 </returns>
             <exception cref="T:System.ArgumentNullException"> <paramref name="source"/> が null です。</exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMax(System.Collections.Generic.IEnumerable{System.Nullable{System.Decimal}})">
             <summary>
@@ -1272,6 +1557,9 @@
             <param name="source"> 確認する対象となるシーケンス。</param>
             <returns> 最小値と最大値のペア。 </returns>
             <exception cref="T:System.ArgumentNullException"> <paramref name="source"/> が null です。</exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMaxItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.SByte})">
             <summary>
@@ -1283,6 +1571,9 @@
             <returns> 最小値を持つ要素と最大値を持つ要素のペア。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMaxItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.SByte}})">
@@ -1296,6 +1587,9 @@
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
             </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMaxItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Byte})">
             <summary>
@@ -1307,6 +1601,9 @@
             <returns> 最小値を持つ要素と最大値を持つ要素のペア。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMaxItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Byte}})">
@@ -1320,6 +1617,9 @@
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
             </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMaxItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Char})">
             <summary>
@@ -1331,6 +1631,9 @@
             <returns> 最小値を持つ要素と最大値を持つ要素のペア。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMaxItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Char}})">
@@ -1344,6 +1647,9 @@
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
             </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMaxItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Int16})">
             <summary>
@@ -1355,6 +1661,9 @@
             <returns> 最小値を持つ要素と最大値を持つ要素のペア。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMaxItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Int16}})">
@@ -1368,6 +1677,9 @@
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
             </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMaxItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.UInt16})">
             <summary>
@@ -1379,6 +1691,9 @@
             <returns> 最小値を持つ要素と最大値を持つ要素のペア。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMaxItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.UInt16}})">
@@ -1392,6 +1707,9 @@
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
             </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMaxItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Int32})">
             <summary>
@@ -1403,6 +1721,9 @@
             <returns> 最小値を持つ要素と最大値を持つ要素のペア。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMaxItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Int32}})">
@@ -1416,6 +1737,9 @@
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
             </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMaxItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.UInt32})">
             <summary>
@@ -1427,6 +1751,9 @@
             <returns> 最小値を持つ要素と最大値を持つ要素のペア。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMaxItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.UInt32}})">
@@ -1440,6 +1767,9 @@
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
             </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMaxItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Int64})">
             <summary>
@@ -1451,6 +1781,9 @@
             <returns> 最小値を持つ要素と最大値を持つ要素のペア。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMaxItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Int64}})">
@@ -1464,6 +1797,9 @@
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
             </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMaxItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.UInt64})">
             <summary>
@@ -1475,6 +1811,9 @@
             <returns> 最小値を持つ要素と最大値を持つ要素のペア。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMaxItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.UInt64}})">
@@ -1488,6 +1827,9 @@
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
             </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMaxItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Single})">
             <summary>
@@ -1499,6 +1841,9 @@
             <returns> 最小値を持つ要素と最大値を持つ要素のペア。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMaxItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Single}})">
@@ -1512,6 +1857,9 @@
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
             </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMaxItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Double})">
             <summary>
@@ -1523,6 +1871,9 @@
             <returns> 最小値を持つ要素と最大値を持つ要素のペア。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMaxItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Double}})">
@@ -1536,6 +1887,9 @@
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
             </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMaxItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Decimal})">
             <summary>
@@ -1548,6 +1902,9 @@
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
             </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinMaxItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Decimal}})">
             <summary>
@@ -1559,6 +1916,729 @@
             <returns> 最小値を持つ要素と最大値を持つ要素のペア。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.SByte})">
+            <summary>
+            シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。
+            </summary>
+            <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
+            <param name="source">最小値を確認する対象となるシーケンス。</param>
+            <param name="selector"> 各要素に適用する変換関数。</param>
+            <returns> 最小値を持つ要素群。 </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.SByte}})">
+            <summary>
+            シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。
+            </summary>
+            <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
+            <param name="source">最小値を確認する対象となるシーケンス。</param>
+            <param name="selector"> 各要素に適用する変換関数。</param>
+            <returns> 最小値を持つ要素群。 </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Byte})">
+            <summary>
+            シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。
+            </summary>
+            <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
+            <param name="source">最小値を確認する対象となるシーケンス。</param>
+            <param name="selector"> 各要素に適用する変換関数。</param>
+            <returns> 最小値を持つ要素群。 </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Byte}})">
+            <summary>
+            シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。
+            </summary>
+            <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
+            <param name="source">最小値を確認する対象となるシーケンス。</param>
+            <param name="selector"> 各要素に適用する変換関数。</param>
+            <returns> 最小値を持つ要素群。 </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Char})">
+            <summary>
+            シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。
+            </summary>
+            <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
+            <param name="source">最小値を確認する対象となるシーケンス。</param>
+            <param name="selector"> 各要素に適用する変換関数。</param>
+            <returns> 最小値を持つ要素群。 </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Char}})">
+            <summary>
+            シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。
+            </summary>
+            <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
+            <param name="source">最小値を確認する対象となるシーケンス。</param>
+            <param name="selector"> 各要素に適用する変換関数。</param>
+            <returns> 最小値を持つ要素群。 </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Int16})">
+            <summary>
+            シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。
+            </summary>
+            <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
+            <param name="source">最小値を確認する対象となるシーケンス。</param>
+            <param name="selector"> 各要素に適用する変換関数。</param>
+            <returns> 最小値を持つ要素群。 </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Int16}})">
+            <summary>
+            シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。
+            </summary>
+            <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
+            <param name="source">最小値を確認する対象となるシーケンス。</param>
+            <param name="selector"> 各要素に適用する変換関数。</param>
+            <returns> 最小値を持つ要素群。 </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.UInt16})">
+            <summary>
+            シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。
+            </summary>
+            <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
+            <param name="source">最小値を確認する対象となるシーケンス。</param>
+            <param name="selector"> 各要素に適用する変換関数。</param>
+            <returns> 最小値を持つ要素群。 </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.UInt16}})">
+            <summary>
+            シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。
+            </summary>
+            <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
+            <param name="source">最小値を確認する対象となるシーケンス。</param>
+            <param name="selector"> 各要素に適用する変換関数。</param>
+            <returns> 最小値を持つ要素群。 </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Int32})">
+            <summary>
+            シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。
+            </summary>
+            <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
+            <param name="source">最小値を確認する対象となるシーケンス。</param>
+            <param name="selector"> 各要素に適用する変換関数。</param>
+            <returns> 最小値を持つ要素群。 </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Int32}})">
+            <summary>
+            シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。
+            </summary>
+            <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
+            <param name="source">最小値を確認する対象となるシーケンス。</param>
+            <param name="selector"> 各要素に適用する変換関数。</param>
+            <returns> 最小値を持つ要素群。 </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.UInt32})">
+            <summary>
+            シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。
+            </summary>
+            <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
+            <param name="source">最小値を確認する対象となるシーケンス。</param>
+            <param name="selector"> 各要素に適用する変換関数。</param>
+            <returns> 最小値を持つ要素群。 </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.UInt32}})">
+            <summary>
+            シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。
+            </summary>
+            <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
+            <param name="source">最小値を確認する対象となるシーケンス。</param>
+            <param name="selector"> 各要素に適用する変換関数。</param>
+            <returns> 最小値を持つ要素群。 </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Int64})">
+            <summary>
+            シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。
+            </summary>
+            <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
+            <param name="source">最小値を確認する対象となるシーケンス。</param>
+            <param name="selector"> 各要素に適用する変換関数。</param>
+            <returns> 最小値を持つ要素群。 </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Int64}})">
+            <summary>
+            シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。
+            </summary>
+            <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
+            <param name="source">最小値を確認する対象となるシーケンス。</param>
+            <param name="selector"> 各要素に適用する変換関数。</param>
+            <returns> 最小値を持つ要素群。 </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.UInt64})">
+            <summary>
+            シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。
+            </summary>
+            <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
+            <param name="source">最小値を確認する対象となるシーケンス。</param>
+            <param name="selector"> 各要素に適用する変換関数。</param>
+            <returns> 最小値を持つ要素群。 </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.UInt64}})">
+            <summary>
+            シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。
+            </summary>
+            <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
+            <param name="source">最小値を確認する対象となるシーケンス。</param>
+            <param name="selector"> 各要素に適用する変換関数。</param>
+            <returns> 最小値を持つ要素群。 </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Single})">
+            <summary>
+            シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。
+            </summary>
+            <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
+            <param name="source">最小値を確認する対象となるシーケンス。</param>
+            <param name="selector"> 各要素に適用する変換関数。</param>
+            <returns> 最小値を持つ要素群。 </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Single}})">
+            <summary>
+            シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。
+            </summary>
+            <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
+            <param name="source">最小値を確認する対象となるシーケンス。</param>
+            <param name="selector"> 各要素に適用する変換関数。</param>
+            <returns> 最小値を持つ要素群。 </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Double})">
+            <summary>
+            シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。
+            </summary>
+            <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
+            <param name="source">最小値を確認する対象となるシーケンス。</param>
+            <param name="selector"> 各要素に適用する変換関数。</param>
+            <returns> 最小値を持つ要素群。 </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Double}})">
+            <summary>
+            シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。
+            </summary>
+            <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
+            <param name="source">最小値を確認する対象となるシーケンス。</param>
+            <param name="selector"> 各要素に適用する変換関数。</param>
+            <returns> 最小値を持つ要素群。 </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Decimal})">
+            <summary>
+            シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。
+            </summary>
+            <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
+            <param name="source">最小値を確認する対象となるシーケンス。</param>
+            <param name="selector"> 各要素に適用する変換関数。</param>
+            <returns> 最小値を持つ要素群。 </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Decimal}})">
+            <summary>
+            シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。
+            </summary>
+            <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
+            <param name="source">最小値を確認する対象となるシーケンス。</param>
+            <param name="selector"> 各要素に適用する変換関数。</param>
+            <returns> 最小値を持つ要素群。 </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.SByte})">
+            <summary>
+            シーケンスの各要素に対して変換関数を呼び出し、最大値を持つ要素群を返します。
+            </summary>
+            <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
+            <param name="source">最大値を確認する対象となるシーケンス。</param>
+            <param name="selector"> 各要素に適用する変換関数。</param>
+            <returns> 最大値を持つ要素群。 </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.SByte}})">
+            <summary>
+            シーケンスの各要素に対して変換関数を呼び出し、最大値を持つ要素群を返します。
+            </summary>
+            <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
+            <param name="source">最大値を確認する対象となるシーケンス。</param>
+            <param name="selector"> 各要素に適用する変換関数。</param>
+            <returns> 最大値を持つ要素群。 </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Byte})">
+            <summary>
+            シーケンスの各要素に対して変換関数を呼び出し、最大値を持つ要素群を返します。
+            </summary>
+            <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
+            <param name="source">最大値を確認する対象となるシーケンス。</param>
+            <param name="selector"> 各要素に適用する変換関数。</param>
+            <returns> 最大値を持つ要素群。 </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Byte}})">
+            <summary>
+            シーケンスの各要素に対して変換関数を呼び出し、最大値を持つ要素群を返します。
+            </summary>
+            <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
+            <param name="source">最大値を確認する対象となるシーケンス。</param>
+            <param name="selector"> 各要素に適用する変換関数。</param>
+            <returns> 最大値を持つ要素群。 </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Char})">
+            <summary>
+            シーケンスの各要素に対して変換関数を呼び出し、最大値を持つ要素群を返します。
+            </summary>
+            <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
+            <param name="source">最大値を確認する対象となるシーケンス。</param>
+            <param name="selector"> 各要素に適用する変換関数。</param>
+            <returns> 最大値を持つ要素群。 </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Char}})">
+            <summary>
+            シーケンスの各要素に対して変換関数を呼び出し、最大値を持つ要素群を返します。
+            </summary>
+            <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
+            <param name="source">最大値を確認する対象となるシーケンス。</param>
+            <param name="selector"> 各要素に適用する変換関数。</param>
+            <returns> 最大値を持つ要素群。 </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Int16})">
+            <summary>
+            シーケンスの各要素に対して変換関数を呼び出し、最大値を持つ要素群を返します。
+            </summary>
+            <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
+            <param name="source">最大値を確認する対象となるシーケンス。</param>
+            <param name="selector"> 各要素に適用する変換関数。</param>
+            <returns> 最大値を持つ要素群。 </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Int16}})">
+            <summary>
+            シーケンスの各要素に対して変換関数を呼び出し、最大値を持つ要素群を返します。
+            </summary>
+            <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
+            <param name="source">最大値を確認する対象となるシーケンス。</param>
+            <param name="selector"> 各要素に適用する変換関数。</param>
+            <returns> 最大値を持つ要素群。 </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.UInt16})">
+            <summary>
+            シーケンスの各要素に対して変換関数を呼び出し、最大値を持つ要素群を返します。
+            </summary>
+            <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
+            <param name="source">最大値を確認する対象となるシーケンス。</param>
+            <param name="selector"> 各要素に適用する変換関数。</param>
+            <returns> 最大値を持つ要素群。 </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.UInt16}})">
+            <summary>
+            シーケンスの各要素に対して変換関数を呼び出し、最大値を持つ要素群を返します。
+            </summary>
+            <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
+            <param name="source">最大値を確認する対象となるシーケンス。</param>
+            <param name="selector"> 各要素に適用する変換関数。</param>
+            <returns> 最大値を持つ要素群。 </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Int32})">
+            <summary>
+            シーケンスの各要素に対して変換関数を呼び出し、最大値を持つ要素群を返します。
+            </summary>
+            <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
+            <param name="source">最大値を確認する対象となるシーケンス。</param>
+            <param name="selector"> 各要素に適用する変換関数。</param>
+            <returns> 最大値を持つ要素群。 </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Int32}})">
+            <summary>
+            シーケンスの各要素に対して変換関数を呼び出し、最大値を持つ要素群を返します。
+            </summary>
+            <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
+            <param name="source">最大値を確認する対象となるシーケンス。</param>
+            <param name="selector"> 各要素に適用する変換関数。</param>
+            <returns> 最大値を持つ要素群。 </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.UInt32})">
+            <summary>
+            シーケンスの各要素に対して変換関数を呼び出し、最大値を持つ要素群を返します。
+            </summary>
+            <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
+            <param name="source">最大値を確認する対象となるシーケンス。</param>
+            <param name="selector"> 各要素に適用する変換関数。</param>
+            <returns> 最大値を持つ要素群。 </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.UInt32}})">
+            <summary>
+            シーケンスの各要素に対して変換関数を呼び出し、最大値を持つ要素群を返します。
+            </summary>
+            <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
+            <param name="source">最大値を確認する対象となるシーケンス。</param>
+            <param name="selector"> 各要素に適用する変換関数。</param>
+            <returns> 最大値を持つ要素群。 </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Int64})">
+            <summary>
+            シーケンスの各要素に対して変換関数を呼び出し、最大値を持つ要素群を返します。
+            </summary>
+            <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
+            <param name="source">最大値を確認する対象となるシーケンス。</param>
+            <param name="selector"> 各要素に適用する変換関数。</param>
+            <returns> 最大値を持つ要素群。 </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Int64}})">
+            <summary>
+            シーケンスの各要素に対して変換関数を呼び出し、最大値を持つ要素群を返します。
+            </summary>
+            <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
+            <param name="source">最大値を確認する対象となるシーケンス。</param>
+            <param name="selector"> 各要素に適用する変換関数。</param>
+            <returns> 最大値を持つ要素群。 </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.UInt64})">
+            <summary>
+            シーケンスの各要素に対して変換関数を呼び出し、最大値を持つ要素群を返します。
+            </summary>
+            <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
+            <param name="source">最大値を確認する対象となるシーケンス。</param>
+            <param name="selector"> 各要素に適用する変換関数。</param>
+            <returns> 最大値を持つ要素群。 </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.UInt64}})">
+            <summary>
+            シーケンスの各要素に対して変換関数を呼び出し、最大値を持つ要素群を返します。
+            </summary>
+            <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
+            <param name="source">最大値を確認する対象となるシーケンス。</param>
+            <param name="selector"> 各要素に適用する変換関数。</param>
+            <returns> 最大値を持つ要素群。 </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Single})">
+            <summary>
+            シーケンスの各要素に対して変換関数を呼び出し、最大値を持つ要素群を返します。
+            </summary>
+            <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
+            <param name="source">最大値を確認する対象となるシーケンス。</param>
+            <param name="selector"> 各要素に適用する変換関数。</param>
+            <returns> 最大値を持つ要素群。 </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Single}})">
+            <summary>
+            シーケンスの各要素に対して変換関数を呼び出し、最大値を持つ要素群を返します。
+            </summary>
+            <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
+            <param name="source">最大値を確認する対象となるシーケンス。</param>
+            <param name="selector"> 各要素に適用する変換関数。</param>
+            <returns> 最大値を持つ要素群。 </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Double})">
+            <summary>
+            シーケンスの各要素に対して変換関数を呼び出し、最大値を持つ要素群を返します。
+            </summary>
+            <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
+            <param name="source">最大値を確認する対象となるシーケンス。</param>
+            <param name="selector"> 各要素に適用する変換関数。</param>
+            <returns> 最大値を持つ要素群。 </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Double}})">
+            <summary>
+            シーケンスの各要素に対して変換関数を呼び出し、最大値を持つ要素群を返します。
+            </summary>
+            <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
+            <param name="source">最大値を確認する対象となるシーケンス。</param>
+            <param name="selector"> 各要素に適用する変換関数。</param>
+            <returns> 最大値を持つ要素群。 </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Decimal})">
+            <summary>
+            シーケンスの各要素に対して変換関数を呼び出し、最大値を持つ要素群を返します。
+            </summary>
+            <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
+            <param name="source">最大値を確認する対象となるシーケンス。</param>
+            <param name="selector"> 各要素に適用する変換関数。</param>
+            <returns> 最大値を持つ要素群。 </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
+            </exception> 
+        </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Decimal}})">
+            <summary>
+            シーケンスの各要素に対して変換関数を呼び出し、最大値を持つ要素群を返します。
+            </summary>
+            <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
+            <param name="source">最大値を確認する対象となるシーケンス。</param>
+            <param name="selector"> 各要素に適用する変換関数。</param>
+            <returns> 最大値を持つ要素群。 </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="source"/> または <paramref name="selector"/> が null です。
+            </exception> 
+            <exception cref="T:System.InvalidOperationException">
+            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.Zip``4(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``1},System.Collections.Generic.IEnumerable{``2},System.Func{``0,``1,``2,``3})">

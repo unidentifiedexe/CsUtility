@@ -177,15 +177,15 @@ namespace CsUtility.Enumerable
         }
 
         /// <summary>
-            /// 指定条件の要素の間で切り分けられたシーケンスを返します。
-            /// </summary>
-            /// <typeparam name="TSource"> シーケンスの要素の型。 </typeparam>
-            /// <param name="source"> 切り分けれられるシーケンス。 </param>
-            /// <param name="predicate"> 切り分ける条件を示す関数。 </param>
-            /// <exception cref="ArgumentNullException">
-            /// <paramref name="source"/> または <paramref name="predicate"/> が null です。
-            /// </exception>
-            /// <returns> 切り分けられたシーケンス。</returns>
+        /// 指定条件の要素の間で切り分けられたシーケンスを返します。
+        /// </summary>
+        /// <typeparam name="TSource"> シーケンスの要素の型。 </typeparam>
+        /// <param name="source"> 切り分けれられるシーケンス。 </param>
+        /// <param name="predicate"> 切り分ける条件を示す関数。 </param>
+        /// <exception cref="ArgumentNullException">
+        /// <paramref name="source"/> または <paramref name="predicate"/> が null です。
+        /// </exception>
+        /// <returns> 切り分けられたシーケンス。</returns>
         public static IEnumerable<IEnumerable<TSource>> SplitIf<TSource>(this IEnumerable<TSource> source, Func<TSource, TSource, bool> predicate)
         {
             if (source == null) throw Error.ArgumentNull(nameof(source));

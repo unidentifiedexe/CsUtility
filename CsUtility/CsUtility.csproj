@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Comparer\Comparer.cs" />
+    <Compile Include="Enumerable\InnerUtilClasses\Buffer.cs" />
     <Compile Include="Enumerable\Enumerable.cs" />
     <Compile Include="Enumerable\EnumerableMinMaxGetors.cs">
       <AutoGen>True</AutoGen>
@@ -86,9 +87,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Comparer\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>copy /Y /V $(TargetPath) $(SolutionDir)

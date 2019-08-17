@@ -42,6 +42,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
+using CsUtility.Enumerable.InnerUtils;
 
 namespace CsUtility.Enumerable
 {
@@ -66,6 +67,9 @@ var oprJaText = "";
         /// <returns> <#= oprJaText #>を持つ要素。 </returns>
         /// <exception cref="ArgumentNullException">
         /// <paramref name="source"/> または <paramref name="selector"/> が null です。
+        /// </exception> 
+        /// <exception cref="InvalidOperationException">
+        /// <paramref name="source"/> に要素が存在しません。
         /// </exception> 
         public static TSource <#= opr.Key #>Item<TSource>(this IEnumerable<TSource> source, Func<TSource, <#= typeName #>> selector)
         {
@@ -126,6 +130,9 @@ var oprJaText = "";
         /// <exception cref="ArgumentNullException">
         /// <paramref name="source"/> または <paramref name="selector"/> が null です。
         /// </exception> 
+        /// <exception cref="InvalidOperationException">
+        /// <paramref name="source"/> に要素が存在しません。
+        /// </exception> 
         public static MinMaxPair<<#= typeName #>> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, <#= typeName #>> selector) 
         {
             return MinMax(System.Linq.Enumerable.Select(source, selector));
@@ -141,6 +148,9 @@ var oprJaText = "";
         /// <param name="source"> 確認する対象となるシーケンス。</param>
         /// <returns> 最小値と最大値のペア。 </returns>
         /// <exception cref="ArgumentNullException"> <paramref name="source"/> が null です。</exception> 
+        /// <exception cref="InvalidOperationException">
+        /// <paramref name="source"/> に要素が存在しません。
+        /// </exception> 
         public static MinMaxPair<<#= typeName #>> MinMax(this IEnumerable<<#= typeName #>> source) 
         {
             if (source == null) throw Error.ArgumentNull("source");
@@ -194,6 +204,9 @@ var oprJaText = "";
         /// <exception cref="ArgumentNullException">
         /// <paramref name="source"/> または <paramref name="selector"/> が null です。
         /// </exception> 
+        /// <exception cref="InvalidOperationException">
+        /// <paramref name="source"/> に要素が存在しません。
+        /// </exception> 
         public static MinMaxPair<TSource> MinMaxItem<TSource>(this IEnumerable<TSource> source, Func<TSource, <#= typeName #>> selector) 
         {
             if (source == null) throw Error.ArgumentNull("source");
@@ -239,5 +252,85 @@ var oprJaText = "";
 
 <# } #>
         #endregion
+
+<# foreach(var opr in minMaxDic){ 
+var oprJaText = "";
+ if(opr.Key == "Min") oprJaText = "最小値";
+ else if(opr.Key == "Max") oprJaText = "最大値";
+ #>
+        #region <#= opr.Key #>Items
+
+<# foreach(var (typeName, isNullable, hasIsNaN) in types){ #>
+        /// <summary>
+        /// <para> シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。 </para>
+        /// <para> <paramref name="source"/> が空の場合は <see cref="System.Linq.Enumerable.Empty{TResult}"/> を返します。 </para>
+        /// </summary>
+        /// <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
+        /// <param name="source"><#= oprJaText #>を確認する対象となるシーケンス。</param>
+        /// <param name="selector"> 各要素に適用する変換関数。</param>
+        /// <returns> <#= oprJaText #>を持つ要素群。 </returns>
+        /// <exception cref="ArgumentNullException">
+        /// <paramref name="source"/> または <paramref name="selector"/> が null です。
+        /// </exception> 
+        public static IEnumerable<TSource> <#= opr.Key #>Items<TSource>(this IEnumerable<TSource> source, Func<TSource, <#= typeName #>> selector)
+        {
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            if (selector == null) throw Error.ArgumentNull(nameof(selector));
+            <#= typeName #> value = default(<#= typeName #>);
+            bool hasValue = false;
+            Buffer<TSource> buffer = new Buffer<TSource>();
+            foreach (TSource item in source)
+            {
+                if (hasValue)
+                {
+                    <#= typeName #> x = selector(item);
+                    <# if(isNullable){ #>if( x == null) continue; <# } #>
+
+<#
+                       var oprText = "";
+                       if(isNullable) oprText += "value == null || " ;
+                       oprText += $"x {opr.Value} value ";
+                       if (hasIsNaN)
+                       {
+                           var turgetVal = (opr.Key == "Max") ? "value" : "x";
+                           if (isNullable) turgetVal += ".Value";
+                           oprText += $" || {typeName.TrimEnd('?')}.IsNaN({turgetVal})";
+                       }
+                       var eqText = "";
+                       if(isNullable) eqText += "value != null && " ;
+                       eqText += $"x == value ";
+                       if (hasIsNaN)
+                       {
+                           var turgetVal = (opr.Key == "Max") ? "value" : "x";
+                           if (isNullable) turgetVal += ".Value";
+                           eqText += $" || {typeName.TrimEnd('?')}.IsNaN({turgetVal})";
+                       }
+#>
+                    if (<#= eqText #>)
+                    {
+                        buffer.Add(item);
+                    }
+                    else if (<#= oprText #>)
+                    {
+                        value = x;
+                        buffer.Clear();
+                        buffer.Add(item);
+                    }
+                }
+                else
+                {
+                    value = selector(item);
+                    hasValue = true;
+                    buffer.Add(item);
+                }
+            }
+            if (hasValue) return buffer.ToArray();
+            else return System.Linq.Enumerable.Empty<TSource>();
+        }
+
+<# } #>
+        #endregion
+
+<# } #>
     }
 }
