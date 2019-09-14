@@ -9,16 +9,31 @@ namespace CsUtility.Enumerable
 {
     static public class Enumerator
     {
-        public static IEnumerator<T> GetDefaultValueEnumerator<T>(this IEnumerator<T> baseObj, T defaultValue)
+        public static IEnumerator<T> AsDefaultValueEnumerator<T>(this IEnumerator<T> baseObj, T defaultValue)
         {
             if (baseObj == null) return null;
             else
-                return new DefaultValueEnumerator<T>(baseObj, default(T));
+                return new DefaultValueEnumerator<T>(baseObj, defaultValue);
         }
-        
-        public static IEnumerator<T> GetDefaultValueEnumerator<T>(this IEnumerator<T> baseObj)
+
+        public static IEnumerator<T> AsDefaultValueEnumerator<T>(this IEnumerator<T> baseObj)
         {
-            return GetDefaultValueEnumerator(baseObj, default(T));
+            return AsDefaultValueEnumerator(baseObj, default(T));
+        }
+
+
+        public static IEnumerator<T> GetDefaultValueEnumerator<T>(this IEnumerable<T> source, T defaultValue)
+        {
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            else
+                return new DefaultValueEnumerator<T>(source.GetEnumerator(), defaultValue);
+        }
+
+        public static IEnumerator<T> GetDefaultValueEnumerator<T>(this IEnumerable<T> source)
+        {
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+            else
+                return new DefaultValueEnumerator<T>(source.GetEnumerator(), default(T));
         }
     }
     

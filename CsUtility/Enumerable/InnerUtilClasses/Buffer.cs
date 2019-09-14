@@ -11,9 +11,14 @@ namespace CsUtility.Enumerable.InnerUtils
         internal TElement[] _items;
         internal int _count;
 
-        internal Buffer(IEnumerable<TElement> source)
+        internal Buffer(IEnumerable<TElement> source) : this(source, null)
+        { }
+        internal Buffer(IEnumerable<TElement> source, int capacity) : this(source, capacity > 0 ? (new TElement[capacity]) : null)
+        { }
+
+        private Buffer(IEnumerable<TElement> source, TElement[] defaultItems)
         {
-            TElement[] items = null;
+            TElement[] items = defaultItems;
             int count = 0;
             if (source is ICollection<TElement> collection)
             {

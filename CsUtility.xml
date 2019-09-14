@@ -217,6 +217,16 @@
             <param name="source"> 平坦化する 2 次元のジャグシーケンス。 </param>
             <returns> 平坦化されたシーケンス。 </returns>
         </member>
+        <member name="M:CsUtility.Enumerable.EnumerableUtilities.Transpose``1(System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{``0}})">
+            <summary> 2 次元のジャグシーケンスの転置を取得します。 </summary>
+            <typeparam name="TSource"> <paramref name="source"/> の要素の型。 </typeparam>
+            <remarks> 要素が存在しない部分は、型の規定値で埋められます。 </remarks>
+            <param name="source"> 転置する 2 次元のジャグシーケンス。 </param>
+            <returns> 転置されたシーケンス。 </returns>
+            <exception cref="T:System.ArgumentNullException"> 
+            <paramref name="source"/>  が null です。
+            </exception>
+        </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItem``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.SByte})">
             <summary>
             シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素を返します。
@@ -1923,7 +1933,8 @@
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.SByte})">
             <summary>
-            シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。
+            <para> シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。 </para>
+            <para> <paramref name="source"/> が空の場合は <see cref="M:System.Linq.Enumerable.Empty``1"/> を返します。 </para>
             </summary>
             <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
             <param name="source">最小値を確認する対象となるシーケンス。</param>
@@ -1931,14 +1942,12 @@
             <returns> 最小値を持つ要素群。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
-            </exception> 
-            <exception cref="T:System.InvalidOperationException">
-            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.SByte}})">
             <summary>
-            シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。
+            <para> シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。 </para>
+            <para> <paramref name="source"/> が空の場合は <see cref="M:System.Linq.Enumerable.Empty``1"/> を返します。 </para>
             </summary>
             <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
             <param name="source">最小値を確認する対象となるシーケンス。</param>
@@ -1946,14 +1955,12 @@
             <returns> 最小値を持つ要素群。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
-            </exception> 
-            <exception cref="T:System.InvalidOperationException">
-            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Byte})">
             <summary>
-            シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。
+            <para> シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。 </para>
+            <para> <paramref name="source"/> が空の場合は <see cref="M:System.Linq.Enumerable.Empty``1"/> を返します。 </para>
             </summary>
             <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
             <param name="source">最小値を確認する対象となるシーケンス。</param>
@@ -1961,14 +1968,12 @@
             <returns> 最小値を持つ要素群。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
-            </exception> 
-            <exception cref="T:System.InvalidOperationException">
-            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Byte}})">
             <summary>
-            シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。
+            <para> シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。 </para>
+            <para> <paramref name="source"/> が空の場合は <see cref="M:System.Linq.Enumerable.Empty``1"/> を返します。 </para>
             </summary>
             <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
             <param name="source">最小値を確認する対象となるシーケンス。</param>
@@ -1976,14 +1981,12 @@
             <returns> 最小値を持つ要素群。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
-            </exception> 
-            <exception cref="T:System.InvalidOperationException">
-            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Char})">
             <summary>
-            シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。
+            <para> シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。 </para>
+            <para> <paramref name="source"/> が空の場合は <see cref="M:System.Linq.Enumerable.Empty``1"/> を返します。 </para>
             </summary>
             <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
             <param name="source">最小値を確認する対象となるシーケンス。</param>
@@ -1991,14 +1994,12 @@
             <returns> 最小値を持つ要素群。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
-            </exception> 
-            <exception cref="T:System.InvalidOperationException">
-            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Char}})">
             <summary>
-            シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。
+            <para> シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。 </para>
+            <para> <paramref name="source"/> が空の場合は <see cref="M:System.Linq.Enumerable.Empty``1"/> を返します。 </para>
             </summary>
             <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
             <param name="source">最小値を確認する対象となるシーケンス。</param>
@@ -2006,14 +2007,12 @@
             <returns> 最小値を持つ要素群。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
-            </exception> 
-            <exception cref="T:System.InvalidOperationException">
-            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Int16})">
             <summary>
-            シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。
+            <para> シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。 </para>
+            <para> <paramref name="source"/> が空の場合は <see cref="M:System.Linq.Enumerable.Empty``1"/> を返します。 </para>
             </summary>
             <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
             <param name="source">最小値を確認する対象となるシーケンス。</param>
@@ -2021,14 +2020,12 @@
             <returns> 最小値を持つ要素群。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
-            </exception> 
-            <exception cref="T:System.InvalidOperationException">
-            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Int16}})">
             <summary>
-            シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。
+            <para> シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。 </para>
+            <para> <paramref name="source"/> が空の場合は <see cref="M:System.Linq.Enumerable.Empty``1"/> を返します。 </para>
             </summary>
             <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
             <param name="source">最小値を確認する対象となるシーケンス。</param>
@@ -2036,14 +2033,12 @@
             <returns> 最小値を持つ要素群。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
-            </exception> 
-            <exception cref="T:System.InvalidOperationException">
-            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.UInt16})">
             <summary>
-            シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。
+            <para> シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。 </para>
+            <para> <paramref name="source"/> が空の場合は <see cref="M:System.Linq.Enumerable.Empty``1"/> を返します。 </para>
             </summary>
             <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
             <param name="source">最小値を確認する対象となるシーケンス。</param>
@@ -2051,14 +2046,12 @@
             <returns> 最小値を持つ要素群。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
-            </exception> 
-            <exception cref="T:System.InvalidOperationException">
-            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.UInt16}})">
             <summary>
-            シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。
+            <para> シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。 </para>
+            <para> <paramref name="source"/> が空の場合は <see cref="M:System.Linq.Enumerable.Empty``1"/> を返します。 </para>
             </summary>
             <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
             <param name="source">最小値を確認する対象となるシーケンス。</param>
@@ -2066,14 +2059,12 @@
             <returns> 最小値を持つ要素群。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
-            </exception> 
-            <exception cref="T:System.InvalidOperationException">
-            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Int32})">
             <summary>
-            シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。
+            <para> シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。 </para>
+            <para> <paramref name="source"/> が空の場合は <see cref="M:System.Linq.Enumerable.Empty``1"/> を返します。 </para>
             </summary>
             <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
             <param name="source">最小値を確認する対象となるシーケンス。</param>
@@ -2081,14 +2072,12 @@
             <returns> 最小値を持つ要素群。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
-            </exception> 
-            <exception cref="T:System.InvalidOperationException">
-            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Int32}})">
             <summary>
-            シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。
+            <para> シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。 </para>
+            <para> <paramref name="source"/> が空の場合は <see cref="M:System.Linq.Enumerable.Empty``1"/> を返します。 </para>
             </summary>
             <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
             <param name="source">最小値を確認する対象となるシーケンス。</param>
@@ -2096,14 +2085,12 @@
             <returns> 最小値を持つ要素群。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
-            </exception> 
-            <exception cref="T:System.InvalidOperationException">
-            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.UInt32})">
             <summary>
-            シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。
+            <para> シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。 </para>
+            <para> <paramref name="source"/> が空の場合は <see cref="M:System.Linq.Enumerable.Empty``1"/> を返します。 </para>
             </summary>
             <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
             <param name="source">最小値を確認する対象となるシーケンス。</param>
@@ -2111,14 +2098,12 @@
             <returns> 最小値を持つ要素群。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
-            </exception> 
-            <exception cref="T:System.InvalidOperationException">
-            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.UInt32}})">
             <summary>
-            シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。
+            <para> シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。 </para>
+            <para> <paramref name="source"/> が空の場合は <see cref="M:System.Linq.Enumerable.Empty``1"/> を返します。 </para>
             </summary>
             <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
             <param name="source">最小値を確認する対象となるシーケンス。</param>
@@ -2126,14 +2111,12 @@
             <returns> 最小値を持つ要素群。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
-            </exception> 
-            <exception cref="T:System.InvalidOperationException">
-            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Int64})">
             <summary>
-            シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。
+            <para> シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。 </para>
+            <para> <paramref name="source"/> が空の場合は <see cref="M:System.Linq.Enumerable.Empty``1"/> を返します。 </para>
             </summary>
             <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
             <param name="source">最小値を確認する対象となるシーケンス。</param>
@@ -2141,14 +2124,12 @@
             <returns> 最小値を持つ要素群。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
-            </exception> 
-            <exception cref="T:System.InvalidOperationException">
-            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Int64}})">
             <summary>
-            シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。
+            <para> シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。 </para>
+            <para> <paramref name="source"/> が空の場合は <see cref="M:System.Linq.Enumerable.Empty``1"/> を返します。 </para>
             </summary>
             <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
             <param name="source">最小値を確認する対象となるシーケンス。</param>
@@ -2156,14 +2137,12 @@
             <returns> 最小値を持つ要素群。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
-            </exception> 
-            <exception cref="T:System.InvalidOperationException">
-            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.UInt64})">
             <summary>
-            シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。
+            <para> シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。 </para>
+            <para> <paramref name="source"/> が空の場合は <see cref="M:System.Linq.Enumerable.Empty``1"/> を返します。 </para>
             </summary>
             <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
             <param name="source">最小値を確認する対象となるシーケンス。</param>
@@ -2171,14 +2150,12 @@
             <returns> 最小値を持つ要素群。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
-            </exception> 
-            <exception cref="T:System.InvalidOperationException">
-            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.UInt64}})">
             <summary>
-            シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。
+            <para> シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。 </para>
+            <para> <paramref name="source"/> が空の場合は <see cref="M:System.Linq.Enumerable.Empty``1"/> を返します。 </para>
             </summary>
             <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
             <param name="source">最小値を確認する対象となるシーケンス。</param>
@@ -2186,14 +2163,12 @@
             <returns> 最小値を持つ要素群。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
-            </exception> 
-            <exception cref="T:System.InvalidOperationException">
-            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Single})">
             <summary>
-            シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。
+            <para> シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。 </para>
+            <para> <paramref name="source"/> が空の場合は <see cref="M:System.Linq.Enumerable.Empty``1"/> を返します。 </para>
             </summary>
             <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
             <param name="source">最小値を確認する対象となるシーケンス。</param>
@@ -2201,14 +2176,12 @@
             <returns> 最小値を持つ要素群。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
-            </exception> 
-            <exception cref="T:System.InvalidOperationException">
-            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Single}})">
             <summary>
-            シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。
+            <para> シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。 </para>
+            <para> <paramref name="source"/> が空の場合は <see cref="M:System.Linq.Enumerable.Empty``1"/> を返します。 </para>
             </summary>
             <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
             <param name="source">最小値を確認する対象となるシーケンス。</param>
@@ -2216,14 +2189,12 @@
             <returns> 最小値を持つ要素群。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
-            </exception> 
-            <exception cref="T:System.InvalidOperationException">
-            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Double})">
             <summary>
-            シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。
+            <para> シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。 </para>
+            <para> <paramref name="source"/> が空の場合は <see cref="M:System.Linq.Enumerable.Empty``1"/> を返します。 </para>
             </summary>
             <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
             <param name="source">最小値を確認する対象となるシーケンス。</param>
@@ -2231,14 +2202,12 @@
             <returns> 最小値を持つ要素群。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
-            </exception> 
-            <exception cref="T:System.InvalidOperationException">
-            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Double}})">
             <summary>
-            シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。
+            <para> シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。 </para>
+            <para> <paramref name="source"/> が空の場合は <see cref="M:System.Linq.Enumerable.Empty``1"/> を返します。 </para>
             </summary>
             <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
             <param name="source">最小値を確認する対象となるシーケンス。</param>
@@ -2246,14 +2215,12 @@
             <returns> 最小値を持つ要素群。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
-            </exception> 
-            <exception cref="T:System.InvalidOperationException">
-            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Decimal})">
             <summary>
-            シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。
+            <para> シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。 </para>
+            <para> <paramref name="source"/> が空の場合は <see cref="M:System.Linq.Enumerable.Empty``1"/> を返します。 </para>
             </summary>
             <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
             <param name="source">最小値を確認する対象となるシーケンス。</param>
@@ -2261,14 +2228,12 @@
             <returns> 最小値を持つ要素群。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
-            </exception> 
-            <exception cref="T:System.InvalidOperationException">
-            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MinItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Decimal}})">
             <summary>
-            シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。
+            <para> シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。 </para>
+            <para> <paramref name="source"/> が空の場合は <see cref="M:System.Linq.Enumerable.Empty``1"/> を返します。 </para>
             </summary>
             <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
             <param name="source">最小値を確認する対象となるシーケンス。</param>
@@ -2277,13 +2242,11 @@
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
             </exception> 
-            <exception cref="T:System.InvalidOperationException">
-            <paramref name="source"/> に要素が存在しません。
-            </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.SByte})">
             <summary>
-            シーケンスの各要素に対して変換関数を呼び出し、最大値を持つ要素群を返します。
+            <para> シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。 </para>
+            <para> <paramref name="source"/> が空の場合は <see cref="M:System.Linq.Enumerable.Empty``1"/> を返します。 </para>
             </summary>
             <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
             <param name="source">最大値を確認する対象となるシーケンス。</param>
@@ -2291,14 +2254,12 @@
             <returns> 最大値を持つ要素群。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
-            </exception> 
-            <exception cref="T:System.InvalidOperationException">
-            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.SByte}})">
             <summary>
-            シーケンスの各要素に対して変換関数を呼び出し、最大値を持つ要素群を返します。
+            <para> シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。 </para>
+            <para> <paramref name="source"/> が空の場合は <see cref="M:System.Linq.Enumerable.Empty``1"/> を返します。 </para>
             </summary>
             <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
             <param name="source">最大値を確認する対象となるシーケンス。</param>
@@ -2306,14 +2267,12 @@
             <returns> 最大値を持つ要素群。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
-            </exception> 
-            <exception cref="T:System.InvalidOperationException">
-            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Byte})">
             <summary>
-            シーケンスの各要素に対して変換関数を呼び出し、最大値を持つ要素群を返します。
+            <para> シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。 </para>
+            <para> <paramref name="source"/> が空の場合は <see cref="M:System.Linq.Enumerable.Empty``1"/> を返します。 </para>
             </summary>
             <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
             <param name="source">最大値を確認する対象となるシーケンス。</param>
@@ -2321,14 +2280,12 @@
             <returns> 最大値を持つ要素群。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
-            </exception> 
-            <exception cref="T:System.InvalidOperationException">
-            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Byte}})">
             <summary>
-            シーケンスの各要素に対して変換関数を呼び出し、最大値を持つ要素群を返します。
+            <para> シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。 </para>
+            <para> <paramref name="source"/> が空の場合は <see cref="M:System.Linq.Enumerable.Empty``1"/> を返します。 </para>
             </summary>
             <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
             <param name="source">最大値を確認する対象となるシーケンス。</param>
@@ -2336,14 +2293,12 @@
             <returns> 最大値を持つ要素群。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
-            </exception> 
-            <exception cref="T:System.InvalidOperationException">
-            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Char})">
             <summary>
-            シーケンスの各要素に対して変換関数を呼び出し、最大値を持つ要素群を返します。
+            <para> シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。 </para>
+            <para> <paramref name="source"/> が空の場合は <see cref="M:System.Linq.Enumerable.Empty``1"/> を返します。 </para>
             </summary>
             <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
             <param name="source">最大値を確認する対象となるシーケンス。</param>
@@ -2351,14 +2306,12 @@
             <returns> 最大値を持つ要素群。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
-            </exception> 
-            <exception cref="T:System.InvalidOperationException">
-            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Char}})">
             <summary>
-            シーケンスの各要素に対して変換関数を呼び出し、最大値を持つ要素群を返します。
+            <para> シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。 </para>
+            <para> <paramref name="source"/> が空の場合は <see cref="M:System.Linq.Enumerable.Empty``1"/> を返します。 </para>
             </summary>
             <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
             <param name="source">最大値を確認する対象となるシーケンス。</param>
@@ -2366,14 +2319,12 @@
             <returns> 最大値を持つ要素群。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
-            </exception> 
-            <exception cref="T:System.InvalidOperationException">
-            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Int16})">
             <summary>
-            シーケンスの各要素に対して変換関数を呼び出し、最大値を持つ要素群を返します。
+            <para> シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。 </para>
+            <para> <paramref name="source"/> が空の場合は <see cref="M:System.Linq.Enumerable.Empty``1"/> を返します。 </para>
             </summary>
             <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
             <param name="source">最大値を確認する対象となるシーケンス。</param>
@@ -2381,14 +2332,12 @@
             <returns> 最大値を持つ要素群。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
-            </exception> 
-            <exception cref="T:System.InvalidOperationException">
-            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Int16}})">
             <summary>
-            シーケンスの各要素に対して変換関数を呼び出し、最大値を持つ要素群を返します。
+            <para> シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。 </para>
+            <para> <paramref name="source"/> が空の場合は <see cref="M:System.Linq.Enumerable.Empty``1"/> を返します。 </para>
             </summary>
             <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
             <param name="source">最大値を確認する対象となるシーケンス。</param>
@@ -2396,14 +2345,12 @@
             <returns> 最大値を持つ要素群。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
-            </exception> 
-            <exception cref="T:System.InvalidOperationException">
-            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.UInt16})">
             <summary>
-            シーケンスの各要素に対して変換関数を呼び出し、最大値を持つ要素群を返します。
+            <para> シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。 </para>
+            <para> <paramref name="source"/> が空の場合は <see cref="M:System.Linq.Enumerable.Empty``1"/> を返します。 </para>
             </summary>
             <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
             <param name="source">最大値を確認する対象となるシーケンス。</param>
@@ -2411,14 +2358,12 @@
             <returns> 最大値を持つ要素群。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
-            </exception> 
-            <exception cref="T:System.InvalidOperationException">
-            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.UInt16}})">
             <summary>
-            シーケンスの各要素に対して変換関数を呼び出し、最大値を持つ要素群を返します。
+            <para> シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。 </para>
+            <para> <paramref name="source"/> が空の場合は <see cref="M:System.Linq.Enumerable.Empty``1"/> を返します。 </para>
             </summary>
             <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
             <param name="source">最大値を確認する対象となるシーケンス。</param>
@@ -2426,14 +2371,12 @@
             <returns> 最大値を持つ要素群。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
-            </exception> 
-            <exception cref="T:System.InvalidOperationException">
-            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Int32})">
             <summary>
-            シーケンスの各要素に対して変換関数を呼び出し、最大値を持つ要素群を返します。
+            <para> シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。 </para>
+            <para> <paramref name="source"/> が空の場合は <see cref="M:System.Linq.Enumerable.Empty``1"/> を返します。 </para>
             </summary>
             <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
             <param name="source">最大値を確認する対象となるシーケンス。</param>
@@ -2441,14 +2384,12 @@
             <returns> 最大値を持つ要素群。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
-            </exception> 
-            <exception cref="T:System.InvalidOperationException">
-            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Int32}})">
             <summary>
-            シーケンスの各要素に対して変換関数を呼び出し、最大値を持つ要素群を返します。
+            <para> シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。 </para>
+            <para> <paramref name="source"/> が空の場合は <see cref="M:System.Linq.Enumerable.Empty``1"/> を返します。 </para>
             </summary>
             <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
             <param name="source">最大値を確認する対象となるシーケンス。</param>
@@ -2456,14 +2397,12 @@
             <returns> 最大値を持つ要素群。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
-            </exception> 
-            <exception cref="T:System.InvalidOperationException">
-            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.UInt32})">
             <summary>
-            シーケンスの各要素に対して変換関数を呼び出し、最大値を持つ要素群を返します。
+            <para> シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。 </para>
+            <para> <paramref name="source"/> が空の場合は <see cref="M:System.Linq.Enumerable.Empty``1"/> を返します。 </para>
             </summary>
             <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
             <param name="source">最大値を確認する対象となるシーケンス。</param>
@@ -2471,14 +2410,12 @@
             <returns> 最大値を持つ要素群。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
-            </exception> 
-            <exception cref="T:System.InvalidOperationException">
-            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.UInt32}})">
             <summary>
-            シーケンスの各要素に対して変換関数を呼び出し、最大値を持つ要素群を返します。
+            <para> シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。 </para>
+            <para> <paramref name="source"/> が空の場合は <see cref="M:System.Linq.Enumerable.Empty``1"/> を返します。 </para>
             </summary>
             <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
             <param name="source">最大値を確認する対象となるシーケンス。</param>
@@ -2486,14 +2423,12 @@
             <returns> 最大値を持つ要素群。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
-            </exception> 
-            <exception cref="T:System.InvalidOperationException">
-            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Int64})">
             <summary>
-            シーケンスの各要素に対して変換関数を呼び出し、最大値を持つ要素群を返します。
+            <para> シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。 </para>
+            <para> <paramref name="source"/> が空の場合は <see cref="M:System.Linq.Enumerable.Empty``1"/> を返します。 </para>
             </summary>
             <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
             <param name="source">最大値を確認する対象となるシーケンス。</param>
@@ -2501,14 +2436,12 @@
             <returns> 最大値を持つ要素群。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
-            </exception> 
-            <exception cref="T:System.InvalidOperationException">
-            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Int64}})">
             <summary>
-            シーケンスの各要素に対して変換関数を呼び出し、最大値を持つ要素群を返します。
+            <para> シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。 </para>
+            <para> <paramref name="source"/> が空の場合は <see cref="M:System.Linq.Enumerable.Empty``1"/> を返します。 </para>
             </summary>
             <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
             <param name="source">最大値を確認する対象となるシーケンス。</param>
@@ -2516,14 +2449,12 @@
             <returns> 最大値を持つ要素群。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
-            </exception> 
-            <exception cref="T:System.InvalidOperationException">
-            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.UInt64})">
             <summary>
-            シーケンスの各要素に対して変換関数を呼び出し、最大値を持つ要素群を返します。
+            <para> シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。 </para>
+            <para> <paramref name="source"/> が空の場合は <see cref="M:System.Linq.Enumerable.Empty``1"/> を返します。 </para>
             </summary>
             <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
             <param name="source">最大値を確認する対象となるシーケンス。</param>
@@ -2531,14 +2462,12 @@
             <returns> 最大値を持つ要素群。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
-            </exception> 
-            <exception cref="T:System.InvalidOperationException">
-            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.UInt64}})">
             <summary>
-            シーケンスの各要素に対して変換関数を呼び出し、最大値を持つ要素群を返します。
+            <para> シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。 </para>
+            <para> <paramref name="source"/> が空の場合は <see cref="M:System.Linq.Enumerable.Empty``1"/> を返します。 </para>
             </summary>
             <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
             <param name="source">最大値を確認する対象となるシーケンス。</param>
@@ -2546,14 +2475,12 @@
             <returns> 最大値を持つ要素群。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
-            </exception> 
-            <exception cref="T:System.InvalidOperationException">
-            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Single})">
             <summary>
-            シーケンスの各要素に対して変換関数を呼び出し、最大値を持つ要素群を返します。
+            <para> シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。 </para>
+            <para> <paramref name="source"/> が空の場合は <see cref="M:System.Linq.Enumerable.Empty``1"/> を返します。 </para>
             </summary>
             <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
             <param name="source">最大値を確認する対象となるシーケンス。</param>
@@ -2561,14 +2488,12 @@
             <returns> 最大値を持つ要素群。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
-            </exception> 
-            <exception cref="T:System.InvalidOperationException">
-            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Single}})">
             <summary>
-            シーケンスの各要素に対して変換関数を呼び出し、最大値を持つ要素群を返します。
+            <para> シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。 </para>
+            <para> <paramref name="source"/> が空の場合は <see cref="M:System.Linq.Enumerable.Empty``1"/> を返します。 </para>
             </summary>
             <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
             <param name="source">最大値を確認する対象となるシーケンス。</param>
@@ -2576,14 +2501,12 @@
             <returns> 最大値を持つ要素群。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
-            </exception> 
-            <exception cref="T:System.InvalidOperationException">
-            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Double})">
             <summary>
-            シーケンスの各要素に対して変換関数を呼び出し、最大値を持つ要素群を返します。
+            <para> シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。 </para>
+            <para> <paramref name="source"/> が空の場合は <see cref="M:System.Linq.Enumerable.Empty``1"/> を返します。 </para>
             </summary>
             <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
             <param name="source">最大値を確認する対象となるシーケンス。</param>
@@ -2591,14 +2514,12 @@
             <returns> 最大値を持つ要素群。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
-            </exception> 
-            <exception cref="T:System.InvalidOperationException">
-            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Double}})">
             <summary>
-            シーケンスの各要素に対して変換関数を呼び出し、最大値を持つ要素群を返します。
+            <para> シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。 </para>
+            <para> <paramref name="source"/> が空の場合は <see cref="M:System.Linq.Enumerable.Empty``1"/> を返します。 </para>
             </summary>
             <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
             <param name="source">最大値を確認する対象となるシーケンス。</param>
@@ -2606,14 +2527,12 @@
             <returns> 最大値を持つ要素群。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
-            </exception> 
-            <exception cref="T:System.InvalidOperationException">
-            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Decimal})">
             <summary>
-            シーケンスの各要素に対して変換関数を呼び出し、最大値を持つ要素群を返します。
+            <para> シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。 </para>
+            <para> <paramref name="source"/> が空の場合は <see cref="M:System.Linq.Enumerable.Empty``1"/> を返します。 </para>
             </summary>
             <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
             <param name="source">最大値を確認する対象となるシーケンス。</param>
@@ -2621,14 +2540,12 @@
             <returns> 最大値を持つ要素群。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
-            </exception> 
-            <exception cref="T:System.InvalidOperationException">
-            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.MaxItems``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Nullable{System.Decimal}})">
             <summary>
-            シーケンスの各要素に対して変換関数を呼び出し、最大値を持つ要素群を返します。
+            <para> シーケンスの各要素に対して変換関数を呼び出し、最小値を持つ要素群を返します。 </para>
+            <para> <paramref name="source"/> が空の場合は <see cref="M:System.Linq.Enumerable.Empty``1"/> を返します。 </para>
             </summary>
             <typeparam name="TSource"> <paramref name="source"/> の要素の型。</typeparam>
             <param name="source">最大値を確認する対象となるシーケンス。</param>
@@ -2636,9 +2553,6 @@
             <returns> 最大値を持つ要素群。 </returns>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="source"/> または <paramref name="selector"/> が null です。
-            </exception> 
-            <exception cref="T:System.InvalidOperationException">
-            <paramref name="source"/> に要素が存在しません。
             </exception> 
         </member>
         <member name="M:CsUtility.Enumerable.EnumerableUtilities.Zip``4(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``1},System.Collections.Generic.IEnumerable{``2},System.Func{``0,``1,``2,``3})">

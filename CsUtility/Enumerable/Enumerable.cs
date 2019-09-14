@@ -463,7 +463,7 @@ namespace CsUtility.Enumerable
                 foreach (TSource subElement in element)
                     yield return subElement;
         }
-        
+
         //public static IEnumerable<TResult> Zip<TSource,TResult>(this IEnumerable<IEnumerable<TSource>> source, Func<IEnumerable<TSource>, TResult> resultSelector)
         //{
         //    if (source == null) throw Error.ArgumentNull(nameof(source));
@@ -477,5 +477,42 @@ namespace CsUtility.Enumerable
 
         //    return iterator();
         //}
+
+
+        /// <summary> 2 次元のジャグシーケンスの転置を取得します。 </summary>
+        /// <typeparam name="TSource"> <paramref name="source"/> の要素の型。 </typeparam>
+        /// <remarks> 要素が存在しない部分は、型の規定値で埋められます。 </remarks>
+        /// <param name="source"> 転置する 2 次元のジャグシーケンス。 </param>
+        /// <returns> 転置されたシーケンス。 </returns>
+        /// <exception cref="ArgumentNullException"> 
+        /// <paramref name="source"/>  が null です。
+        /// </exception>
+        public static IEnumerable<IEnumerable<TSource>> Transpose<TSource>(this IEnumerable<IEnumerable<TSource>> source)
+        {
+            if (source == null) throw Error.ArgumentNull(nameof(source));
+
+            return Itr();
+
+            IEnumerable<IEnumerable<TSource>> Itr()
+            {
+                IEnumerable<IEnumerator<TSource>> enumerators = null;
+                try
+                {
+                    enumerators = source.Select(p => p.GetDefaultValueEnumerator()).ToArray();
+                    while (enumerators.Aggregate(false,(a,p)=> p.MoveNext() || a))
+                    {
+                        yield return new InnerUtils.Buffer<TSource>(enumerators.Select(p => p.Current)).ToArray();
+                    }
+                }
+                finally
+                {
+                    if (enumerators != null)
+                    {
+                        foreach (var item in enumerators)
+                            item?.Dispose();
+                    }
+                }
+            }
+        }
     }
 }
